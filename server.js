@@ -9,7 +9,7 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const API_KEY = process.env.API_KEY;
 
-async function fetchStats() {
+async function fetchOffensiveStats() {
 	try {
 		const data = await fetch(
 			`https://www.pro-football-reference.com/years/2019/`,
@@ -20,23 +20,75 @@ async function fetchStats() {
 		let text = await data.text();
 		text = text.replace(/<!--|-->/gm, '');
 		const dom = new JSDOM(text);
-		const getStatsOffense = Array.from(
+		const statsTeamOffense = Array.from(
 			dom.window.document.querySelector('#team_stats').querySelectorAll('tr')
 		);
-		const getStatsPassing = Array.from(
+		const statsPassingOffense = Array.from(
 			dom.window.document.querySelector('#passing').querySelectorAll('tr')
 		);
-		const getStatsRushing = Array.from(
+		const statsRushingOffense = Array.from(
 			dom.window.document.querySelector('#rushing').querySelectorAll('tr')
+		);
+		const statsConversionsOffense = Array.from(
+			dom.window.document
+				.querySelector('#team_conversions')
+				.querySelectorAll('tr')
 		);
 
 		const allStats = compileData(
-			parseArray(getStatsOffense),
-			parseArray(getStatsPassing),
-			parseArray(getStatsRushing)
+			parseArray(statsTeamOffense),
+			parseArray(statsPassingOffense),
+			parseArray(statsRushingOffense),
+			parseArray(statsConversionsOffense)
 		);
 
-		storeStats(allStats);
+		storeStats(allStats, 'offense');
+	} catch (err) {
+		console.error(err);
+	}
+}
+
+async function fetchDefensiveStats() {
+	try {
+		const data = await fetch(
+			'https://www.pro-football-reference.com/years/2019/opp.htm',
+			{
+				method: 'GET',
+			}
+		);
+		let text = await data.text();
+		text = text.replace(/<!--|-->/gm, '');
+		const dom = new JSDOM(text);
+		// storeHTML(dom, 'defense');
+		const statsTeamDefense = Array.from(
+			dom.window.document.querySelector('#team_stats').querySelectorAll('tr')
+		);
+		const statsAdvancedTeamDefense = Array.from(
+			dom.window.document
+				.querySelector('#advanced_defense')
+				.querySelectorAll('tr')
+		);
+		const statsPassingDefense = Array.from(
+			dom.window.document.querySelector('#passing').querySelectorAll('tr')
+		);
+		const statsRushingDefense = Array.from(
+			dom.window.document.querySelector('#rushing').querySelectorAll('tr')
+		);
+		const statsConversionsDefense = Array.from(
+			dom.window.document
+				.querySelector('#team_conversions')
+				.querySelectorAll('tr')
+		);
+
+		const allStats = compileData(
+			parseArray(statsTeamDefense),
+			parseArray(statsAdvancedTeamDefense),
+			parseArray(statsPassingDefense),
+			parseArray(statsRushingDefense),
+			parseArray(statsConversionsDefense)
+		);
+
+		storeStats(allStats, 'defense');
 	} catch (err) {
 		console.error(err);
 	}
@@ -53,7 +105,7 @@ async function fetchOdds() {
 			JSON.stringify(oddsDataJSON),
 			(err) => {
 				if (err) {
-					console.log(err);
+					console.error(err);
 				}
 			}
 		);
@@ -64,28 +116,23 @@ async function fetchOdds() {
 	}
 }
 
-async function storeHTML(jsdomText) {
-	fs.writeFile(
-		path.join(__dirname, '/api/stored.html'),
-		jsdomText.serialize(),
-		(err) => {
-			if (err) {
-				console.err(err);
-			}
+// for testing
+async function storeHTML(jsdomText, filename) {
+	const filePath = `api/${filename}.html`;
+	fs.writeFile(path.join(__dirname, filePath), jsdomText.serialize(), (err) => {
+		if (err) {
+			console.err(err);
 		}
-	);
+	});
 }
 
-async function storeStats(array) {
-	fs.writeFile(
-		path.join(__dirname, 'api/data.json'),
-		JSON.stringify(array),
-		(err) => {
-			if (err) {
-				console.error(err);
-			}
+async function storeStats(array, filename) {
+	const filePath = `api/${filename}.json`;
+	fs.writeFile(path.join(__dirname, filePath), JSON.stringify(array), (err) => {
+		if (err) {
+			console.error(err);
 		}
-	);
+	});
 }
 
 function parseArray(array) {
@@ -111,7 +158,6 @@ function parseArray(array) {
 function compileData(...data) {
 	const newData = [];
 	data.forEach((array, index) => {
-		console.log(index);
 		if (newData.length < 1) {
 			array.forEach((item) => newData.push(item));
 		} else {
@@ -133,8 +179,9 @@ function compileData(...data) {
 	return newData;
 }
 
-fetchStats();
-fetchOdds();
+fetchOffensiveStats();
+fetchDefensiveStats();
+// fetchOdds();
 
 app.use(express.static(path.join(__dirname, 'build')));
 

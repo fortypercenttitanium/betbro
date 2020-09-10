@@ -9,6 +9,22 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const API_KEY = process.env.API_KEY;
 
+function camelCase(string) {
+	if (string.includes('_')) {
+		return string
+			.split('_')
+			.map((word, i) => {
+				if (i > 0 && word[0].match(/[a-zA-Z]/)) {
+					word = word[0].toUpperCase() + word.slice(1);
+				}
+				return word;
+			})
+			.join('');
+	} else {
+		return string;
+	}
+}
+
 async function fetchOffensiveStats() {
 	try {
 		const data = await fetch(
@@ -97,7 +113,7 @@ async function fetchDefensiveStats() {
 async function fetchOdds() {
 	try {
 		const oddsData = await fetch(
-			`https://api.the-odds-api.com/v3/odds/?sport=americanfootball_nfl&region=us&apiKey=${API_KEY}`
+			`https://api.the-odds-api.com/v3/odds/?sport=americanfootball_nfl&region=us&mkt=spreads&dateFormat=iso&apiKey=${API_KEY}`
 		);
 		const oddsDataJSON = await oddsData.json();
 		fs.writeFile(
@@ -144,7 +160,7 @@ function parseArray(array) {
 			const cells = row.querySelectorAll('td');
 			const obj = {};
 			cells.forEach((cell, i) => {
-				const dataType = cell.getAttribute('data-stat');
+				const dataType = camelCase(cell.getAttribute('data-stat'));
 				obj[dataType] =
 					dataType === 'team'
 						? cell.childNodes[0].textContent
@@ -181,12 +197,20 @@ function compileData(...data) {
 
 fetchOffensiveStats();
 fetchDefensiveStats();
-// fetchOdds();
+fetchOdds();
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/api/data.json', (req, res) => {
-	res.sendFile(path.join(__dirname, '/api/data.json'));
+app.get('/offense', (req, res) => {
+	res.sendFile(path.join(__dirname, '/api/offense.json'));
+});
+
+app.get('/defense', (req, res) => {
+	res.sendFile(path.join(__dirname, '/api/defense.json'));
+});
+
+app.get('/odds', (req, res) => {
+	res.sendFile(path.join(__dirname, '/api/odds.json'));
 });
 
 app.listen(PORT, (req, res) => {

@@ -1,29 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import styled from 'styled-components';
+import NavBar from './components/Navbar';
+import Headline from './components/Headline';
+import Home from './components/Home';
+import Breakdowns from './components/Breakdowns';
+import About from './components/About';
+import MyBetBro from './components/MyBetBro';
+import NotFound from './components/NotFound';
+import { fillDatabase } from './tools/database';
 
 function App() {
-  fetch("/api/data.json")
-    .then((res) => res.json())
-    .then((json) => console.log(json));
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <main>
-        <ul></ul>
-      </main>
-    </div>
-  );
+	const [headline, setHeadline] = useState(window.location.pathname);
+	useEffect(() => {
+		setHeadline(window.location.pathname);
+	});
+	return (
+		<BrowserRouter>
+			<div className='App'>
+				<NavBar />
+				<Headline headline={headline} />
+				<Switch>
+					<Route exact path='/' component={Home} />
+					<Route exact path='/about' component={About} />
+					<Route exact path='/breakdowns' component={Breakdowns} />
+					<Route exact path='/mybetbro' component={MyBetBro} />
+					<Route component={NotFound} />
+				</Switch>
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;

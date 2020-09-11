@@ -1,98 +1,136 @@
-import moment from 'moment';
-
-export const database = [];
-const weekEndDates = {
-	1: '2020-09-16',
-	2: '2020-09-23',
-	3: '2020-09-30',
-	4: '2020-10-07',
-	5: '2020-10-14',
-	6: '2020-10-21',
-	7: '2020-10-28',
-	8: '2020-11-04',
-	9: '2020-11-11',
-	10: '2020-11-18',
-	11: '2020-11-25',
-	12: '2020-12-02',
-	13: '2020-12-09',
-	14: '2020-12-16',
-	15: '2020-12-23',
-	16: '2020-12-30',
-	17: '2020-01-06',
-	18: '2021-01-13',
-	19: '2021-01-20',
-	20: '2021-01-27',
-	21: '2021-02-08',
-};
-
-const thisWeek =
-	Object.values(weekEndDates).findIndex((date) => {
-		return moment(date).subtract(1, 'days').isAfter(moment());
-	}) + 1;
-
-async function fetchStats() {
+export default async function fetchStats(team, statList) {
 	try {
 		const offensiveStatsRaw = await fetch(`/offense`);
 		const defensiveStatsRaw = await fetch(`/defense`);
 		const offensiveStats = await offensiveStatsRaw.json();
 		const defensiveStats = await defensiveStatsRaw.json();
-		return {
-			offensiveStats,
-			defensiveStats,
+
+		const OS = offensiveStats.find((item) => item.team === team);
+		const DS = defensiveStats.find((item) => item.team === team);
+
+		Object.keys(OS).forEach((key) => {
+			if (/^[0-9.-]*$/.test(OS[key])) {
+				OS[key] = Number(OS[key]);
+			}
+		});
+		Object.keys(DS).forEach((key) => {
+			if (/^[0-9.-]*$/.test(DS[key])) {
+				DS[key] = Number(DS[key]);
+			}
+		});
+
+		const result = {
+			team,
 		};
+
+		statList.forEach((stat) => {
+			if (stat.category === 'stats') {
+				result[stat.selection] = calcStat(stat.selection);
+			}
+		});
+
+		return result;
+
+		function calcStat(stat) {
+			switch (stat) {
+				case 'gamesPlayed':
+					return OS.g;
+				case 'pointsForPG':
+					return OS.points / OS.g;
+				case 'totalYardsOffensePG':
+					return OS.totalYards / OS.g;
+				case 'offensivePlaysPG':
+					return OS.playsOffense / OS.g;
+				case 'offensiveYardsPP':
+					return OS.ydsPerPlayOffense;
+				case 'offensiveTurnoversPG':
+					return OS.turnovers / OS.g;
+				case 'fumblesLostPG':
+					return OS.fumblesLost / OS.g;
+				case 'firstDownsPG':
+					return OS.firstDown / OS.g;
+				case 'passCompPG':
+					return OS.passCmp / OS.g;
+				case 'passAttPG':
+					return OS.passAtt / OS.g;
+				case 'passYdsPG':
+					return OS.passYdsPerG;
+				case 'passTdPG':
+					return OS.passTd / OS.g;
+				case 'offensiveIntPG':
+					return OS.passInt / OS.g;
+				case 'passYdsPerAtt':
+					return OS.passYdsPerAtt;
+				case 'passFirstDownsPG':
+					return OS.passFd / OS.g;
+				case 'rushAttPG':
+					return OS.rushAtt / OS.g;
+				case 'rushYdsPG':
+					return OS.rushYdsPerG;
+				case 'rushTdPG':
+					return OS.rushTd / OS.g;
+				case 'rushYdsPerAtt':
+					return OS.rushYdsPerAtt;
+				case 'rushFirstDownsPG':
+					return OS.rushFd / OS.g;
+				case 'offensivePenaltiesPG':
+					return OS.penalties / OS.g;
+				case 'offensivePenaltyYdsPG':
+					return OS.penaltiesYds / OS.g;
+				case 'scoringPctFor':
+					return OS.scorePct;
+				case 'offensiveTurnoverPct':
+					return OS.turnoverPct;
+				case 'passCompPct':
+					return OS.passCmpPerc;
+				case 'passTouchdownPct':
+					return OS.passTdPerc;
+				case 'passIntPct':
+					return OS.passIntPerc;
+				case 'passLong':
+					return OS.passLong;
+				case 'passYdsPerComp':
+					return OS.passYdsPerComp;
+				case 'passRating':
+					return OS.passRating;
+				case 'sacksAllowed':
+					return OS.passSacked;
+				case 'sacksAllowedYds':
+					return OS.passSackedYds;
+				case 'sackPct':
+					return OS.passSackedPerc;
+				case 'comebacks':
+					return OS.comebacks;
+				case 'gwd':
+					return OS.gwd;
+				case 'rushLong':
+					return OS.rushLong;
+				case 'fumblesAllowed':
+					return OS.fumbles;
+				case 'thirdDownPct':
+					return OS.thirdDownPct;
+				case 'fourthDownPct':
+					return OS.fourthDownPct;
+				case 'redzonePct':
+					return OS.redZonePct;
+				default:
+					return null;
+			}
+		}
 	} catch (err) {
 		console.error(err);
 	}
 }
-async function fetchOdds(week) {
-	try {
-		const oddsDataRaw = await fetch('/odds');
-		const odds = await oddsDataRaw.json();
-		const thisWeeksOdds = odds.data.filter((game) => {
-			return moment(game.commence_time).isBefore(weekEndDates[week]);
-		});
 
-		const matchups = thisWeeksOdds.map((matchup) => {
-			return {
-				homeTeam: matchup.home_team,
-				awayTeam: matchup.teams.filter((team) => team !== matchup.homeTeam),
-				time: moment(matchup.commence_time),
-			};
-		});
-		return {
-			thisWeeksOdds,
-			matchups,
-		};
-	} catch (err) {
-		console.error(err);
-	}
-}
-
-export async function fillDatabase() {
-	try {
-		const { offensiveStats, defensiveStats } = await fetchStats();
-		const odds = await fetchOdds(thisWeek);
-		const matchups = odds.matchups;
-		const database = matchups.map((matchup) => {
-			return {
-				time: matchup.time,
-				home: {},
-			};
-		});
-	} catch (err) {
-		console.error(err);
-	}
-}
-
-export const init = [
+export const initialSelections = [
 	{ category: 'odds', site: 'betrivers', selection: 'spread' },
 	{ category: 'odds', site: 'betrivers', selection: 'moneyline' },
-	{ category: 'offense', site: '', selection: 'points-for' },
-	{ category: 'offense', site: '', selection: 'passing-yards-per-game' },
-	{ category: 'offense', site: '', selection: 'rushing-yards-per-game' },
-	{ category: 'offense', site: '', selection: 'first-downs-per-game' },
-	{ category: 'offense', site: '', selection: 'redzone-efficiency' },
-	{ category: 'defense', site: '', selection: 'points-against-per-game' },
-	{ category: 'defense', site: '', selection: 'yards-allowed-per-game' },
-	{ category: 'defense', site: '', selection: 'turnover-differential' },
+	{ category: 'stats', selection: 'pointsForPG' },
+	{ category: 'stats', selection: 'passYdsPG' },
+	{ category: 'stats', selection: 'rushYdsPG' },
+	{ category: 'stats', selection: 'firstDownsPG' },
+	{ category: 'stats', selection: 'passCompPct' },
+	{ category: 'stats', selection: 'scoringPctFor' },
+	{ category: 'stats', selection: 'offensiveTurnoversPG' },
+	{ category: 'stats', selection: 'redzonePct' },
 ];

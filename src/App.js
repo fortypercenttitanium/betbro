@@ -14,7 +14,7 @@ function App() {
 	const [headline, setHeadline] = useState(window.location.pathname);
 	useEffect(() => {
 		setHeadline(window.location.pathname);
-	});
+	}, []);
 	return (
 		<BrowserRouter>
 			<div className='App'>

@@ -142,6 +142,10 @@ export default async function fetchStats(statList) {
 						findTeamStats(team, DS).turnovers -
 						findTeamStats(team, OS).turnovers
 					);
+				case 'pointDiff':
+					return (
+						findTeamStats(team, OS).points - findTeamStats(team, DS).points
+					);
 				case 'pointsAgPG':
 					return findTeamStats(team, DS).points / findTeamStats(team, OS).g;
 				case 'yardsAllowedPG':
@@ -200,7 +204,7 @@ export default async function fetchStats(statList) {
 					return (
 						findTeamStats(team, DS).passDefended / findTeamStats(team, OS).g
 					);
-				case 'passIntPctAg':
+				case 'defIntPct':
 					return findTeamStats(team, DS).passIntPerc;
 				case 'passYardsPerAttAg':
 					return findTeamStats(team, DS).passYdsPerAtt;
@@ -238,218 +242,20 @@ export default async function fetchStats(statList) {
 		console.error(err);
 	}
 }
-// export default async function fetchStats(team, statList) {
-// 	console.log('calling fetch');
-// 	try {
-// 		const statsRaw = await fetch(`/fetchStats`);
-// 		const statsJSON = await statsRaw.json();
-
-// 		const OS = statsJSON.offensiveStats.find((item) => item.team === team);
-// 		const DS = statsJSON.defensiveStats.find((item) => item.team === team);
-
-// 		//convert to numbers
-// 		Object.keys(OS).forEach((key) => {
-// 			if (/^[0-9.-]*$/.test(OS[key])) {
-// 				OS[key] = Number(OS[key]);
-// 			}
-// 		});
-// 		Object.keys(DS).forEach((key) => {
-// 			if (/^[0-9.-]*$/.test(DS[key])) {
-// 				DS[key] = Number(DS[key]);
-// 			}
-// 		});
-
-// 		const result = {
-// 			team,
-// 		};
-
-// 		// stat name API
-// 		statList.forEach((stat) => {
-// 			if (stat.category === 'stats') {
-// 				result[stat.selection] = calcStat(stat.selection);
-// 			}
-// 		});
-
-// 		return result;
-
-// 		function calcStat(stat) {
-// 			switch (stat) {
-// 				case 'gamesPlayed':
-// 					return OS.g;
-// 				case 'pointsForPG':
-// 					return OS.points / OS.g;
-// 				case 'totalYardsOffensePG':
-// 					return OS.totalYards / OS.g;
-// 				case 'offensivePlaysPG':
-// 					return OS.playsOffense / OS.g;
-// 				case 'offensiveYardsPP':
-// 					return OS.ydsPerPlayOffense;
-// 				case 'offensiveTurnoversPG':
-// 					return OS.turnovers / OS.g;
-// 				case 'fumblesLostPG':
-// 					return OS.fumblesLost / OS.g;
-// 				case 'firstDownsPG':
-// 					return OS.firstDown / OS.g;
-// 				case 'passCompPG':
-// 					return OS.passCmp / OS.g;
-// 				case 'passAttPG':
-// 					return OS.passAtt / OS.g;
-// 				case 'passYdsPG':
-// 					return OS.passYdsPerG;
-// 				case 'passTdPG':
-// 					return OS.passTd / OS.g;
-// 				case 'offensiveIntPG':
-// 					return OS.passInt / OS.g;
-// 				case 'passYdsPerAtt':
-// 					return OS.passYdsPerAtt;
-// 				case 'passFirstDownsPG':
-// 					return OS.passFd / OS.g;
-// 				case 'rushAttPG':
-// 					return OS.rushAtt / OS.g;
-// 				case 'rushYdsPG':
-// 					return OS.rushYdsPerG;
-// 				case 'rushTdPG':
-// 					return OS.rushTd / OS.g;
-// 				case 'rushYdsPerAtt':
-// 					return OS.rushYdsPerAtt;
-// 				case 'rushFirstDownsPG':
-// 					return OS.rushFd / OS.g;
-// 				case 'offensivePenaltiesPG':
-// 					return OS.penalties / OS.g;
-// 				case 'offensivePenaltyYdsPG':
-// 					return OS.penaltiesYds / OS.g;
-// 				case 'scoringPctFor':
-// 					return OS.scorePct;
-// 				case 'offensiveTurnoverPct':
-// 					return OS.turnoverPct;
-// 				case 'passCompPct':
-// 					return OS.passCmpPerc;
-// 				case 'passTouchdownPct':
-// 					return OS.passTdPerc;
-// 				case 'passIntPct':
-// 					return OS.passIntPerc;
-// 				case 'passLong':
-// 					return OS.passLong;
-// 				case 'passYdsPerComp':
-// 					return OS.passYdsPerComp;
-// 				case 'passRating':
-// 					return OS.passRating;
-// 				case 'sacksAllowed':
-// 					return OS.passSacked;
-// 				case 'sacksAllowedYds':
-// 					return OS.passSackedYds;
-// 				case 'sackPctOff':
-// 					return OS.passSackedPerc;
-// 				case 'comebacks':
-// 					return OS.comebacks;
-// 				case 'gwd':
-// 					return OS.gwd;
-// 				case 'rushLong':
-// 					return OS.rushLong;
-// 				case 'fumblesAllowed':
-// 					return OS.fumbles;
-// 				case 'thirdDownPct':
-// 					return OS.thirdDownPct;
-// 				case 'fourthDownPct':
-// 					return OS.fourthDownPct;
-// 				case 'redzonePct':
-// 					return OS.redZonePct;
-// 				case 'turnoverDiff':
-// 					return DS.turnovers - OS.turnovers;
-// 				case 'pointsAgPG':
-// 					return DS.points / OS.g;
-// 				case 'yardsAllowedPG':
-// 					return DS.totalYards / OS.g;
-// 				case 'defensivePlaysPG':
-// 					return DS.playsOffense / OS.g;
-// 				case 'yardsAllowedPP':
-// 					return DS.ydsPerPlayOffense;
-// 				case 'defensiveTurnoversPG':
-// 					return DS.turnovers / OS.g;
-// 				case 'forcedFumblesPG':
-// 					return DS.fumblesLost / OS.g;
-// 				case 'firstDownsAllowedPG':
-// 					return DS.firstDown / OS.g;
-// 				case 'passCompAllowedPG':
-// 					return DS.passCmp / OS.g;
-// 				case 'passAttAgPG':
-// 					return DS.passAtt / OS.g;
-// 				case 'passTdAllowedPG':
-// 					return DS.passTd / OS.g;
-// 				case 'defensiveIntPG':
-// 					return DS.passInt / OS.g;
-// 				case 'passYdsPerAttAg':
-// 					return DS.passYdsPerAtt;
-// 				case 'passFistDownsAllowedPG':
-// 					return DS.passFd / OS.g;
-// 				case 'rushAttAgPG':
-// 					return DS.rushAtt / OS.g;
-// 				case 'rushYdsAllowedPG':
-// 					return DS.rushYdsPerG;
-// 				case 'rushTdAllowedPG':
-// 					return DS.rushTd / OS.g;
-// 				case 'rushYdsPerAttAg':
-// 					return DS.rushYdsPerAtt;
-// 				case 'rushFirstDownsAllowedPG':
-// 					return DS.rushFd / OS.g;
-// 				case 'defensivePenaltiesPG':
-// 					return DS.penalties / OS.g;
-// 				case 'defensivePenaltyYdsPG':
-// 					return DS.penaltiesYds / OS.g;
-// 				case 'scoringPctAg':
-// 					return DS.scorePct;
-// 				case 'defensiveTurnoverPct':
-// 					return DS.turnoverPct;
-// 				case 'passCompPctAllowed':
-// 					return DS.passCompPct;
-// 				case 'passTdPctAg':
-// 					return DS.passTdPerc;
-// 				case 'passesDefensedPG':
-// 					return DS.passDefended / OS.g;
-// 				case 'passIntPctAg':
-// 					return DS.passIntPerc;
-// 				case 'passYardsPerAttAg':
-// 					return DS.passYdsPerAtt;
-// 				case 'passYardsPerCompAllowed':
-// 					return DS.passYdsPerCmp;
-// 				case 'passRatingAg':
-// 					return DS.passRating;
-// 				case 'sacksPG':
-// 					return DS.passSacked / OS.g;
-// 				case 'sackYdsPG':
-// 					return DS.passSackedYds / OS.g;
-// 				case 'qbHitsPG':
-// 					return DS.qbHits / OS.g;
-// 				case 'tacklesForLossPG':
-// 					return DS.tacklesLoss / OS.g;
-// 				case 'sackPctDef':
-// 					return DS.passSackedPerc;
-// 				case 'passYdsPGAllowed':
-// 					return DS.passYdsPerG;
-// 				case 'thirdDownPctAg':
-// 					return DS.thirdDownPct;
-// 				case 'fourthDownPctAg':
-// 					return DS.fourthDownPct;
-// 				case 'redzonePctAg':
-// 					return DS.redZonePct;
-// 				default:
-// 					return null;
-// 			}
-// 		}
-// 	} catch (err) {
-// 		console.error(err);
-// 	}
-// }
 
 export const initialSelections = [
 	{ category: 'odds', site: 'betrivers', selection: 'spreads' },
 	{ category: 'odds', site: 'betrivers', selection: 'moneyLine' },
+	{ category: 'odds', site: 'betrivers', selection: 'overUnder' },
 	{ category: 'stats', selection: 'pointsForPG' },
 	{ category: 'stats', selection: 'passYdsPG' },
 	{ category: 'stats', selection: 'rushYdsPG' },
+	{ category: 'stats', selection: 'turnoverDiff' },
+	{ category: 'stats', selection: 'pointDiff' },
 	{ category: 'stats', selection: 'firstDownsPG' },
 	{ category: 'stats', selection: 'passCompPct' },
 	{ category: 'stats', selection: 'scoringPctFor' },
 	{ category: 'stats', selection: 'offensiveTurnoversPG' },
 	{ category: 'stats', selection: 'redzonePct' },
+	{ category: 'stats', selection: 'pointsAgPG' },
 ];

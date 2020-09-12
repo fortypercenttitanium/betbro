@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
-import abbTeam, { teamsArray } from '../tools/teamAbbreviations';
+import abbTeam from '../tools/teamAbbreviations';
 import thisWeek from '../tools/weeks';
 import fetchStats, { initialSelections } from '../tools/database';
 import newTeamName from '../tools/newTeamName';
+import { statNameAPI } from '../tools/statNameAPI';
 
 const Grid = styled.div`
 	display: grid;
@@ -98,22 +99,7 @@ export default function Breakdowns() {
 				console.error(err);
 			}
 		}
-		// async function setNewStats() {
-		// 	const newStats = await Promise.all(
-		// 		teamsArray.map(async function (team) {
-		// 			if (team === 'Las Vegas Raiders') {
-		// 				team = 'Oakland Raiders';
-		// 			}
-		// 			if (team === 'Washington Football Team') {
-		// 				team = 'Washington Redskins';
-		// 			}
-		// 			const fetchedStats = await fetchStats(team, selections);
-		// 			return fetchedStats;
-		// 		})
-		// 	);
-		// 	console.log(newStats);
-		// 	return newStats;
-		// }
+
 		async function setNewStats() {
 			const fetchedStats = await fetchStats(selections);
 			return fetchedStats;
@@ -173,11 +159,28 @@ export default function Breakdowns() {
 	return (
 		<Grid>
 			{selections.map((sel, i) => {
-				return (
-					<WideCell row={i + 2} col={1} key={i}>
-						<span>{sel.selection}</span>
-					</WideCell>
-				);
+				if (sel.category === 'stats') {
+					return (
+						<WideCell row={i + 2} col={1} key={i}>
+							<Span>{statNameAPI[sel.selection]}</Span>
+						</WideCell>
+					);
+				} else {
+					return (
+						<WideCell row={i + 2} col={1} key={i}>
+							<Span>
+								{statNameAPI[sel.selection]}
+								<br />
+								{odds.length > 0 &&
+									odds
+										.find((item) =>
+											item.sites.some((nested) => nested.site_key === sel.site)
+										)
+										.sites.find((site) => site.site_key === sel.site).site_nice}
+							</Span>
+						</WideCell>
+					);
+				}
 			})}
 			{matchups.map((matchup, i) => {
 				return (

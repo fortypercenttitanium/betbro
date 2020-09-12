@@ -62,7 +62,6 @@ const Span = styled.span`
 `;
 
 export default function Breakdowns() {
-	const [stats, setStats] = useState([]);
 	const [odds, setOdds] = useState([]);
 	const [selections, setSelections] = useState(initialSelections);
 	const [matchups, setMatchups] = useState([]);
@@ -71,8 +70,8 @@ export default function Breakdowns() {
 		async function fetchOdds(week) {
 			try {
 				const oddsDataRaw = await fetch('/odds');
-				const odds = await oddsDataRaw.json();
-				const thisWeeksOdds = odds.data.filter((game) => {
+				const oddsJSON = await oddsDataRaw.json();
+				const thisWeeksOdds = oddsJSON.data.filter((game) => {
 					return moment(game.commence_time).isBefore(thisWeek());
 				});
 
@@ -99,26 +98,31 @@ export default function Breakdowns() {
 				console.error(err);
 			}
 		}
+		// async function setNewStats() {
+		// 	const newStats = await Promise.all(
+		// 		teamsArray.map(async function (team) {
+		// 			if (team === 'Las Vegas Raiders') {
+		// 				team = 'Oakland Raiders';
+		// 			}
+		// 			if (team === 'Washington Football Team') {
+		// 				team = 'Washington Redskins';
+		// 			}
+		// 			const fetchedStats = await fetchStats(team, selections);
+		// 			return fetchedStats;
+		// 		})
+		// 	);
+		// 	console.log(newStats);
+		// 	return newStats;
+		// }
 		async function setNewStats() {
-			const newStats = await Promise.all(
-				teamsArray.map(async function (team) {
-					if (team === 'Las Vegas Raiders') {
-						team = 'Oakland Raiders';
-					}
-					if (team === 'Washington Football Team') {
-						team = 'Washington Redskins';
-					}
-					const fetchedStats = await fetchStats(team, selections);
-					return fetchedStats;
-				})
-			);
-			return newStats;
+			const fetchedStats = await fetchStats(selections);
+			return fetchedStats;
 		}
 		fetchOdds();
-	}, []);
+	}, [selections]);
 
 	// useEffect(() => {
-	// 	console.log(matchups);
+	// 	console.log(odds);
 	// });
 
 	const renderStats = () => {
@@ -135,7 +139,7 @@ export default function Breakdowns() {
 										: odds.length > 0
 										? odds[index].sites.find(
 												(site) => site.site_key === selections[i].site
-										  ).odds.spreads.points[
+										  ).odds[selections[i].selection][
 												odds[index].teams.findIndex(
 													(ind) => ind === matchup.awayTeam.team
 												)
@@ -150,7 +154,7 @@ export default function Breakdowns() {
 										: odds.length > 0
 										? odds[index].sites.find(
 												(site) => site.site_key === selections[i].site
-										  ).odds.spreads.points[
+										  ).odds[selections[i].selection][
 												odds[index].teams.findIndex(
 													(ind) => ind === matchup.homeTeam.team
 												)
@@ -189,44 +193,4 @@ export default function Breakdowns() {
 			{renderStats()}
 		</Grid>
 	);
-
-	// {selections.map((sel) => {
-	// 				return (
-	// <MiniGrid>
-	// 	<StatDiv>
-	// 		<Span>
-	// 			{sel.category === 'stats'
-	// 				? matchup.awayTeam[sel.selection]
-	// 				: odds.length > 0
-	// 				? odds[mIndex].sites.find(
-	// 						(site) => site.site_key === sel.site
-	// 				  ).odds.spreads.points[
-	// 						odds[mIndex].teams.findIndex(
-	// 							(i) => i === matchup.awayTeam.team
-	// 						)
-	// 				  ]
-	// 				: null}
-	// 		</Span>
-	// 	</StatDiv>
-	// 	<StatDiv>
-	// 		<Span>
-	// 			{sel.category === 'stats'
-	// 				? matchup.homeTeam[sel.selection]
-	// 				: odds.length > 0
-	// 				? odds[mIndex].sites.find(
-	// 						(site) => site.site_key === sel.site
-	// 				  ).odds.spreads.points[
-	// 						odds[mIndex].teams.findIndex(
-	// 							(i) => i === matchup.homeTeam.team
-	// 						)
-	// 				  ]
-	// 				: null}
-	// 		</Span>
-	// 	</StatDiv>
-	// </MiniGrid>
-	// 				);
-	// 			})}
-	// 		</StatCol>
-	// 	);
-	// })}
 }

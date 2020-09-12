@@ -8,7 +8,6 @@ import Breakdowns from './components/Breakdowns';
 import About from './components/About';
 import MyBetBro from './components/MyBetBro';
 import NotFound from './components/NotFound';
-import { fillDatabase } from './tools/database';
 
 function App() {
 	const [headline, setHeadline] = useState(window.location.pathname);

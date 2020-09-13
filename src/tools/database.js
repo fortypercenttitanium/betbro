@@ -1,5 +1,4 @@
 export default async function fetchStats(statList) {
-	console.log('calling fetch');
 	try {
 		const statsRaw = await fetch(`/fetchStats`);
 		const statsJSON = await statsRaw.json();

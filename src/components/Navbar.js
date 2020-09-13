@@ -5,25 +5,26 @@ import { Link } from 'react-router-dom';
 const NavContainer = styled.nav`
 	width: 100%;
 	height: 6rem;
-	background-color: #888;
+	background-color: #c4c4c4;
 	display: flex;
+	overflow: auto;
 `;
 
 const LinksContainer = styled.div`
 	display: flex;
-	flex: 1 0 auto;
+	flex: 3 1 auto;
 	justify-content: flex-end;
 	height: 100%;
-	margin-left: auto;
+	margin: auto 3%;
 `;
 
 const LinkDiv = styled.div`
+	text-align: center;
 	display: flex;
-	flex-basis: 130px;
 	height: 100%;
-	color: #5c49d0;
+	color: #222;
 	margin: auto;
-	padding: 0 2rem;
+	padding: 0 1rem;
 	cursor: pointer;
 	&:hover > span {
 		text-decoration: underline;
@@ -36,17 +37,20 @@ const LinkDiv = styled.div`
 const LogoContainer = styled.div`
 	display: flex;
 	height: 100%;
+	margin: auto;
 `;
 
 export default function Navbar() {
 	return (
 		<NavContainer>
 			<LogoContainer>
-				<img
-					src='images/logo.png'
-					alt='BetBro logo'
-					style={{ height: '100%' }}
-				/>
+				<Link to='/'>
+					<img
+						src='images/logo.png'
+						alt='BetBro logo'
+						style={{ width: '285px' }}
+					/>
+				</Link>
 			</LogoContainer>
 			<LinksContainer>
 				<Link className='first-link' to='/about'>

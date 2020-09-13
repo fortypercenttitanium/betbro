@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import moment from 'moment';
 import abbTeam from '../tools/teamAbbreviations';
-import thisWeek from '../tools/weeks';
-import fetchStats, { initialSelections } from '../tools/database';
-import newTeamName from '../tools/newTeamName';
-import { statNameAPI } from '../tools/statNameAPI';
+import statNameAPI from '../tools/statNameAPI';
+import moment from 'moment';
 
 const Grid = styled.div`
 	display: grid;
@@ -13,6 +10,40 @@ const Grid = styled.div`
 	gap: 5px;
 	background-color: #666;
 	overflow: auto;
+`;
+
+const MatchupContainer = styled.div`
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	height: 100%;
+	justify-content: center;
+`;
+
+const MatchupCard = styled.div`
+	border-radius: 1rem;
+	border: 1px solid black;
+	max-width: 340px;
+	margin: 1rem;
+	padding: 1rem;
+	flex: 1;
+	flex-basis: 16rem;
+	text-align: center;
+`;
+
+const H1 = styled.h1`
+	font-weight: bold;
+	font-size: 2rem;
+`;
+
+const H2 = styled.h2`
+	font-size: 1.5rem;
+`;
+
+const H3 = styled.h3`
+	font-size: 1rem;
+	margin: auto;
 `;
 
 const Cell = styled.div`
@@ -34,8 +65,6 @@ const MiniGrid = styled.div`
 	width: 110px;
 	grid-template-rows: 2fr 1fr;
 	grid-template-columns: repeat(2, 1fr);
-	grid-row-start: ${(props) => props.row};
-	grid-column-start: ${(props) => props.col};
 `;
 
 const StatDiv = styled.div`
@@ -62,138 +91,125 @@ const Span = styled.span`
 	margin: auto;
 `;
 
-export default function Breakdowns() {
-	const [odds, setOdds] = useState([]);
-	const [selections, setSelections] = useState(initialSelections);
-	const [matchups, setMatchups] = useState([]);
+export default function Breakdowns(props) {
+	const {
+		odds,
+		setOdds,
+		selections,
+		setSelections,
+		matchups,
+		setMatchups,
+	} = props.propList;
 
-	useEffect(() => {
-		async function fetchOdds(week) {
-			try {
-				const oddsDataRaw = await fetch('/odds');
-				const oddsJSON = await oddsDataRaw.json();
-				const thisWeeksOdds = oddsJSON.data.filter((game) => {
-					return moment(game.commence_time).isBefore(thisWeek());
-				});
+	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');
 
-				const fetchedStats = await setNewStats();
-				const statsArr = fetchedStats.map((st) => {
-					st.team = newTeamName(st.team);
-					return st;
-				});
+	const findMatchupOdds = (matchup, index) => {
+		const homeIndex = odds[index].teams.findIndex(
+			(team) => team === matchup.homeTeam.team
+		);
+		const awayIndex = odds[index].teams.findIndex(
+			(team) => team === matchup.awayTeam.team
+		);
+		const oddsObj = odds[index].sites.find(
+			(site) => site.site_key === oddsSnapshotSite
+		);
 
-				const currentMatchups = thisWeeksOdds.map((matchup) => {
-					return {
-						homeTeam: statsArr.find((item) => item.team === matchup.home_team),
-						awayTeam: statsArr.find(
-							(item) =>
-								item.team ===
-								matchup.teams.find((team) => team !== matchup.home_team)
-						),
-						time: moment(matchup.commence_time),
-					};
-				});
-				setMatchups(currentMatchups);
-				setOdds(thisWeeksOdds);
-			} catch (err) {
-				console.error(err);
-			}
-		}
-
-		async function setNewStats() {
-			const fetchedStats = await fetchStats(selections);
-			return fetchedStats;
-		}
-		fetchOdds();
-	}, [selections]);
-
-	// useEffect(() => {
-	// 	console.log(odds);
-	// });
+		const result = {
+			homeOdds: {
+				moneyLine: oddsObj.odds.moneyLine[homeIndex],
+				spread: oddsObj.odds.spreads[homeIndex],
+			},
+			awayOdds: {
+				moneyLine: oddsObj.odds.moneyLine[awayIndex],
+				spread: oddsObj.odds.spreads[awayIndex],
+			},
+			overUnder: oddsObj.odds.overUnder[0],
+		};
+		return result;
+	};
 
 	const renderStats = () => {
 		const arr = [];
 		for (let i = 0; i < selections.length; i++) {
 			arr.push(
-				matchups.map((matchup, index) => {
-					return (
-						<MiniGrid key={index} row={i + 2} col={index + 2}>
-							<StatDiv>
-								<Span>
-									{selections[i].category === 'stats'
-										? matchup.awayTeam[selections[i].selection]
-										: odds.length > 0
-										? odds[index].sites.find(
-												(site) => site.site_key === selections[i].site
-										  ).odds[selections[i].selection][
-												odds[index].teams.findIndex(
-													(ind) => ind === matchup.awayTeam.team
-												)
-										  ]
-										: null}
-								</Span>
-							</StatDiv>
-							<StatDiv>
-								<Span>
-									{selections[i].category === 'stats'
-										? matchup.homeTeam[selections[i].selection]
-										: odds.length > 0
-										? odds[index].sites.find(
-												(site) => site.site_key === selections[i].site
-										  ).odds[selections[i].selection][
-												odds[index].teams.findIndex(
-													(ind) => ind === matchup.homeTeam.team
-												)
-										  ]
-										: null}
-								</Span>
-							</StatDiv>
-						</MiniGrid>
-					);
-				})
+				matchups
+					.sort((a, b) => {
+						return a.time.isBefore(b.time) ? -1 : 1;
+					})
+					.map((matchup, index) => {
+						return (
+							<MiniGrid
+								key={index}
+								style={{ gridRowStart: i + 2, gridColumnStart: index + 2 }}
+							>
+								<StatDiv>
+									<Span>
+										{selections[i].category === 'stats'
+											? matchup.awayTeam[selections[i].selection]
+											: odds.length > 0
+											? odds[index].sites.find(
+													(site) => site.site_key === selections[i].site
+											  ).odds[selections[i].selection][
+													odds[index].teams.findIndex(
+														(ind) => ind === matchup.awayTeam.team
+													)
+											  ]
+											: null}
+									</Span>
+								</StatDiv>
+								<StatDiv>
+									<Span>
+										{selections[i].category === 'stats'
+											? matchup.homeTeam[selections[i].selection]
+											: odds.length > 0
+											? odds[index].sites.find(
+													(site) => site.site_key === selections[i].site
+											  ).odds[selections[i].selection][
+													odds[index].teams.findIndex(
+														(ind) => ind === matchup.homeTeam.team
+													)
+											  ]
+											: null}
+									</Span>
+								</StatDiv>
+							</MiniGrid>
+						);
+					})
 			);
 		}
 		return arr;
 	};
 
 	return (
-		<Grid>
-			{selections.map((sel, i) => {
-				if (sel.category === 'stats') {
+		<MatchupContainer>
+			{odds.length > 0 &&
+				matchups.map((matchup, index) => {
 					return (
-						<WideCell row={i + 2} col={1} key={i}>
-							<Span>{statNameAPI[sel.selection]}</Span>
-						</WideCell>
+						<MatchupCard key={index}>
+							<H3 style={{ display: 'inline' }}>
+								({findMatchupOdds(matchup, index).awayOdds.moneyLine})
+							</H3>
+							{'  '}
+							<H1 style={{ display: 'inline' }}>
+								{abbTeam(matchup.awayTeam.team)}
+							</H1>{' '}
+							<H1 style={{ display: 'inline' }}>
+								@ {abbTeam(matchup.homeTeam.team)}
+							</H1>
+							{'  '}
+							<H3 style={{ display: 'inline' }}>
+								({findMatchupOdds(matchup, index).homeOdds.moneyLine})
+							</H3>
+							<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>
+							<H3>
+								Spread: {abbTeam(matchup.awayTeam.team)}{' '}
+								{findMatchupOdds(matchup, index).awayOdds.spread},{' '}
+								{abbTeam(matchup.homeTeam.team)}{' '}
+								{findMatchupOdds(matchup, index).homeOdds.spread}
+							</H3>
+						</MatchupCard>
 					);
-				} else {
-					return (
-						<WideCell row={i + 2} col={1} key={i}>
-							<Span>
-								{statNameAPI[sel.selection]}
-								<br />
-								{odds.length > 0 &&
-									odds
-										.find((item) =>
-											item.sites.some((nested) => nested.site_key === sel.site)
-										)
-										.sites.find((site) => site.site_key === sel.site).site_nice}
-							</Span>
-						</WideCell>
-					);
-				}
-			})}
-			{matchups.map((matchup, i) => {
-				return (
-					<Cell key={i} row={1} col={i + 2}>
-						<Span>
-							{`${abbTeam(matchup.awayTeam.team)} @ ${abbTeam(
-								matchup.homeTeam.team
-							)}`}
-						</Span>
-					</Cell>
-				);
-			})}
-			{renderStats()}
-		</Grid>
+				})}
+		</MatchupContainer>
 	);
 }

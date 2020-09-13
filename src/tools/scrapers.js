@@ -118,7 +118,11 @@ async function fetchOdds() {
 					} else {
 						val = -100 / (val - 1);
 					}
-					return Math.round(val);
+					const mlString =
+						Math.round(val) > 0
+							? `+${Math.round(val)}`
+							: Math.round(val).toString();
+					return mlString;
 				});
 			});
 		});
@@ -137,7 +141,11 @@ async function fetchOdds() {
 						(site) => site.site_key === moneyLineSite.site_key
 					);
 					if (spreadsSite) {
-						moneyLineSite.odds.spreads = spreadsSite.odds.spreads.points;
+						moneyLineSite.odds.spreads = spreadsSite.odds.spreads.points.map(
+							(point) => {
+								return Number(point) > 0 ? `+${point}` : point;
+							}
+						);
 					}
 					return moneyLineSite;
 				});

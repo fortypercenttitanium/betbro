@@ -1,4 +1,4 @@
-export const statNameAPI = {
+const statNameAPI = {
 	gamesPlayed: 'Games',
 	pointsForPG: 'Points For Per Game',
 	totalYardsOffensePG: 'Total Yards Per Game',
@@ -83,3 +83,5 @@ export const statNameAPI = {
 	moneyLine: 'Moneyline',
 	overUnder: 'Over/Under',
 };
+
+export default statNameAPI;

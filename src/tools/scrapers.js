@@ -4,6 +4,7 @@ const path = require('path');
 const fetch = require('node-fetch');
 const camelCase = require('./camelCaseData');
 const jsdom = require('jsdom');
+const moment = require('moment');
 const { JSDOM } = jsdom;
 const API_KEY = process.env.API_KEY;
 
@@ -175,6 +176,9 @@ async function fetchOdds() {
 			return moneyLineMatchup;
 		});
 
+		//add timestamp
+		oddsJSON.lastUpdated = moment().toISOString();
+
 		fs.writeFile(
 			path.join(__dirname, '../../api', 'odds.json'),
 			JSON.stringify(oddsJSON),
@@ -202,6 +206,8 @@ async function storeHTML(jsdomText, filename) {
 }
 
 async function storeStats(data, filename) {
+	//add timestamp
+	data.lastUpdated = moment().toISOString();
 	const filePath = `../../api/${filename}.json`;
 	fs.writeFile(path.join(__dirname, filePath), JSON.stringify(data), (err) => {
 		if (err) {

@@ -4,6 +4,7 @@ const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 8000;
 const scrapers = require('./src/tools/scrapers');
+const morgan = require('morgan')
 
 scrapers.getStats();
 scrapers.fetchOdds();

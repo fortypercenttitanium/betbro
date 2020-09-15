@@ -12,10 +12,19 @@ const Grid = styled.div`
 	overflow: auto;
 `;
 
+const BreakdownsDiv = styled.div`
+	display: flex;
+	position: relative;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+`;
+
 const MatchupContainer = styled.div`
 	display: flex;
 	margin: 0 auto;
 	flex-wrap: wrap;
+	width: 80%;
 	max-width: 1000px;
 	height: 100%;
 	justify-content: center;
@@ -24,7 +33,9 @@ const MatchupContainer = styled.div`
 const MatchupCard = styled.div`
 	border-radius: 1rem;
 	border: 1px solid black;
-	max-width: 340px;
+	max-width: 320px;
+	flex-basis: 0;
+	flex: 1 1;
 	margin: 1rem;
 	padding: 1rem;
 	flex: 1;
@@ -32,18 +43,33 @@ const MatchupCard = styled.div`
 	text-align: center;
 `;
 
+const Selector = styled.select`
+	font-size: 1rem;
+`;
+
 const H1 = styled.h1`
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 1.7rem;
+	@media (max-width: 450px) {
+		font-size: 1.3rem;
+	}
 `;
 
 const H2 = styled.h2`
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+	font-weight: normal;
+	@media (max-width: 450px) {
+		font-size: 1rem;
+	}
 `;
 
 const H3 = styled.h3`
 	font-size: 1rem;
+	font-weight: normal;
 	margin: auto;
+	@media (max-width: 450px) {
+		font-size: 0.8rem;
+	}
 `;
 
 const Cell = styled.div`
@@ -51,8 +77,6 @@ const Cell = styled.div`
 	background: #ddd;
 	width: 110px;
 	text-align: center;
-	grid-row-start: ${(props) => props.row};
-	grid-column-start: ${(props) => props.col};
 `;
 
 const WideCell = styled(Cell)`
@@ -99,9 +123,12 @@ export default function Breakdowns(props) {
 		setSelections,
 		matchups,
 		setMatchups,
+		selectionList,
+		setSelectionList,
 	} = props.propList;
 
 	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');
+	const [siteLayout, setSiteLayout] = useState('tile');
 
 	const findMatchupOdds = (matchup, index) => {
 		const homeIndex = odds[index].teams.findIndex(
@@ -110,21 +137,33 @@ export default function Breakdowns(props) {
 		const awayIndex = odds[index].teams.findIndex(
 			(team) => team === matchup.awayTeam.team
 		);
-		const oddsObj = odds[index].sites.find(
-			(site) => site.site_key === oddsSnapshotSite
-		);
+		const oddsObj =
+			odds[index].sites.find((site) => site.site_key === oddsSnapshotSite) ||
+			null;
 
-		const result = {
-			homeOdds: {
-				moneyLine: oddsObj.odds.moneyLine[homeIndex],
-				spread: oddsObj.odds.spreads[homeIndex],
-			},
-			awayOdds: {
-				moneyLine: oddsObj.odds.moneyLine[awayIndex],
-				spread: oddsObj.odds.spreads[awayIndex],
-			},
-			overUnder: oddsObj.odds.overUnder[0],
-		};
+		const result = oddsObj
+			? {
+					homeOdds: {
+						moneyLine: oddsObj.odds.moneyLine[homeIndex] || 'n/a',
+						spread: oddsObj.odds.spreads[homeIndex] || 'n/a',
+					},
+					awayOdds: {
+						moneyLine: oddsObj.odds.moneyLine[awayIndex] || 'n/a',
+						spread: oddsObj.odds.spreads[awayIndex] || 'n/a',
+					},
+					overUnder: oddsObj.odds.overUnder[0] || 'n/a',
+			  }
+			: {
+					homeOdds: {
+						moneyLine: 'n/a',
+						spread: 'n/a',
+					},
+					awayOdds: {
+						moneyLine: 'n/a',
+						spread: 'n/a',
+					},
+					overUnder: 'n/a',
+			  };
 		return result;
 	};
 
@@ -137,6 +176,7 @@ export default function Breakdowns(props) {
 						return a.time.isBefore(b.time) ? -1 : 1;
 					})
 					.map((matchup, index) => {
+						console.log(index, odds);
 						return (
 							<MiniGrid
 								key={index}
@@ -180,36 +220,111 @@ export default function Breakdowns(props) {
 		return arr;
 	};
 
+	const handleSelectorChange = (e, i) => {
+		const newSelections = [...selections];
+		newSelections[i] = selectionList[e.target.value];
+		setSelections(newSelections);
+	};
+
 	return (
-		<MatchupContainer>
-			{odds.length > 0 &&
-				matchups.map((matchup, index) => {
-					return (
-						<MatchupCard key={index}>
-							<H3 style={{ display: 'inline' }}>
-								({findMatchupOdds(matchup, index).awayOdds.moneyLine})
-							</H3>
-							{'  '}
-							<H1 style={{ display: 'inline' }}>
-								{abbTeam(matchup.awayTeam.team)}
-							</H1>{' '}
-							<H1 style={{ display: 'inline' }}>
-								@ {abbTeam(matchup.homeTeam.team)}
-							</H1>
-							{'  '}
-							<H3 style={{ display: 'inline' }}>
-								({findMatchupOdds(matchup, index).homeOdds.moneyLine})
-							</H3>
-							<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>
-							<H3>
-								Spread: {abbTeam(matchup.awayTeam.team)}{' '}
-								{findMatchupOdds(matchup, index).awayOdds.spread},{' '}
-								{abbTeam(matchup.homeTeam.team)}{' '}
-								{findMatchupOdds(matchup, index).homeOdds.spread}
-							</H3>
-						</MatchupCard>
-					);
-				})}
-		</MatchupContainer>
+		<BreakdownsDiv>
+			{siteLayout === 'tile' && (
+				<MatchupContainer>
+					{odds.length > 0 &&
+						matchups.map((matchup, index) => {
+							return (
+								<MatchupCard key={index}>
+									<H3 style={{ display: 'inline' }}>
+										({findMatchupOdds(matchup, index).awayOdds.moneyLine})
+									</H3>
+									{'  '}
+									<H1 style={{ display: 'inline' }}>
+										{abbTeam(matchup.awayTeam.team)}
+									</H1>{' '}
+									<H1 style={{ display: 'inline' }}>
+										@ {abbTeam(matchup.homeTeam.team)}
+									</H1>
+									{'  '}
+									<H3 style={{ display: 'inline' }}>
+										({findMatchupOdds(matchup, index).homeOdds.moneyLine})
+									</H3>
+									<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>
+									<H3>
+										Spread: {abbTeam(matchup.awayTeam.team)}{' '}
+										{findMatchupOdds(matchup, index).awayOdds.spread},{' '}
+										{abbTeam(matchup.homeTeam.team)}{' '}
+										{findMatchupOdds(matchup, index).homeOdds.spread}
+									</H3>
+									<H3>O/U: {findMatchupOdds(matchup, index).overUnder}</H3>
+								</MatchupCard>
+							);
+						})}
+				</MatchupContainer>
+			)}
+			{siteLayout === 'grid' && odds.length > 0 && (
+				<Grid>
+					{selections.map((sel, i) => {
+						if (sel.category === 'stats') {
+							return (
+								<WideCell row={i + 2} col={1} key={i}>
+									<Selector
+										defaultValue={i}
+										onChange={(e) => {
+											handleSelectorChange(e, i);
+										}}
+									>
+										{selectionList.map((item, itemIndex) => {
+											return item.category === 'stats' ? (
+												<option value={itemIndex}>
+													{statNameAPI[item.selection]}
+												</option>
+											) : (
+												<option value={itemIndex}>
+													{statNameAPI[item.selection]}({item.site})
+												</option>
+											);
+										})}
+									</Selector>
+								</WideCell>
+							);
+						} else {
+							return (
+								<WideCell row={i + 2} col={1} key={i}>
+									<Selector
+										defaultValue={statNameAPI[sel.selection]}
+										onChange={(e) => {
+											handleSelectorChange(e, i);
+										}}
+									>
+										{/* {statNameAPI[sel.selection]}
+										{odds.length > 0 &&
+											odds
+												.find((item) =>
+													item.sites.some(
+														(nested) => nested.site_key === sel.site
+													)
+												)
+												.sites.find((site) => site.site_key === sel.site)
+												.site_nice} */}
+									</Selector>
+								</WideCell>
+							);
+						}
+					})}
+					{matchups.map((matchup, i) => {
+						return (
+							<Cell key={i} style={{ gridRowStart: 1, gridColumnStart: i + 2 }}>
+								<Span>
+									{`${abbTeam(matchup.awayTeam.team)} @ ${abbTeam(
+										matchup.homeTeam.team
+									)}`}
+								</Span>
+							</Cell>
+						);
+					})}
+					{renderStats()}
+				</Grid>
+			)}
+		</BreakdownsDiv>
 	);
 }

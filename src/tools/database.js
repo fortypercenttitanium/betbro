@@ -243,9 +243,6 @@ export default async function fetchStats(statList) {
 }
 
 export const initialSelections = [
-	{ category: 'odds', site: 'betrivers', selection: 'spreads' },
-	{ category: 'odds', site: 'betrivers', selection: 'moneyLine' },
-	{ category: 'odds', site: 'betrivers', selection: 'overUnder' },
 	{ category: 'stats', selection: 'pointsForPG' },
 	{ category: 'stats', selection: 'passYdsPG' },
 	{ category: 'stats', selection: 'rushYdsPG' },

@@ -11,7 +11,8 @@ const API_KEY = process.env.API_KEY;
 async function fetchOffensiveStats() {
 	try {
 		const data = await fetch(
-			`https://www.pro-football-reference.com/years/2019/`,
+			// `https://www.pro-football-reference.com/years/2019/`,
+			'https://www.pro-football-reference.com/years/2020//index.htm',
 			{
 				method: 'GET',
 			}
@@ -50,7 +51,8 @@ async function fetchOffensiveStats() {
 async function fetchDefensiveStats() {
 	try {
 		const data = await fetch(
-			'https://www.pro-football-reference.com/years/2019/opp.htm',
+			// 'https://www.pro-football-reference.com/years/2019/opp.htm',
+			'https://www.pro-football-reference.com/years/2020/opp.htm',
 			{
 				method: 'GET',
 			}
@@ -181,7 +183,7 @@ async function fetchOdds() {
 
 		fs.writeFile(
 			path.join(__dirname, '../../api', 'odds.json'),
-			JSON.stringify(oddsJSON),
+			JSON.stringify(oddsJSON, null, '\t'),
 			(err) => {
 				if (err) {
 					console.error(err);
@@ -209,11 +211,15 @@ async function storeStats(data, filename) {
 	//add timestamp
 	data.lastUpdated = moment().toISOString();
 	const filePath = `../../api/${filename}.json`;
-	fs.writeFile(path.join(__dirname, filePath), JSON.stringify(data), (err) => {
-		if (err) {
-			console.error(err);
+	fs.writeFile(
+		path.join(__dirname, filePath),
+		JSON.stringify(data, null, '\t'),
+		(err) => {
+			if (err) {
+				console.error(err);
+			}
 		}
-	});
+	);
 }
 
 function parseArray(array) {
@@ -229,7 +235,9 @@ function parseArray(array) {
 				obj[dataType] =
 					dataType === 'team'
 						? cell.childNodes[0].textContent
-						: (obj[dataType] = cell.textContent);
+						: cell.textContent !== ''
+						? (obj[dataType] = cell.textContent)
+						: (obj[dataType] = '0');
 			});
 			return obj;
 		})

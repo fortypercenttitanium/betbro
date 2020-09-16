@@ -116,6 +116,118 @@ async function fetchDefensiveStats() {
 	}
 }
 
+// for testing
+async function storeHTML(jsdomText, filename) {
+	const filePath = `../../api/${filename}.html`;
+	fs.writeFile(path.join(__dirname, filePath), jsdomText.serialize(), (err) => {
+		if (err) {
+			console.err(err);
+		}
+	});
+}
+
+function parseArray(array) {
+	return array
+		.filter((row) => {
+			return row.querySelector('th').getAttribute('data-stat') === 'ranker';
+		})
+		.map((row) => {
+			const cells = row.querySelectorAll('td');
+			const obj = {};
+			cells.forEach((cell, i) => {
+				const dataType = camelCase(cell.getAttribute('data-stat'));
+				obj[dataType] =
+					dataType === 'team'
+						? cell.childNodes[0].textContent
+						: cell.textContent !== ''
+						? (obj[dataType] = cell.textContent)
+						: (obj[dataType] = '0');
+			});
+			return obj;
+		})
+		.filter((obj) => Object.keys(obj).length > 0);
+}
+
+function parseRecords(array) {
+	return array
+		.filter((row) => row.querySelector('th') !== null)
+		.filter((row) => {
+			return row.querySelector('th').getAttribute('data-stat') === 'team';
+		})
+		.map((row) => {
+			const cells = Array.from(row.querySelectorAll('td')).filter(
+				(td) =>
+					td.getAttribute('data-stat') === 'wins' ||
+					td.getAttribute('data-stat') === 'losses' ||
+					td.getAttribute('data-stat') === 'ties'
+			);
+			const team = row.querySelector('th').childNodes[0].textContent;
+			const obj = { team };
+			cells.forEach((cell, i) => {
+				const dataType = cell.getAttribute('data-stat');
+				obj[dataType] =
+					cell.textContent !== ''
+						? (obj[dataType] = cell.textContent)
+						: (obj[dataType] = '0');
+			});
+			return obj;
+		})
+		.filter((obj) => Object.values(obj).length > 2)
+		.map((obj) => {
+			return {
+				team: obj.team,
+				record: obj.ties
+					? `${obj.wins} - ${obj.losses} - ${obj.ties}`
+					: `${obj.wins} - ${obj.losses}`,
+			};
+		});
+}
+
+function compileData(...data) {
+	const newData = [];
+	data.forEach((array, index) => {
+		if (newData.length < 1) {
+			array.forEach((item) => newData.push(item));
+		} else {
+			array.forEach((obj) => {
+				for (let property in obj) {
+					if (
+						!newData[
+							newData.findIndex((item) => item.team === obj.team)
+						].hasOwnProperty(property)
+					) {
+						newData[newData.findIndex((item) => item.team === obj.team)][
+							property
+						] = obj[property];
+					}
+				}
+			});
+		}
+	});
+
+	return newData;
+}
+
+function joinStats(offense, defense) {
+	const stats = {
+		offensiveStats: offense,
+		defensiveStats: defense,
+		// add timestamp
+		lastUpdated: moment().toISOString(),
+	};
+	return stats;
+}
+
+async function getStats() {
+	try {
+		const offense = await fetchOffensiveStats();
+		const defense = await fetchDefensiveStats();
+		return joinStats(offense, defense);
+	} catch (err) {
+		console.error(err);
+	}
+}
+
 async function getOdds() {
 	try {
 		const moneyLineRaw = await fetch(
@@ -241,123 +353,11 @@ async function getOdds() {
 
 		//add timestamp
 		oddsJSON.lastUpdated = moment().toISOString();
-		return JSON.stringify(oddsJSON);
+		return oddsJSON;
 	} catch (err) {
 		if (err) {
 			console.error(err);
 		}
-	}
-}
-
-// for testing
-async function storeHTML(jsdomText, filename) {
-	const filePath = `../../api/${filename}.html`;
-	fs.writeFile(path.join(__dirname, filePath), jsdomText.serialize(), (err) => {
-		if (err) {
-			console.err(err);
-		}
-	});
-}
-
-function parseArray(array) {
-	return array
-		.filter((row) => {
-			return row.querySelector('th').getAttribute('data-stat') === 'ranker';
-		})
-		.map((row) => {
-			const cells = row.querySelectorAll('td');
-			const obj = {};
-			cells.forEach((cell, i) => {
-				const dataType = camelCase(cell.getAttribute('data-stat'));
-				obj[dataType] =
-					dataType === 'team'
-						? cell.childNodes[0].textContent
-						: cell.textContent !== ''
-						? (obj[dataType] = cell.textContent)
-						: (obj[dataType] = '0');
-			});
-			return obj;
-		})
-		.filter((obj) => Object.keys(obj).length > 0);
-}
-
-function parseRecords(array) {
-	return array
-		.filter((row) => row.querySelector('th') !== null)
-		.filter((row) => {
-			return row.querySelector('th').getAttribute('data-stat') === 'team';
-		})
-		.map((row) => {
-			const cells = Array.from(row.querySelectorAll('td')).filter(
-				(td) =>
-					td.getAttribute('data-stat') === 'wins' ||
-					td.getAttribute('data-stat') === 'losses' ||
-					td.getAttribute('data-stat') === 'ties'
-			);
-			const team = row.querySelector('th').childNodes[0].textContent;
-			const obj = { team };
-			cells.forEach((cell, i) => {
-				const dataType = cell.getAttribute('data-stat');
-				obj[dataType] =
-					cell.textContent !== ''
-						? (obj[dataType] = cell.textContent)
-						: (obj[dataType] = '0');
-			});
-			return obj;
-		})
-		.filter((obj) => Object.values(obj).length > 2)
-		.map((obj) => {
-			return {
-				team: obj.team,
-				record: obj.ties
-					? `${obj.wins} - ${obj.losses} - ${obj.ties}`
-					: `${obj.wins} - ${obj.losses}`,
-			};
-		});
-}
-
-function compileData(...data) {
-	const newData = [];
-	data.forEach((array, index) => {
-		if (newData.length < 1) {
-			array.forEach((item) => newData.push(item));
-		} else {
-			array.forEach((obj) => {
-				for (let property in obj) {
-					if (
-						!newData[
-							newData.findIndex((item) => item.team === obj.team)
-						].hasOwnProperty(property)
-					) {
-						newData[newData.findIndex((item) => item.team === obj.team)][
-							property
-						] = obj[property];
-					}
-				}
-			});
-		}
-	});
-
-	return newData;
-}
-
-function joinStats(offense, defense) {
-	const stats = {
-		offensiveStats: offense,
-		defensiveStats: defense,
-		// add timestamp
-		lastUpdated: moment().toISOString(),
-	};
-	return stats;
-}
-
-async function getStats() {
-	try {
-		const offense = await fetchOffensiveStats();
-		const defense = await fetchDefensiveStats();
-		return JSON.stringify(joinStats(offense, defense), null, '\t');
-	} catch (err) {
-		console.error(err);
 	}
 }
 

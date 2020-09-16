@@ -35,8 +35,7 @@ function App() {
 		async function fetchOdds(week = thisWeek()) {
 			try {
 				const oddsDataRaw = await fetch('/odds');
-				const oddsJSON = await oddsDataRaw.json();
-				const odds = JSON.parse(oddsJSON);
+				const odds = await oddsDataRaw.json();
 				const thisWeeksOdds = odds.data.filter((game) => {
 					return game.week === week;
 				});

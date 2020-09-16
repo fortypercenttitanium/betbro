@@ -307,11 +307,15 @@ export default function Breakdowns(props) {
 							<MatchupCard key={index}>
 								<H3 style={{ display: 'inline' }}>
 									(
-									{
+									{/* each && statement is to test if that site's odds exist */}
+									{matchup.betting.sites.find(
+										(site) => site.site_key === oddsSnapshotSite
+									) &&
 										matchup.betting.sites.find(
 											(site) => site.site_key === oddsSnapshotSite
-										).odds.moneyLine[getTeamIndex(index, matchup.awayTeam.team)]
-									}
+										).odds.moneyLine[
+											getTeamIndex(index, matchup.awayTeam.team)
+										]}
 									)
 								</H3>
 								{'  '}
@@ -324,7 +328,6 @@ export default function Breakdowns(props) {
 								{'  '}
 								<H3 style={{ display: 'inline' }}>
 									(
-									{/* each && statement is to test if that site's odds exist */}
 									{matchup.betting.sites.find(
 										(site) => site.site_key === oddsSnapshotSite
 									).odds.moneyLine &&

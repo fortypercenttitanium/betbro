@@ -20,6 +20,7 @@ const accessLogStream = fs.createWriteStream(
 const logger = morgan('combined', { stream: accessLogStream });
 
 app.get('/fetchStats', (req, res) => {
+	res.json('hello world!');
 	res.sendFile(path.join(__dirname, '/api/statsMaster.json'));
 });
 

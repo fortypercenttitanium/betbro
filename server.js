@@ -19,8 +19,6 @@ const accessLogStream = fs.createWriteStream(
 // setup the logger
 const logger = morgan('combined', { stream: accessLogStream });
 
-app.use(logger, express.static(path.join(__dirname, 'build')));
-
 app.get('/fetchStats', (req, res) => {
 	res.sendFile(path.join(__dirname, '/api/statsMaster.json'));
 });
@@ -28,6 +26,8 @@ app.get('/fetchStats', (req, res) => {
 app.get('/odds', (req, res) => {
 	res.sendFile(path.join(__dirname, '/api/odds.json'));
 });
+
+app.use(logger, express.static(path.join(__dirname, 'build')));
 
 app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}`);

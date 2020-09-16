@@ -116,7 +116,7 @@ async function fetchDefensiveStats() {
 	}
 }
 
-async function fetchOdds() {
+async function getOdds() {
 	try {
 		const moneyLineRaw = await fetch(
 			`https://api.the-odds-api.com/v3/odds/?sport=americanfootball_nfl&region=us&mkt=h2h&dateFormat=iso&apiKey=${API_KEY}`
@@ -242,15 +242,7 @@ async function fetchOdds() {
 		//add timestamp
 		oddsJSON.lastUpdated = moment().toISOString();
 
-		fs.writeFile(
-			path.join(__dirname, '../../api', 'odds.json'),
-			JSON.stringify(oddsJSON, null, '\t'),
-			(err) => {
-				if (err) {
-					console.error(err);
-				}
-			}
-		);
+		return oddsJSON;
 	} catch (err) {
 		if (err) {
 			console.error(err);
@@ -266,21 +258,6 @@ async function storeHTML(jsdomText, filename) {
 			console.err(err);
 		}
 	});
-}
-
-async function storeStats(data, filename) {
-	//add timestamp
-	data.lastUpdated = moment().toISOString();
-	const filePath = `../../api/${filename}.json`;
-	fs.writeFile(
-		path.join(__dirname, filePath),
-		JSON.stringify(data, null, '\t'),
-		(err) => {
-			if (err) {
-				console.error(err);
-			}
-		}
-	);
 }
 
 function parseArray(array) {
@@ -366,20 +343,23 @@ function compileData(...data) {
 }
 
 function joinStats(offense, defense) {
-	return {
+	const stats = {
 		offensiveStats: offense,
 		defensiveStats: defense,
+		// add timestamp
+		lastUpdated: moment().toISOString(),
 	};
+	return stats;
 }
 
 async function getStats() {
 	const offense = await fetchOffensiveStats();
 	const defense = await fetchDefensiveStats();
-	storeStats(joinStats(offense, defense), 'statsMaster');
+	return joinStats(offense, defense);
 }
 
 module.exports = {
 	getStats,
-	fetchOdds,
+	getOdds,
 	storeHTML,
 };

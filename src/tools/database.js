@@ -1,5 +1,3 @@
-import statNameAPI from './statNameAPI';
-
 export default async function fetchStats(statList) {
 	try {
 		const statsRaw = await fetch(`/fetchStats`);

@@ -1,10 +1,10 @@
 export default async function fetchStats(statList) {
 	try {
-		const statsJSON = await fetch(`/stats`);
-		//const statsJSON = await statsRaw.json();
-		console.log(statsJSON);
-		const OS = statsJSON.offensiveStats;
-		const DS = statsJSON.defensiveStats;
+		const statsDataRaw = await fetch(`/stats`);
+		const statsJSON = await statsDataRaw.json();
+		const stats = JSON.parse(statsJSON);
+		const OS = stats.offensiveStats;
+		const DS = stats.defensiveStats;
 
 		//convert to numbers
 		Object.keys(OS).forEach((key) => {

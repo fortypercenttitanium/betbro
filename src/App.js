@@ -34,10 +34,10 @@ function App() {
 	useEffect(() => {
 		async function fetchOdds(week = thisWeek()) {
 			try {
-				const oddsJSON = await fetch('/odds');
-				console.log(oddsJSON);
-				//const oddsJSON = await oddsDataRaw.json();
-				const thisWeeksOdds = oddsJSON.data.filter((game) => {
+				const oddsDataRaw = await fetch('/odds');
+				const oddsJSON = await oddsDataRaw.json();
+				const odds = JSON.parse(oddsJSON);
+				const thisWeeksOdds = odds.data.filter((game) => {
 					return game.week === week;
 				});
 

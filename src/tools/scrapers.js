@@ -211,38 +211,37 @@ async function getOdds() {
 
 		// check if any odds data was deleted from last pull and add it back in
 
-		const oldOdds = JSON.parse(
-			fs.readFileSync(path.join(__dirname, '../../api/odds.json'), 'utf8')
-		);
-		oldOdds.data.forEach((matchupOld, index) => {
-			//find the same matchup in the old data
-			const i = oddsJSON.data.findIndex(
-				(matchupNew) =>
-					matchupNew.week === matchupOld.week &&
-					matchupNew.home_team === matchupOld.home_team
-			);
-			// in case it wasn't found
-			if (i >= 0) {
-				// check each old matchup for sites not in the new one, and push them if they aren't there
-				matchupOld.sites.forEach((site) => {
-					if (
-						!oddsJSON.data[i].sites.find(
-							(newList) => newList.site_key === site.site_key
-						)
-					) {
-						site.deleted = true;
-						oddsJSON.data[i].sites.push(site);
-					}
-				});
-			} else {
-				console.log('matchup comparison not found (line 200)');
-			}
-		});
+		// const oldOdds = JSON.parse(
+		// 	fs.readFileSync(path.join(__dirname, '../../api/odds.json'), 'utf8')
+		// );
+		// oldOdds.data.forEach((matchupOld, index) => {
+		// 	//find the same matchup in the old data
+		// 	const i = oddsJSON.data.findIndex(
+		// 		(matchupNew) =>
+		// 			matchupNew.week === matchupOld.week &&
+		// 			matchupNew.home_team === matchupOld.home_team
+		// 	);
+		// 	// in case it wasn't found
+		// 	if (i >= 0) {
+		// 		// check each old matchup for sites not in the new one, and push them if they aren't there
+		// 		matchupOld.sites.forEach((site) => {
+		// 			if (
+		// 				!oddsJSON.data[i].sites.find(
+		// 					(newList) => newList.site_key === site.site_key
+		// 				)
+		// 			) {
+		// 				site.deleted = true;
+		// 				oddsJSON.data[i].sites.push(site);
+		// 			}
+		// 		});
+		// 	} else {
+		// 		console.log('matchup comparison not found (line 200)');
+		// 	}
+		// });
 
 		//add timestamp
 		oddsJSON.lastUpdated = moment().toISOString();
-
-		return oddsJSON;
+		return JSON.stringify(oddsJSON);
 	} catch (err) {
 		if (err) {
 			console.error(err);
@@ -353,9 +352,13 @@ function joinStats(offense, defense) {
 }
 
 async function getStats() {
-	const offense = await fetchOffensiveStats();
-	const defense = await fetchDefensiveStats();
-	return joinStats(offense, defense);
+	try {
+		const offense = await fetchOffensiveStats();
+		const defense = await fetchDefensiveStats();
+		return JSON.stringify(joinStats(offense, defense), null, '\t');
+	} catch (err) {
+		console.error(err);
+	}
 }
 
 module.exports = {

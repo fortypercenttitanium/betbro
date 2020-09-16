@@ -16,31 +16,33 @@ const accessLogStream = fs.createWriteStream(
 // setup the logger
 const logger = morgan('combined', { stream: accessLogStream });
 
-let stats = {};
-let odds = {};
-(async function fetchStatDB() {
-	const statList = await scrapers.getStats();
-	stats = statList;
-})();
-(async function fetchOddsDB() {
-	const oddsList = await scrapers.getOdds();
-	odds = oddsList;
-})();
+app.use(logger, express.static(path.join(__dirname, 'build')));
 
 app.get('/stats', (req, res) => {
 	console.log('received fetch stats');
-	res.setHeader('Content-Type', 'application/json');
-	res.send('hello');
-	res.end();
+	async function fetchStatDB() {
+		const statList = await scrapers.getStats();
+		res.setHeader('Content-Type', 'application/json');
+		res.json(statList);
+		res.end();
+	}
+	fetchStatDB();
 });
 
 app.get('/odds', (req, res) => {
-	'received fetch odds';
-	res.setHeader('Content-Type', 'application/json');
-	res.json(odds);
-	res.end();
+	console.log('received fetch odds');
+	async function fetchOddsDB() {
+		try {
+			const oddsList = await scrapers.getOdds();
+			res.setHeader('Content-Type', 'application/json');
+			res.json(oddsList);
+			res.end();
+		} catch (err) {
+			console.err(err);
+		}
+	}
+	fetchOddsDB();
 });
-app.use(logger, express.static(path.join(__dirname, 'build')));
 
 app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}`);

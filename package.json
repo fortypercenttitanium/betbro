@@ -23,7 +23,6 @@
 		"replace-in-file": "^6.1.0",
 		"styled-components": "^5.2.0"
 	},
-	"proxy": "http://localhost:8080",
 	"scripts": {
 		"react-start": "set PORT=3000 && react-scripts start",
 		"start": "npm run build && node server",

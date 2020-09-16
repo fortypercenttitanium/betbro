@@ -2,6 +2,7 @@
 	"name": "betbro",
 	"version": "0.1.0",
 	"private": true,
+	"engine": "12.18.3",
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
@@ -23,8 +24,7 @@
 	"proxy": "http://localhost:8080",
 	"scripts": {
 		"react-start": "set PORT=3000 && react-scripts start",
-		"start": "concurrently \"npm run react-start\" \"node server\"",
-		"server": "concurrently \"npm run build\" \"node server\"",
+		"start": "concurrently \"npm run build\" \"node server\"",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"

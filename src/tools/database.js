@@ -1,3 +1,5 @@
+import statNameAPI from './statNameAPI';
+
 export default async function fetchStats(statList) {
 	try {
 		const statsRaw = await fetch(`/fetchStats`);
@@ -31,10 +33,10 @@ export default async function fetchStats(statList) {
 		result.map((obj) => {
 			statList.forEach((stat) => {
 				if (stat.category === 'stats') {
-					typeof calcStat(stat.selection, obj.team) === 'number'
-						? (obj[stat.selection] =
-								Math.round(calcStat(stat.selection, obj.team) * 10) / 10)
-						: (obj[stat.selection] = calcStat(stat.selection, obj.team));
+					typeof calcStat(stat.name, obj.team) === 'number'
+						? (obj[stat.name] =
+								Math.round(calcStat(stat.name, obj.team) * 10) / 10)
+						: (obj[stat.name] = calcStat(stat.name, obj.team));
 				}
 			});
 			return obj;
@@ -136,6 +138,8 @@ export default async function fetchStats(statList) {
 					return findTeamStats(team, OS).fourthDownPct;
 				case 'redzonePct':
 					return findTeamStats(team, OS).redZonePct;
+				case 'record':
+					return findTeamStats(team, OS).record;
 				case 'turnoverDiff':
 					return (
 						findTeamStats(team, DS).turnovers -
@@ -242,16 +246,4 @@ export default async function fetchStats(statList) {
 	}
 }
 
-export const initialSelections = [
-	{ category: 'stats', selection: 'pointsForPG' },
-	{ category: 'stats', selection: 'passYdsPG' },
-	{ category: 'stats', selection: 'rushYdsPG' },
-	{ category: 'stats', selection: 'turnoverDiff' },
-	{ category: 'stats', selection: 'pointDiff' },
-	{ category: 'stats', selection: 'firstDownsPG' },
-	{ category: 'stats', selection: 'passCompPct' },
-	{ category: 'stats', selection: 'scoringPctFor' },
-	{ category: 'stats', selection: 'offensiveTurnoversPG' },
-	{ category: 'stats', selection: 'redzonePct' },
-	{ category: 'stats', selection: 'pointsAgPG' },
-];
+export const initialSelections = [84, 85, 86, 0, 1, 9, 17, 23, 41, 44, 80];

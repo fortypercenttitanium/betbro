@@ -1,4 +1,4 @@
-import moment from 'moment';
+const moment = require('moment');
 
 const weekEndDates = {
 	1: '2020-09-16',
@@ -24,10 +24,15 @@ const weekEndDates = {
 	21: '2021-02-08',
 };
 
-export default function thisWeek() {
-	return weekEndDates[
+function thisWeek() {
+	return (
 		Object.values(weekEndDates).findIndex((date) => {
 			return moment(date).subtract(1, 'days').isAfter(moment());
 		}) + 1
-	];
+	);
 }
+
+module.exports = {
+	thisWeek,
+	weekEndDates,
+};

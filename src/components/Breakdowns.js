@@ -140,6 +140,24 @@ export default function Breakdowns(props) {
 	// 	console.log(matchups);
 	// });
 
+	const getOddsData = (matchup, type, site, team = null) => {
+		console.log(type, site);
+		if (
+			matchup.betting.sites.find((item) => item.site_key === site) &&
+			matchup.betting.sites.find((item) => item.site_key === site).odds[type]
+		) {
+			return type !== 'overUnder'
+				? matchup.betting.sites.find((item) => item.site_key === site).odds[
+						type
+				  ][getTeamIndex(matchups.indexOf(matchup), team)]
+				: matchup.betting.sites.find((item) => item.site_key === site).odds[
+						type
+				  ][0];
+		} else {
+			return 'n/a';
+		}
+	};
+
 	const renderStats = () => {
 		const arr = [];
 		for (let i = 0; i < selections.length; i++) {
@@ -177,32 +195,22 @@ export default function Breakdowns(props) {
 							<StatDiv>
 								<Span>
 									{/* check whether that data exists for the selected site */}
-									{matchup.betting.sites.find(
-										(site) =>
-											site.site_key === selectionList[selections[i]].site
-									).odds[selectionList[selections[i]].name]
-										? matchup.betting.sites.find(
-												(site) =>
-													site.site_key === selectionList[selections[i]].site
-										  ).odds[selectionList[selections[i]].name][
-												getTeamIndex(index, matchup.awayTeam.team)
-										  ]
-										: 'n/a'}
+									{getOddsData(
+										matchup,
+										selectionList[selections[i]].name,
+										selectionList[selections[i]].site,
+										matchup.awayTeam.team
+									)}
 								</Span>
 							</StatDiv>
 							<StatDiv>
 								<Span>
-									{matchup.betting.sites.find(
-										(site) =>
-											site.site_key === selectionList[selections[i]].site
-									).odds[selectionList[selections[i]].name]
-										? matchup.betting.sites.find(
-												(site) =>
-													site.site_key === selectionList[selections[i]].site
-										  ).odds[selectionList[selections[i]].name][
-												getTeamIndex(index, matchup.homeTeam.team)
-										  ]
-										: 'n/a'}
+									{getOddsData(
+										matchup,
+										selectionList[selections[i]].name,
+										selectionList[selections[i]].site,
+										matchup.homeTeam.team
+									)}
 								</Span>
 							</StatDiv>
 						</MiniGrid>
@@ -216,14 +224,11 @@ export default function Breakdowns(props) {
 							}}
 						>
 							<Span>
-								{matchup.betting.sites.find(
-									(site) => site.site_key === selectionList[selections[i]].site
-								).odds[selectionList[selections[i]].name]
-									? matchup.betting.sites.find(
-											(site) =>
-												site.site_key === selectionList[selections[i]].site
-									  ).odds[selectionList[selections[i]].name][0]
-									: 'n/a'}
+								{getOddsData(
+									matchup,
+									selectionList[selections[i]].name,
+									selectionList[selections[i]].site
+								)}
 							</Span>
 						</Cell>
 					);
@@ -286,6 +291,7 @@ export default function Breakdowns(props) {
 							value={oddsSnapshotSite}
 							onChange={(e) => {
 								setOddsSnapshotSite(e.target.value);
+								console.log(oddsSnapshotSite);
 							}}
 							style={{
 								padding: '1.3rem',
@@ -295,7 +301,7 @@ export default function Breakdowns(props) {
 						>
 							{Object.values(statNameAPI.sites).map((site, i) => {
 								return (
-									<option value={Object.keys(statNameAPI.sites)[i]}>
+									<option key={i} value={Object.keys(statNameAPI.sites)[i]}>
 										{site}
 									</option>
 								);
@@ -306,17 +312,12 @@ export default function Breakdowns(props) {
 						return (
 							<MatchupCard key={index}>
 								<H3 style={{ display: 'inline' }}>
-									(
-									{/* each && statement is to test if that site's odds exist */}
-									{matchup.betting.sites.find(
-										(site) => site.site_key === oddsSnapshotSite
-									) &&
-										matchup.betting.sites.find(
-											(site) => site.site_key === oddsSnapshotSite
-										).odds.moneyLine[
-											getTeamIndex(index, matchup.awayTeam.team)
-										]}
-									)
+									{getOddsData(
+										matchup,
+										'moneyLine',
+										oddsSnapshotSite,
+										matchup.awayTeam.team
+									)}
 								</H3>
 								{'  '}
 								<H1 style={{ display: 'inline' }}>
@@ -328,41 +329,33 @@ export default function Breakdowns(props) {
 								{'  '}
 								<H3 style={{ display: 'inline' }}>
 									(
-									{matchup.betting.sites.find(
-										(site) => site.site_key === oddsSnapshotSite
-									).odds.moneyLine &&
-										matchup.betting.sites.find(
-											(site) => site.site_key === oddsSnapshotSite
-										).odds.moneyLine[
-											getTeamIndex(index, matchup.homeTeam.team)
-										]}
+									{getOddsData(
+										matchup,
+										'moneyLine',
+										oddsSnapshotSite,
+										matchup.homeTeam.team
+									)}
 									)
 								</H3>
 								<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>
 								<H3>
 									Spread: {abbTeam(matchup.awayTeam.team)}{' '}
-									{matchup.betting.sites.find(
-										(site) => site.site_key === oddsSnapshotSite
-									).odds.spreads &&
-										matchup.betting.sites.find(
-											(site) => site.site_key === oddsSnapshotSite
-										).odds.spreads[getTeamIndex(index, matchup.awayTeam.team)]}
+									{getOddsData(
+										matchup,
+										'spreads',
+										oddsSnapshotSite,
+										matchup.awayTeam.team
+									)}
 									, {abbTeam(matchup.homeTeam.team)}{' '}
-									{matchup.betting.sites.find(
-										(site) => site.site_key === oddsSnapshotSite
-									).odds.spreads &&
-										matchup.betting.sites.find(
-											(site) => site.site_key === oddsSnapshotSite
-										).odds.spreads[getTeamIndex(index, matchup.homeTeam.team)]}
+									{getOddsData(
+										matchup,
+										'spreads',
+										oddsSnapshotSite,
+										matchup.homeTeam.team
+									)}
 								</H3>
 								<H3>
-									O/U:{' '}
-									{matchup.betting.sites.find(
-										(site) => site.site_key === oddsSnapshotSite
-									).odds.overUnder &&
-										matchup.betting.sites.find(
-											(site) => site.site_key === oddsSnapshotSite
-										).odds.overUnder[0]}
+									O/U: {getOddsData(matchup, 'overUnder', oddsSnapshotSite)}
 								</H3>
 							</MatchupCard>
 						);

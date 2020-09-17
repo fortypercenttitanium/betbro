@@ -10,6 +10,7 @@ const NodeCache = require('node-cache');
 
 const cache = new NodeCache();
 
+//setup cache refresh
 async function refreshCache() {
 	try {
 		const odds = await scrapers.getOdds();
@@ -26,6 +27,12 @@ async function refreshCache() {
 }
 
 refreshCache();
+
+//setup cache refresh timer 10 mins
+setInterval(() => {
+	refreshCache();
+}, 600000);
+
 // create a write stream (in append mode)
 const accessLogStream = fs.createWriteStream(
 	path.join(__dirname, 'logger.log'),
@@ -47,7 +54,7 @@ app.get('/stats', (req, res) => {
 app.get('/odds', (req, res) => {
 	console.log('received fetch odds');
 	res.setHeader('Content-Type', 'application/json');
-	res.json(cache.get('odds'));
+	res.json(JSON.stringify(cache.get('odds')));
 	res.end();
 });
 

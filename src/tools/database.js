@@ -2,7 +2,7 @@ export default async function fetchStats(statList) {
 	try {
 		const statsDataRaw = await fetch(`/stats`);
 		const statsJSON = await statsDataRaw.json();
-		const stats = JSON.parse(statsJSON);
+		const stats = await JSON.parse(statsJSON);
 		const OS = stats.offensiveStats;
 		const DS = stats.defensiveStats;
 

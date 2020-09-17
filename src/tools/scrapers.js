@@ -243,10 +243,10 @@ async function getOdds() {
 		);
 		const overUnderJSON = await overUnderRaw.json();
 
-		const oddsJSON = moneyLineJSON;
+		const oddsData = moneyLineJSON;
 
 		//convert h2h to moneyline
-		oddsJSON.data.forEach((matchup) => {
+		oddsData.data.forEach((matchup) => {
 			matchup.sites.forEach((site) => {
 				site.odds.moneyLine = site.odds.h2h.map((val) => {
 					if (val > 2) {
@@ -264,7 +264,7 @@ async function getOdds() {
 		});
 
 		// add week
-		oddsJSON.data = oddsJSON.data.map((datum) => {
+		oddsData.data = oddsData.data.map((datum) => {
 			const weekNumber =
 				Object.values(weeks.weekEndDates).findIndex((week) =>
 					moment(week).isAfter(moment(datum.commence_time))
@@ -274,7 +274,7 @@ async function getOdds() {
 		});
 
 		// add spreads data to moneyline
-		oddsJSON.data = oddsJSON.data.map((moneyLineMatchup) => {
+		oddsData.data = oddsData.data.map((moneyLineMatchup) => {
 			const spreads = spreadsJSON.data.find((spreadsMatchup) => {
 				return (
 					spreadsMatchup.home_team === moneyLineMatchup.home_team &&
@@ -300,7 +300,7 @@ async function getOdds() {
 		});
 
 		// add over/under data to moneyline
-		oddsJSON.data = oddsJSON.data.map((moneyLineMatchup) => {
+		oddsData.data = oddsData.data.map((moneyLineMatchup) => {
 			const overUnders = overUnderJSON.data.find((overUnderMatchup) => {
 				return (
 					overUnderMatchup.home_team === moneyLineMatchup.home_team &&
@@ -352,8 +352,8 @@ async function getOdds() {
 		// });
 
 		//add timestamp
-		oddsJSON.lastUpdated = moment().toISOString();
-		return oddsJSON;
+		oddsData.lastUpdated = moment().toISOString();
+		return oddsData;
 	} catch (err) {
 		if (err) {
 			console.error(err);

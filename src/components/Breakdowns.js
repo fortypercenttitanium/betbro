@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import abbTeam from '../tools/teamAbbreviations';
 import selectionList from '../tools/selectionList';
 import statNameAPI from '../tools/statNameAPI';
+import ComparisonGauge from './ComparisonGauge';
 import moment from 'moment';
 
 const Grid = styled.div`
@@ -141,7 +142,6 @@ export default function Breakdowns(props) {
 	// });
 
 	const getOddsData = (matchup, type, site, team = null) => {
-		console.log(type, site);
 		if (
 			matchup.betting.sites.find((item) => item.site_key === site) &&
 			matchup.betting.sites.find((item) => item.site_key === site).odds[type]
@@ -182,6 +182,9 @@ export default function Breakdowns(props) {
 									{matchup.homeTeam[selectionList[selections[i]].name]}
 								</Span>
 							</StatDiv>
+							<GaugeContainer>
+								<ComparisonGauge />
+							</GaugeContainer>
 						</MiniGrid>
 					) : selectionList[selections[i]].name !== 'overUnder' ? (
 						<MiniGrid
@@ -213,6 +216,9 @@ export default function Breakdowns(props) {
 									)}
 								</Span>
 							</StatDiv>
+							<GaugeContainer>
+								<ComparisonGauge />
+							</GaugeContainer>
 						</MiniGrid>
 					) : (
 						<Cell

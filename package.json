@@ -48,5 +48,12 @@
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.4"
+	},
+	"nodemonConfig": {
+		"ignore": [
+			"/src/components/*",
+			"/src/App.js",
+			"/src/tools"
+		]
 	}
 }

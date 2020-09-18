@@ -7,7 +7,7 @@ const NavContainer = styled.nav`
 	height: 6rem;
 	background-color: #c4c4c4;
 	display: flex;
-	overflow: auto;
+	overflow: hidden;
 `;
 
 const LinksContainer = styled.div`

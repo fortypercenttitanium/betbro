@@ -181,12 +181,14 @@ export default function Breakdowns(props) {
 								{rankings !== {} && (
 									<ComparisonGauge
 										awayRank={
+											rankings[selectionList[selections[i]].name] &&
 											rankings[selectionList[selections[i]].name].find(
 												(item) => item.team === matchup.awayTeam.team
 											).rank
 										}
 										awayTeam={matchup.awayTeam.team}
 										homeRank={
+											rankings[selectionList[selections[i]].name] &&
 											rankings[selectionList[selections[i]].name].find(
 												(item) => item.team === matchup.homeTeam.team
 											).rank

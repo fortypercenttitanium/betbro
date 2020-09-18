@@ -4,6 +4,7 @@ export default async function fetchStats(statList) {
 		if (!statsDataRaw.ok) {
 			throw new Error(statsDataRaw.status + ': ' + statsDataRaw.statusText);
 		}
+
 		const statsJSON = await statsDataRaw.json();
 		const stats = await JSON.parse(statsJSON);
 		const OS = stats.offensiveStats;

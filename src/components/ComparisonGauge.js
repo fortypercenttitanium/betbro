@@ -2,7 +2,9 @@ import React from 'react';
 
 export default function ComparisonGauge(props) {
 	const circlePosition =
-		Math.round((props.awayRank - props.homeRank + 41) * 1.52) - 2;
+		props.awayRank && props.homeRank
+			? Math.round((props.awayRank - props.homeRank + 41) * 1.52) - 2
+			: 60;
 	const teamColors = {
 		'Arizona Cardinals': '#97233F',
 		'Atlanta Falcons': '#A71930',

@@ -4,6 +4,7 @@ import abbTeam from '../tools/teamAbbreviations';
 import selectionList from '../tools/selectionList';
 import statNameAPI from '../tools/statNameAPI';
 import ComparisonGauge from './ComparisonGauge';
+import LoadingScreen from './LoadingScreen';
 import moment from 'moment';
 
 const Grid = styled.div`
@@ -104,12 +105,6 @@ const StatDiv = styled.div`
 	width: 100%;
 	text-align: center;
 	align-items: center;
-	&:first-child {
-		border-right: 1px solid black;
-	}
-	&:last-child {
-		border-left: 1px solid black;
-	}
 `;
 
 const GaugeContainer = styled.div`
@@ -123,7 +118,7 @@ const Span = styled.span`
 `;
 
 export default function Breakdowns(props) {
-	const { selections, setSelections, matchups } = props.propList;
+	const { selections, setSelections, matchups, rankings } = props.propList;
 
 	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');
 	const [siteLayout, setSiteLayout] = useState('tile');
@@ -183,7 +178,22 @@ export default function Breakdowns(props) {
 								</Span>
 							</StatDiv>
 							<GaugeContainer>
-								<ComparisonGauge />
+								{rankings !== {} && (
+									<ComparisonGauge
+										awayRank={
+											rankings[selectionList[selections[i]].name].find(
+												(item) => item.team === matchup.awayTeam.team
+											).rank
+										}
+										awayTeam={matchup.awayTeam.team}
+										homeRank={
+											rankings[selectionList[selections[i]].name].find(
+												(item) => item.team === matchup.homeTeam.team
+											).rank
+										}
+										homeTeam={matchup.homeTeam.team}
+									/>
+								)}
 							</GaugeContainer>
 						</MiniGrid>
 					) : selectionList[selections[i]].name !== 'overUnder' ? (
@@ -216,9 +226,6 @@ export default function Breakdowns(props) {
 									)}
 								</Span>
 							</StatDiv>
-							<GaugeContainer>
-								<ComparisonGauge />
-							</GaugeContainer>
 						</MiniGrid>
 					) : (
 						<Cell
@@ -252,6 +259,7 @@ export default function Breakdowns(props) {
 
 	return (
 		<BreakdownsDiv>
+			{!matchups.length && <LoadingScreen />}
 			<WideCell
 				style={{
 					position: 'absolute',

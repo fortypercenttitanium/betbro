@@ -10,7 +10,7 @@ const NodeCache = require('node-cache');
 
 const cache = new NodeCache();
 
-//setup cache refresh
+//setup cache refreshers
 async function refreshStats() {
 	try {
 		const stats = await scrapers.getStats();

@@ -5,6 +5,7 @@ import moment from 'moment';
 import fetchStats, { initialSelections } from './tools/database';
 import selectionList from './tools/selectionList';
 import statNameAPI from './tools/statNameAPI';
+import ranker from './tools/ranker';
 import NavBar from './components/Navbar';
 import Headline from './components/Headline';
 import Home from './components/Home';
@@ -23,18 +24,23 @@ function App() {
 
 	const [selections, setSelections] = useState(initialSelections);
 	const [matchups, setMatchups] = useState([]);
+	const [rankings, setRankings] = useState({});
 
 	const propList = {
 		selections,
 		setSelections,
 		matchups,
 		setMatchups,
+		rankings,
 	};
 
 	useEffect(() => {
 		async function fetchOdds(week = thisWeek()) {
 			try {
 				const oddsDataRaw = await fetch('/odds');
+				if (!oddsDataRaw.ok) {
+					throw new Error(oddsDataRaw.status + ': ' + oddsDataRaw.statusText);
+				}
 				const oddsJSON = await oddsDataRaw.json();
 				const odds = JSON.parse(oddsJSON);
 				const thisWeeksOdds = odds.data.filter((game) => {
@@ -42,6 +48,18 @@ function App() {
 				});
 
 				const statsArr = await setNewStats();
+
+				const rankObj = {};
+				selections.forEach((sel) => {
+					if (selectionList[sel].category === 'stats') {
+						rankObj[selectionList[sel].name] = ranker(
+							statsArr,
+							selectionList[sel].name
+						);
+					}
+				});
+				console.log(rankObj);
+				setRankings(rankObj);
 
 				const currentMatchups = thisWeeksOdds.map((matchup) => {
 					return {
@@ -69,7 +87,13 @@ function App() {
 			const initSelections = selections.map((sel) => {
 				return selectionList[sel];
 			});
-			const fetchedStats = await fetchStats(initSelections);
+			let fetchedStats = await fetchStats(initSelections);
+			fetchedStats = fetchedStats.filter(
+				(item) =>
+					item.team !== 'Avg Tm/G' &&
+					item.team !== 'League Total' &&
+					item.team !== 'Avg Team'
+			);
 			return fetchedStats;
 		}
 		fetchOdds();

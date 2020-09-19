@@ -35,10 +35,21 @@ function App() {
 	useEffect(() => {
 		async function fetchOdds(week = thisWeek()) {
 			try {
+				const key = process.env.hasOwnProperty('REACT_APP_API_KEY')
+					? process.env.REACT_APP_API_KEY
+					: process.env.API_KEY;
 				const oddsDataRaw = await fetch(
 					process.env.NODE_ENV === 'development'
 						? '/odds'
-						: `${process.env.API_URL}/odds`
+						: process.env.hasOwnProperty('REACT_APP_API_URL')
+						? `${process.env.REACT_APP_API_URL}/odds`
+						: `${process.env.API_URL}/odds`,
+					{
+						method: 'POST',
+						headers: {
+							authorization: `Basic ${key}`,
+						},
+					}
 				);
 				if (!oddsDataRaw.ok) {
 					throw new Error(oddsDataRaw.status + ': ' + oddsDataRaw.statusText);

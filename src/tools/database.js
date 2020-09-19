@@ -1,9 +1,18 @@
 export default async function fetchStats(statList) {
 	try {
+		const key = process.env.hasOwnProperty('REACT_APP_API_KEY');
 		const statsDataRaw = await fetch(
 			process.env.NODE_ENV === 'development'
 				? '/stats'
-				: `${process.env.API_URL}/stats`
+				: process.env.hasOwnProperty('REACT_APP_API_URL')
+				? `${process.env.REACT_APP_API_URL}/stats`
+				: `${process.env.API_URL}/stats`,
+			{
+				method: 'POST',
+				headers: {
+					authorization: `Basic ${key}`,
+				},
+			}
 		);
 		if (!statsDataRaw.ok) {
 			throw new Error(statsDataRaw.status + ': ' + statsDataRaw.statusText);

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import abbTeam from '../tools/teamAbbreviations';
 import selectionList from '../tools/selectionList';
 import statNameAPI from '../tools/statNameAPI';
 import ComparisonGauge from './ComparisonGauge';
 import LoadingScreen from './LoadingScreen';
-import moment from 'moment';
+//import moment from 'moment';
 
 const Grid = styled.div`
 	display: grid;
@@ -131,10 +131,6 @@ export default function Breakdowns(props) {
 	const toggleLayout = () => {
 		setSiteLayout(siteLayout === 'grid' ? 'tile' : 'grid');
 	};
-
-	// useEffect(() => {
-	// 	console.log(matchups);
-	// });
 
 	const getOddsData = (matchup, type, site, team = null) => {
 		if (

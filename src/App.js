@@ -43,7 +43,7 @@ function App() {
 						? '/odds'
 						: // : process.env.hasOwnProperty('REACT_APP_API_URL')
 						  // ? `${process.env.REACT_APP_API_URL}/odds`
-						  `${process.env.API_URL}/odds`,
+						  `${process.env.REACT_APP_API_URL}/odds`,
 					{
 						method: 'POST',
 						headers: {

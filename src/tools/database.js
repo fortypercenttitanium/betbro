@@ -1,6 +1,8 @@
 export default async function fetchStats(statList) {
 	try {
-		const key = process.env.hasOwnProperty('REACT_APP_API_KEY');
+		const key = process.env.hasOwnProperty('REACT_APP_API_KEY')
+			? process.env.REACT_APP_API_KEY
+			: process.env.API_KEY;
 		const statsDataRaw = await fetch(
 			process.env.NODE_ENV === 'development'
 				? '/stats'

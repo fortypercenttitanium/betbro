@@ -37,7 +37,11 @@ function App() {
 	useEffect(() => {
 		async function fetchOdds(week = thisWeek()) {
 			try {
-				const oddsDataRaw = await fetch('/odds');
+				const oddsDataRaw = await fetch(
+					process.env.NODE_ENV === 'development'
+						? 'http://localhost:8080/odds'
+						: `${process.env.API_URL}/odds`
+				);
 				if (!oddsDataRaw.ok) {
 					throw new Error(oddsDataRaw.status + ': ' + oddsDataRaw.statusText);
 				}

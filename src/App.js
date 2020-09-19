@@ -58,7 +58,6 @@ function App() {
 						);
 					}
 				});
-				console.log(rankObj);
 				setRankings(rankObj);
 
 				const currentMatchups = thisWeeksOdds.map((matchup) => {

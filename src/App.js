@@ -41,9 +41,9 @@ function App() {
 				const oddsDataRaw = await fetch(
 					process.env.NODE_ENV === 'development'
 						? '/odds'
-						: // : process.env.hasOwnProperty('REACT_APP_API_URL')
-						  // ? `${process.env.REACT_APP_API_URL}/odds`
-						  `${process.env.REACT_APP_API_URL}/odds`,
+						: process.env.hasOwnProperty('REACT_APP_API_URL')
+						? `${process.env.REACT_APP_API_URL}/odds`
+						: `${process.env.REACT_APP_API_URL}/odds`,
 					{
 						method: 'POST',
 						headers: {

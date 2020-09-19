@@ -303,7 +303,6 @@ export default function Breakdowns(props) {
 							value={oddsSnapshotSite}
 							onChange={(e) => {
 								setOddsSnapshotSite(e.target.value);
-								console.log(oddsSnapshotSite);
 							}}
 							style={{
 								padding: '1.3rem',

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-// import styled from 'styled-components';
 import moment from 'moment';
 import fetchStats, { initialSelections } from './tools/database';
 import selectionList from './tools/selectionList';
-// import statNameAPI from './tools/statNameAPI';
 import ranker from './tools/ranker';
 import NavBar from './components/Navbar';
 import Headline from './components/Headline';
@@ -39,7 +37,7 @@ function App() {
 			try {
 				const oddsDataRaw = await fetch(
 					process.env.NODE_ENV === 'development'
-						? 'http://localhost:8080/odds'
+						? '/odds'
 						: `${process.env.API_URL}/odds`
 				);
 				if (!oddsDataRaw.ok) {

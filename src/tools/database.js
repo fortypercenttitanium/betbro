@@ -2,7 +2,7 @@ export default async function fetchStats(statList) {
 	try {
 		const statsDataRaw = await fetch(
 			process.env.NODE_ENV === 'development'
-				? 'http://localhost:8080/stats'
+				? '/stats'
 				: `${process.env.API_URL}/stats`
 		);
 		if (!statsDataRaw.ok) {

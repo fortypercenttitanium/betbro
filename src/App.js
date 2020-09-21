@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import moment from 'moment';
 import fetchStats, { initialSelections } from './tools/database';
 import selectionList from './tools/selectionList';
@@ -112,21 +112,19 @@ function App() {
 	}, [selections]);
 
 	return (
-		<BrowserRouter>
-			<div className='App'>
-				<NavBar />
-				<Headline headline={headline} />
-				<Switch>
-					<Route exact path='/' component={Home} />
-					<Route exact path='/about' component={About} />
-					<Route exact path='/breakdowns'>
-						<Breakdowns propList={propList} />{' '}
-					</Route>
-					<Route exact path='/mybetbro' component={MyBetBro} />
-					<Route component={NotFound} />
-				</Switch>
-			</div>
-		</BrowserRouter>
+		<div className='App'>
+			<NavBar />
+			<Headline headline={headline} />
+			<Switch>
+				<Route exact path='/' component={Home} />
+				<Route path='/about' component={About} />
+				<Route path='/breakdowns'>
+					<Breakdowns propList={propList} />{' '}
+				</Route>
+				<Route path='/mybetbro' component={MyBetBro} />
+				<Route path='*' component={NotFound} />
+			</Switch>
+		</div>
 	);
 }
 

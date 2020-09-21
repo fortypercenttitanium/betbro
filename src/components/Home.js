@@ -15,7 +15,6 @@ const LeftContainer = styled.div`
 	color: #ddd;
 	height: 100%;
 	flex: 0.8;
-	border: 1px solid green;
 `;
 
 const RightContainer = styled.div`
@@ -24,7 +23,6 @@ const RightContainer = styled.div`
 	flex: 1.2;
 	color: #ddd;
 	height: 100%;
-	border: 1px solid red;
 `;
 
 const CircleDiv = styled.div`

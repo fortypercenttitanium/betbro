@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
 import selectionList from '../tools/selectionList';
 import LoadingScreen from './LoadingScreen';
 import TileBanner from './TileBanner';
@@ -26,7 +25,13 @@ const MatchupContainer = styled.div`
 `;
 
 export default function Breakdowns(props) {
-	const { selections, setSelections, matchups, rankings } = props.propList;
+	const {
+		selections,
+		setSelections,
+		matchups,
+		rankings,
+		records,
+	} = props.propList;
 
 	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');
 	const [siteLayout, setSiteLayout] = useState('tile');
@@ -90,6 +95,7 @@ export default function Breakdowns(props) {
 		matchups,
 		getOddsData,
 		oddsSnapshotSite,
+		records,
 	};
 
 	return (

@@ -35,6 +35,24 @@ const Span = styled.span`
 	margin: auto;
 `;
 
+const ToggleLayoutButton = styled.div`
+	margin: auto;
+	padding: 0.5rem;
+	cursor: pointer;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 5px;
+	&:hover {
+		background: #222;
+		color: #ddd;
+	}
+`;
+
+const Text = styled.span`
+	margin: auto;
+	font-size: 1rem;
+`;
+
 export default function GridLayout(props) {
 	const {
 		siteLayout,
@@ -55,20 +73,10 @@ export default function GridLayout(props) {
 					gridColumnStart: '1',
 				}}
 			>
-				<span
-					style={{
-						cursor: 'pointer',
-						fontWeight: 'bold',
-						fontSize: '1rem',
-						padding: '5px',
-						border: '1px solid black',
-						borderRadius: '5px',
-						margin: '5px',
-					}}
-					onClick={toggleLayout}
-				>
-					{siteLayout === 'grid' ? 'Tile mode' : 'Grid mode'}
-				</span>
+				<Text>Click to switch view mode:</Text>
+				<ToggleLayoutButton onClick={toggleLayout}>
+					<Text>{siteLayout === 'grid' ? 'Tile mode' : 'Grid mode'}</Text>
+				</ToggleLayoutButton>
 			</WideCell>
 			{selections.map((sel, i) => {
 				return (

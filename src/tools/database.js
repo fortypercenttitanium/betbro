@@ -46,6 +46,20 @@ export default async function fetchStats(statList) {
 			}
 		});
 
+		// set records
+		const records = {};
+		result.forEach((result) => {
+			if (
+				result.team !== 'Avg Tm/G' &&
+				result.team !== 'League Total' &&
+				result.team !== 'Avg Team'
+			) {
+				records[result.team] = OS.find(
+					(stat) => stat.team === result.team
+				).record;
+			}
+		});
+
 		// add in rest of stats
 		result.map((obj) => {
 			statList.forEach((stat) => {
@@ -59,7 +73,7 @@ export default async function fetchStats(statList) {
 			return obj;
 		});
 
-		return result;
+		return { result, records };
 
 		// parse data with team name
 		function findTeamStats(team, data) {

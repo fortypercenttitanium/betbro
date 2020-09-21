@@ -49,19 +49,14 @@ const H3 = styled.h3`
 `;
 
 export default function TileLayout(props) {
-	const { matchups, getOddsData, oddsSnapshotSite } = props.propsList;
+	const { matchups, getOddsData, oddsSnapshotSite, records } = props.propsList;
 	return (
 		<TileContainer>
 			{matchups.map((matchup, index) => {
 				return (
 					<MatchupCard key={index}>
-						<H3 style={{ display: 'inline' }}>
-							{getOddsData(
-								matchup,
-								'moneyLine',
-								oddsSnapshotSite,
-								matchup.awayTeam.team
-							)}
+						<H3 style={{ display: 'inline', marginRight: '1rem' }}>
+							{records[matchup.awayTeam.team]}
 						</H3>
 						{'  '}
 						<H1 style={{ display: 'inline' }}>
@@ -71,17 +66,26 @@ export default function TileLayout(props) {
 							@ {abbTeam(matchup.homeTeam.team)}
 						</H1>
 						{'  '}
-						<H3 style={{ display: 'inline' }}>
-							(
+						<H3 style={{ display: 'inline', marginLeft: '1rem' }}>
+							{records[matchup.awayTeam.team]}
+						</H3>
+						<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>
+						<H3>
+							Moneyline: {abbTeam(matchup.awayTeam.team)}{' '}
+							{getOddsData(
+								matchup,
+								'moneyLine',
+								oddsSnapshotSite,
+								matchup.awayTeam.team
+							)}
+							, {abbTeam(matchup.homeTeam.team)}{' '}
 							{getOddsData(
 								matchup,
 								'moneyLine',
 								oddsSnapshotSite,
 								matchup.homeTeam.team
 							)}
-							)
 						</H3>
-						<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>
 						<H3>
 							Spread: {abbTeam(matchup.awayTeam.team)}{' '}
 							{getOddsData(

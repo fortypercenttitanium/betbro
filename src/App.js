@@ -23,6 +23,8 @@ function App() {
 	const [selections, setSelections] = useState(initialSelections);
 	const [matchups, setMatchups] = useState([]);
 	const [rankings, setRankings] = useState({});
+	const [records, setRecords] = useState({});
+	//const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const propList = {
 		selections,
@@ -30,6 +32,7 @@ function App() {
 		matchups,
 		setMatchups,
 		rankings,
+		records,
 	};
 
 	useEffect(() => {
@@ -62,6 +65,7 @@ function App() {
 
 				const statsArr = await setNewStats();
 
+				//set team rankings for each stat
 				const rankObj = {};
 				selections.forEach((sel) => {
 					if (selectionList[sel].category === 'stats') {
@@ -99,14 +103,15 @@ function App() {
 			const initSelections = selections.map((sel) => {
 				return selectionList[sel];
 			});
-			let fetchedStats = await fetchStats(initSelections);
-			fetchedStats = fetchedStats.filter(
+			const fetchedStats = await fetchStats(initSelections);
+			setRecords(fetchedStats.records);
+			const filteredStats = fetchedStats.result.filter(
 				(item) =>
 					item.team !== 'Avg Tm/G' &&
 					item.team !== 'League Total' &&
 					item.team !== 'Avg Team'
 			);
-			return fetchedStats;
+			return filteredStats;
 		}
 		fetchOdds();
 	}, [selections]);

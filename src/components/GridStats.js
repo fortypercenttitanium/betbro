@@ -17,6 +17,10 @@ const MiniGrid = styled.div`
 	grid-template-columns: repeat(2, 1fr);
 `;
 
+const MiniGridNoBottom = styled(MiniGrid)`
+	grid-template-rows: 1fr;
+`;
+
 const StatDiv = styled.div`
 	display: flex;
 	height: 100%;
@@ -86,7 +90,7 @@ export default function GridStats(props) {
 						</GaugeContainer>
 					</MiniGrid>
 				) : selectionList[selections[i]].name !== 'overUnder' ? (
-					<MiniGrid
+					<MiniGridNoBottom
 						key={index}
 						style={{
 							gridRowStart: i + 2,
@@ -115,7 +119,7 @@ export default function GridStats(props) {
 								)}
 							</Span>
 						</StatDiv>
-					</MiniGrid>
+					</MiniGridNoBottom>
 				) : (
 					<Cell
 						key={index}

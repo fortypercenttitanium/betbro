@@ -41,7 +41,7 @@ const CircleDiv = styled.div`
 const TopTextDiv = styled.div`
 	display: flex;
 	width: 95%;
-	margin: 6rem auto 0 0;
+	margin: 7rem auto 0 0;
 	text-align: center;
 `;
 const BottomTextDiv = styled.div`

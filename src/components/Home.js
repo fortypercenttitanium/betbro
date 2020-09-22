@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const HomeContainer = styled.div`
 	display: flex;
-	background: #2c2837;
+	background: url('images/bg.png');
+	background-size: contain;
 	position: relative;
 	margin: -3rem 0 0;
 	min-height: 35rem;
@@ -80,8 +81,9 @@ const H3 = styled(H1)`
 
 const LogoImg = styled.img`
 	position: relative;
-	height: 38rem;
+	height: 36rem;
 	margin: auto 0 auto auto;
+	border: 7px solid #ddd;
 	border-radius: 50%;
 `;
 

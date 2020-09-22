@@ -31,7 +31,15 @@ export default function Headline(props) {
 	};
 	return (
 		<HeadlineDiv>
-			<span style={{ marginLeft: '12%' }}>{getHeadline()}</span>
+			<div
+				style={{
+					height: '100%',
+					marginLeft: '12%',
+					display: 'flex',
+				}}
+			>
+				<span style={{ margin: 'auto 0' }}>{getHeadline()}</span>
+			</div>
 		</HeadlineDiv>
 	);
 }

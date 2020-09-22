@@ -46,9 +46,9 @@ export default function Navbar() {
 			<LogoContainer>
 				<Link to='/'>
 					<img
-						src='images/logo.png'
+						src='images/logo-no-sub.png'
 						alt='BetBro logo'
-						style={{ width: '230px', position: 'relative', top: '-70px' }}
+						style={{ width: '150px', position: 'relative', top: '-25px' }}
 					/>
 				</Link>
 			</LogoContainer>

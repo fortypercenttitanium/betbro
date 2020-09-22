@@ -117,7 +117,7 @@ function App() {
 	}, [selections]);
 
 	return (
-		<div className='App' style={{ height: '90vh' }}>
+		<div className='App' style={{ height: '100%' }}>
 			<NavBar />
 			<Headline headline={headline} />
 			<Switch>

@@ -18,7 +18,6 @@ const LeftContainer = styled.div`
 	display: flex;
 	position: relative;
 	color: #ddd;
-	height: 100%;
 	width: 45%;
 `;
 
@@ -27,7 +26,6 @@ const RightContainer = styled.div`
 	flex-direction: column;
 	width: 55%;
 	color: #ddd;
-	height: 100%;
 `;
 
 const CircleDiv = styled.div`
@@ -35,13 +33,14 @@ const CircleDiv = styled.div`
 	position: relative;
 	height: 100%;
 	width: 100%;
+	margin-top: 1%;
 	background: transparent;
 `;
 
 const TopTextDiv = styled.div`
 	display: flex;
 	width: 95%;
-	margin: 7rem auto 0 0;
+	margin: 8.2rem auto 0 0;
 	text-align: center;
 `;
 const BottomTextDiv = styled.div`
@@ -64,7 +63,7 @@ const H2 = styled.h2`
 	font-weight: 400;
 	line-height: 3rem;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
-	padding: 0 5rem;
+	padding: 0 2rem;
 `;
 
 const H3 = styled(H1)`
@@ -81,7 +80,8 @@ const H3 = styled(H1)`
 
 const LogoImg = styled.img`
 	position: relative;
-	height: 36rem;
+	/* height: 89%; */
+	width: 85%;
 	margin: auto 0 auto auto;
 	border: 7px solid #ddd;
 	border-radius: 50%;

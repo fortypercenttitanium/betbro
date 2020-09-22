@@ -8,8 +8,9 @@ const HomeContainer = styled.div`
 	position: relative;
 	margin: -3rem 0 0;
 	min-height: 35rem;
-	height: calc(100vh - 6rem);
+	height: 100%;
 	width: 100%;
+	overflow: auto;
 `;
 
 const LeftContainer = styled.div`
@@ -17,13 +18,13 @@ const LeftContainer = styled.div`
 	position: relative;
 	color: #ddd;
 	height: 100%;
-	flex: 0.9;
+	width: 45%;
 `;
 
 const RightContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	flex: 1.1;
+	width: 55%;
 	color: #ddd;
 	height: 100%;
 `;

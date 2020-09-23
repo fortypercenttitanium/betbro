@@ -226,9 +226,9 @@ export default function ranker(statsList, stat) {
 			case 'tacklesForLossPG':
 				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'sackPctDef':
-				return Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
+				return Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
 					? -1
-					: Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
+					: Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
 					? 1
 					: 0;
 			case 'passYdsPGAllowed':

@@ -18,6 +18,9 @@ export const Selector = styled.select`
 	background: #2c2837;
 	color: #eee;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+	@media (max-width: 600px) {
+		font-size: 0.6rem;
+	}
 `;
 
 const Cell = styled.div`

@@ -13,8 +13,18 @@ import {
 import ComparisonGauge from './ComparisonGauge';
 import abbTeam from '../tools/teamAbbreviations';
 
+const TileGrid = styled(Grid)`
+	height: 100%;
+	width: 100%;
+`;
+
+const TileWideCell = styled(WideCell)`
+	width: 100%;
+`;
+
 const DetailedViewContainer = styled.div`
 	margin: auto;
+	overflow: auto;
 `;
 
 export default function TileDetailedView(props) {
@@ -34,11 +44,11 @@ export default function TileDetailedView(props) {
 		tileDetailedView !== null && (
 			<Background onClick={() => setTileDetailedView(null)}>
 				<DetailedViewContainer onClick={(e) => e.stopPropagation()}>
-					<Grid>
+					<TileGrid>
 						{/* render the selectors just like in grid layout */}
 						{selections.map((sel, i) => {
 							return (
-								<WideCell
+								<TileWideCell
 									style={{ gridRowStart: i + 2, gridColumnStart: 1 }}
 									key={i}
 								>
@@ -54,7 +64,7 @@ export default function TileDetailedView(props) {
 											);
 										})}
 									</Selector>
-								</WideCell>
+								</TileWideCell>
 							);
 						})}
 						{/* render matchup header */}
@@ -164,7 +174,7 @@ export default function TileDetailedView(props) {
 								</Cell>
 							);
 						})}
-					</Grid>
+					</TileGrid>
 				</DetailedViewContainer>
 			</Background>
 		)

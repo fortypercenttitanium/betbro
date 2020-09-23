@@ -119,7 +119,7 @@ function App() {
 	return (
 		<div className='App' style={{ height: '100%' }}>
 			<NavBar />
-			<Headline headline={headline} />
+			{headline !== '/' && <Headline headline={headline} />}
 			<Switch>
 				<Route exact path='/' component={Home} />
 				<Route path='/about' component={About} />

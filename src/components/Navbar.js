@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const NavContainer = styled.nav`
 	width: 100%;
 	height: 6rem;
-	background-color: #c4c4c4;
+	background-color: var(--midgrey);
 	display: flex;
 	overflow: hidden;
 `;

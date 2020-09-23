@@ -5,6 +5,7 @@ import LoadingScreen from './LoadingScreen';
 import TileBanner from './TileBanner';
 import GridLayout from './GridLayout';
 import TileLayout from './TileLayout';
+import TileDetailedView from './TileDetailedView';
 
 const BreakdownsDiv = styled.div`
 	display: flex;
@@ -12,6 +13,7 @@ const BreakdownsDiv = styled.div`
 	margin: 0;
 	height: calc(100vh - 10rem);
 	width: 100%;
+	overflow: auto;
 `;
 
 const MatchupContainer = styled.div`
@@ -35,6 +37,7 @@ export default function Breakdowns(props) {
 
 	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');
 	const [siteLayout, setSiteLayout] = useState('tile');
+	const [tileDetailedView, setTileDetailedView] = useState(null);
 
 	const getTeamIndex = (matchupIndex, team) => {
 		const odds = matchups[matchupIndex].betting;
@@ -96,12 +99,26 @@ export default function Breakdowns(props) {
 		getOddsData,
 		oddsSnapshotSite,
 		records,
+		setTileDetailedView,
+	};
+
+	const tileDetailProps = {
+		tileDetailedView,
+		setTileDetailedView,
+		selectionList,
+		selections,
+		getOddsData,
+		rankings,
+		handleSelectorChange,
+		matchups,
 	};
 
 	return (
 		<BreakdownsDiv>
 			{!matchups.length && <LoadingScreen />}
-
+			{tileDetailedView !== null && (
+				<TileDetailedView propsList={tileDetailProps} />
+			)}
 			{siteLayout === 'tile' && (
 				<MatchupContainer>
 					<TileBanner propsList={bannerProps} />

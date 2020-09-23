@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import GridStats from './GridStats';
 import abbTeam from '../tools/teamAbbreviations';
 
-const Grid = styled.div`
+export const Grid = styled.div`
 	display: grid;
 	margin: 0.2rem;
 	grid-auto-rows: 45px;
@@ -13,7 +13,7 @@ const Grid = styled.div`
 	height: 100%;
 `;
 
-const Selector = styled.select`
+export const Selector = styled.select`
 	font-size: 1rem;
 	background: #2c2837;
 	color: #eee;
@@ -27,7 +27,7 @@ const Cell = styled.div`
 	text-align: center;
 `;
 
-const WideCell = styled(Cell)`
+export const WideCell = styled(Cell)`
 	width: auto;
 `;
 
@@ -78,6 +78,7 @@ export default function GridLayout(props) {
 					<Text>{siteLayout === 'grid' ? 'Tile mode' : 'Grid mode'}</Text>
 				</ToggleLayoutButton>
 			</WideCell>
+			{/* render selectors on left */}
 			{selections.map((sel, i) => {
 				return (
 					<WideCell style={{ gridRowStart: i + 2, gridColumnStart: 1 }} key={i}>
@@ -93,6 +94,7 @@ export default function GridLayout(props) {
 					</WideCell>
 				);
 			})}
+			{/* render matchup headers */}
 			{matchups.map((matchup, i) => {
 				return (
 					<Cell

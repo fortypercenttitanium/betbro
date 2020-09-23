@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HeadlineDiv = styled.div`
-	background: #2c2837;
+	background: var(--betbro-blue);
 	width: 100%;
 	height: 3rem;
 	font-size: 2rem;

@@ -6,11 +6,7 @@ const HomeContainer = styled.div`
 	display: flex;
 	background: url('images/bg.png');
 	background-size: contain;
-	position: relative;
-	margin: -3rem 0 0;
-	min-height: 35rem;
 	height: 100%;
-	width: 100%;
 	overflow: auto;
 `;
 
@@ -30,17 +26,16 @@ const RightContainer = styled.div`
 
 const CircleDiv = styled.div`
 	display: flex;
-	position: relative;
+	background: transparent;
+	margin: 3% 0 0 auto;
 	height: 100%;
 	width: 100%;
-	margin-top: 1%;
-	background: transparent;
 `;
 
 const TopTextDiv = styled.div`
 	display: flex;
 	width: 95%;
-	margin: 8.2rem auto 0 0;
+	margin: 6rem auto 0 0;
 	text-align: center;
 `;
 const BottomTextDiv = styled.div`
@@ -79,10 +74,12 @@ const H3 = styled(H1)`
 `;
 
 const LogoImg = styled.img`
-	position: relative;
-	/* height: 89%; */
-	width: 85%;
-	margin: auto 0 auto auto;
+	display: block;
+	max-height: 32rem;
+	max-width: 32rem;
+	height: auto;
+	width: 100%;
+	margin-left: auto;
 	border: 7px solid #ddd;
 	border-radius: 50%;
 `;

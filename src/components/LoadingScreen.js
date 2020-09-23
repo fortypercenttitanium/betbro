@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Background = styled.div`
+export const Background = styled.div`
 	position: fixed;
 	display: flex;
 	top: 0;

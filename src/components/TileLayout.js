@@ -9,6 +9,7 @@ const TileContainer = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
+	cursor: pointer;
 `;
 
 const MatchupCard = styled.div`
@@ -21,6 +22,12 @@ const MatchupCard = styled.div`
 	flex: 1;
 	flex-basis: 16rem;
 	text-align: center;
+	transition: 0.3s;
+	&:hover {
+		background-color: var(--betbro-blue);
+		color: #ddd;
+		transition: 0.3s;
+	}
 `;
 
 const H1 = styled.h1`
@@ -49,12 +56,27 @@ const H3 = styled.h3`
 `;
 
 export default function TileLayout(props) {
-	const { matchups, getOddsData, oddsSnapshotSite, records } = props.propsList;
+	const {
+		matchups,
+		getOddsData,
+		oddsSnapshotSite,
+		records,
+		setTileDetailedView,
+	} = props.propsList;
+
+	const handleClick = (matchup) => {
+		setTileDetailedView(matchups.indexOf(matchup));
+	};
 	return (
 		<TileContainer>
 			{matchups.map((matchup, index) => {
 				return (
-					<MatchupCard key={index}>
+					<MatchupCard
+						onClick={() => {
+							handleClick(matchup);
+						}}
+						key={index}
+					>
 						<H3 style={{ display: 'inline', marginRight: '1rem' }}>
 							{records[matchup.awayTeam.team]}
 						</H3>

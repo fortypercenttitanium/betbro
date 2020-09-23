@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import ComparisonGauge from './ComparisonGauge';
 
-const Cell = styled.div`
+export const Cell = styled.div`
 	display: flex;
 	background: #ddd;
 	width: 120px;
 	text-align: center;
 `;
 
-const MiniGrid = styled.div`
+export const MiniGrid = styled.div`
 	background: #ddd;
 	display: grid;
 	width: 120px;
@@ -17,11 +17,11 @@ const MiniGrid = styled.div`
 	grid-template-columns: repeat(2, 1fr);
 `;
 
-const MiniGridNoBottom = styled(MiniGrid)`
+export const MiniGridNoBottom = styled(MiniGrid)`
 	grid-template-rows: 1fr;
 `;
 
-const StatDiv = styled.div`
+export const StatDiv = styled.div`
 	display: flex;
 	height: 100%;
 	width: 100%;
@@ -29,13 +29,13 @@ const StatDiv = styled.div`
 	align-items: center;
 `;
 
-const GaugeContainer = styled.div`
+export const GaugeContainer = styled.div`
 	grid-column: 1 / 3;
 	text-align: center;
 	width: 100%;
 `;
 
-const Span = styled.span`
+export const Span = styled.span`
 	margin: auto;
 `;
 

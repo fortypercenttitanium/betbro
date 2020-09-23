@@ -41,7 +41,7 @@ const CenteredDiv = styled.div`
 const BannerSelector = styled.select`
 	margin: auto;
 	font-size: 1rem;
-	background: #2c2837;
+	background: var(--betbro-blue);
 	color: #eee;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 	border-radius: 5px;

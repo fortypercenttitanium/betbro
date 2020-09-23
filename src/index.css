@@ -1,9 +1,20 @@
+html {
+	height: 100%;
+}
+
 body {
 	margin: 0;
 	font-family: 'Epilogue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	overflow: hidden;
+	height: 100%;
+}
+:root {
+	--midgrey: #c4c4c4;
+	--betbro-blue: #2c2837;
+}
+#root {
+	height: 100%;
 }
 a {
 	text-decoration: none;

@@ -89,7 +89,7 @@ export default function TileLayout(props) {
 						</H1>
 						{'  '}
 						<H3 style={{ display: 'inline', marginLeft: '1rem' }}>
-							{records[matchup.awayTeam.team]}
+							{records[matchup.homeTeam.team]}
 						</H3>
 						<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>
 						<H3>

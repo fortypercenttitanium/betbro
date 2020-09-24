@@ -6,8 +6,8 @@ import TileBanner from './TileBanner';
 import GridLayout from './GridLayout';
 import TileLayout from './TileLayout';
 import TileDetailedView from './TileDetailedView';
-const weeks = require('../tools/weeks');
-const thisWeek = weeks.thisWeek();
+// const weeks = require('../tools/weeks');
+// const thisWeek = weeks.thisWeek();
 
 const BreakdownsDiv = styled.div`
 	display: flex;
@@ -36,7 +36,6 @@ export default function Breakdowns(props) {
 		matchups,
 		rankings,
 		records,
-		setHeadline,
 	} = props.propList;
 
 	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');

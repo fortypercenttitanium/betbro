@@ -27,9 +27,11 @@ const RightContainer = styled.div`
 const CircleDiv = styled.div`
 	display: flex;
 	background: transparent;
-	margin: 3% 0 0 auto;
-	height: 100%;
-	width: 100%;
+	margin: auto;
+	height: auto;
+	margin-right: 0;
+	margin-top: 5%;
+	width: 95%;
 `;
 
 const TopTextDiv = styled.div`
@@ -40,13 +42,13 @@ const TopTextDiv = styled.div`
 `;
 const BottomTextDiv = styled.div`
 	display: flex;
-	width: 80%;
+	width: 85%;
 	flex-direction: column;
 	margin: 0 auto;
 `;
 
 const H1 = styled.h1`
-	font-size: 4rem;
+	font-size: calc(1rem + 3vw);
 	font-weight: 500;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 	line-height: 4.2rem;
@@ -58,7 +60,6 @@ const H2 = styled.h2`
 	font-weight: 400;
 	line-height: 3rem;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
-	padding: 0 2rem;
 `;
 
 const H3 = styled(H1)`

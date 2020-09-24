@@ -6,10 +6,13 @@ import TileBanner from './TileBanner';
 import GridLayout from './GridLayout';
 import TileLayout from './TileLayout';
 import TileDetailedView from './TileDetailedView';
+const weeks = require('../tools/weeks');
+const thisWeek = weeks.thisWeek();
 
 const BreakdownsDiv = styled.div`
 	display: flex;
 	position: relative;
+	background: #222;
 	margin: 0;
 	height: calc(100vh - 10rem);
 	width: 100%;
@@ -33,6 +36,7 @@ export default function Breakdowns(props) {
 		matchups,
 		rankings,
 		records,
+		setHeadline,
 	} = props.propList;
 
 	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');
@@ -64,6 +68,8 @@ export default function Breakdowns(props) {
 			return 'n/a';
 		}
 	};
+
+	// setHeadline(`Bro's Breakdowns Week ${thisWeek}`);
 
 	const handleSelectorChange = (e, i) => {
 		const newSelections = [...selections];

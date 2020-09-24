@@ -8,7 +8,7 @@ export const Grid = styled.div`
 	margin: 0.2rem;
 	grid-auto-rows: 45px;
 	gap: 5px;
-	background-color: white;
+	background-color: transparent;
 	overflow: auto;
 	height: 100%;
 `;

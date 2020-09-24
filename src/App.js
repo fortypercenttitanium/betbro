@@ -33,6 +33,7 @@ function App() {
 		setMatchups,
 		rankings,
 		records,
+		setHeadline,
 	};
 
 	useEffect(() => {

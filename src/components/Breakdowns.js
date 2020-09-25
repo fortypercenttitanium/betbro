@@ -38,7 +38,7 @@ export default function Breakdowns(props) {
 	} = props.propList;
 
 	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');
-	const [siteLayout, setSiteLayout] = useState('grid');
+	const [siteLayout, setSiteLayout] = useState('tile');
 	const [tileDetailedView, setTileDetailedView] = useState(null);
 
 	const getTeamIndex = (matchupIndex, team) => {

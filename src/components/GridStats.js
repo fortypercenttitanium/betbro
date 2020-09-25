@@ -5,14 +5,14 @@ import ComparisonGauge from './ComparisonGauge';
 export const Cell = styled.div`
 	display: flex;
 	background: #ddd;
-	width: 120px;
+	width: var(--cell-width);
 	text-align: center;
 `;
 
 export const MiniGrid = styled.div`
 	background: #ddd;
 	display: grid;
-	width: 120px;
+	width: var(--cell-width);
 	grid-template-rows: 2fr 1fr;
 	grid-template-columns: repeat(2, 1fr);
 `;
@@ -23,8 +23,9 @@ export const MiniGridNoBottom = styled(MiniGrid)`
 
 export const StatDiv = styled.div`
 	display: flex;
-	height: 100%;
-	width: 100%;
+	padding: 4px 2px 0;
+	width: calc(100% - 4px);
+	margin: auto;
 	text-align: center;
 	align-items: center;
 `;
@@ -46,6 +47,7 @@ export default function GridStats(props) {
 		selectionList,
 		rankings,
 		getOddsData,
+		oddsSnapshotSite,
 	} = props.propList;
 
 	const arr = [];
@@ -104,7 +106,7 @@ export default function GridStats(props) {
 								{getOddsData(
 									matchup,
 									selectionList[selections[i]].name,
-									selectionList[selections[i]].site,
+									oddsSnapshotSite,
 									matchup.awayTeam.team
 								)}
 							</Span>
@@ -114,7 +116,7 @@ export default function GridStats(props) {
 								{getOddsData(
 									matchup,
 									selectionList[selections[i]].name,
-									selectionList[selections[i]].site,
+									oddsSnapshotSite,
 									matchup.homeTeam.team
 								)}
 							</Span>
@@ -133,7 +135,7 @@ export default function GridStats(props) {
 							{getOddsData(
 								matchup,
 								selectionList[selections[i]].name,
-								selectionList[selections[i]].site
+								oddsSnapshotSite
 							)}
 						</Span>
 					</Cell>

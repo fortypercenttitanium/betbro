@@ -4,25 +4,20 @@ const selectionList = Object.keys(statNameAPI.stats).map((stat) => {
 	return { category: 'stats', name: stat, value: statNameAPI.stats[stat] };
 });
 
-Object.keys(statNameAPI.sites).forEach((site) => {
-	selectionList.push({
-		category: 'odds',
-		name: 'moneyLine',
-		value: `MoneyLine (${statNameAPI.sites[site]})`,
-		site,
-	});
-	selectionList.push({
-		category: 'odds',
-		name: 'spreads',
-		value: `Spreads (${statNameAPI.sites[site]})`,
-		site,
-	});
-	selectionList.push({
-		category: 'odds',
-		name: 'overUnder',
-		value: `Over/Under (${statNameAPI.sites[site]})`,
-		site,
-	});
+selectionList.push({
+	category: 'odds',
+	name: 'moneyLine',
+	value: statNameAPI.betting.moneyLine,
+});
+selectionList.push({
+	category: 'odds',
+	name: 'spreads',
+	value: statNameAPI.betting.spreads,
+});
+selectionList.push({
+	category: 'odds',
+	name: 'overUnder',
+	value: statNameAPI.betting.overUnder,
 });
 
 export default selectionList;

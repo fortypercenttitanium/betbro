@@ -277,4 +277,4 @@ export default async function fetchStats(statList) {
 	}
 }
 
-export const initialSelections = [0, 85, 86, 84, 2, 3, 17, 11, 41, 44];
+export const initialSelections = [0, 81, 82, 83, 2, 3, 17, 11, 41, 44];

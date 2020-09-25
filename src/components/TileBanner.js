@@ -20,12 +20,16 @@ const ToggleLayoutButton = styled.div`
 	margin: auto;
 	padding: 1rem;
 	cursor: pointer;
+	transition: 0.3s;
+	background-color: rgba(44, 40, 55, 0.6);
+	color: #ddd;
 	text-align: center;
-	border: 1px solid black;
+	border: 1px solid #ddd;
 	border-radius: 5px;
 	&:hover {
-		background: #222;
-		color: #ddd;
+		background-color: #ddd;
+		color: var(--betbro-blue);
+		transition: 0.3s;
 	}
 `;
 

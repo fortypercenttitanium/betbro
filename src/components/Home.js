@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HomeContainer = styled.div`
 	display: flex;
-	background: url('images/bg.png');
-	background-size: contain;
 	height: 100%;
 	overflow: auto;
 `;
@@ -85,7 +83,10 @@ const LogoImg = styled.img`
 	border-radius: 50%;
 `;
 
-export default function Home() {
+export default function Home(props) {
+	useEffect(() => {
+		props.setHeadline('');
+	}, [props]);
 	return (
 		<HomeContainer>
 			<LeftContainer>

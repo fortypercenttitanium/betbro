@@ -9,10 +9,12 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	height: 100%;
 	overflow: hidden;
+	color: #ddd;
 }
 :root {
 	--midgrey: #c4c4c4;
 	--betbro-blue: #2c2837;
+	--cell-width: 140px;
 }
 #root {
 	height: 100%;

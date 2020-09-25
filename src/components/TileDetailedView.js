@@ -24,7 +24,6 @@ const TileWideCell = styled(WideCell)`
 
 const DetailedViewContainer = styled.div`
 	margin: auto;
-	overflow: auto;
 `;
 
 export default function TileDetailedView(props) {

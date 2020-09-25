@@ -14,7 +14,9 @@ const TileContainer = styled.div`
 
 const MatchupCard = styled.div`
 	border-radius: 1rem;
-	border: 1px solid black;
+	border: 1px solid #ddd;
+	color: #ddd;
+	background-color: rgba(44, 40, 55, 0.6);
 	max-width: 320px;
 	flex: 1 1;
 	margin: 1rem;
@@ -24,15 +26,19 @@ const MatchupCard = styled.div`
 	text-align: center;
 	transition: 0.3s;
 	&:hover {
-		background-color: var(--betbro-blue);
-		color: #ddd;
+		background-color: #ddd;
+		color: var(--betbro-blue);
 		transition: 0.3s;
+		& > h1 {
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+		}
 	}
 `;
 
 const H1 = styled.h1`
 	font-weight: bold;
 	font-size: 1.7rem;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 	@media (max-width: 450px) {
 		font-size: 1.3rem;
 	}

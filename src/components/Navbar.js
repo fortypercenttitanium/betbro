@@ -5,7 +5,16 @@ import { Link } from 'react-router-dom';
 const NavContainer = styled.nav`
 	width: 100%;
 	height: 6rem;
-	background-color: var(--midgrey);
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 1) 29%,
+		rgba(42, 42, 42, 1) 53%,
+		rgba(47, 47, 47, 1) 63%,
+		rgba(0, 0, 0, 1) 100%
+	);
+	border-bottom: 4px solid #ddd;
 	display: flex;
 	overflow: hidden;
 `;
@@ -22,7 +31,7 @@ const LinkDiv = styled.div`
 	text-align: center;
 	display: flex;
 	height: 100%;
-	color: #222;
+	color: #fff;
 	margin: auto;
 	padding: 0 1rem;
 	cursor: pointer;
@@ -37,10 +46,16 @@ const LinkDiv = styled.div`
 const LogoContainer = styled.div`
 	display: flex;
 	height: 100%;
-	margin: auto;
+	margin: auto auto auto 5%;
 `;
 
-export default function Navbar() {
+const Span = styled.span`
+	text-decoration: ${(props) => (props.underline ? 'underline' : 'none')};
+	transform: ${(props) => (props.underline ? 'scale(1.1)' : 'none')};
+`;
+
+export default function Navbar(props) {
+	const { headline } = props;
 	return (
 		<NavContainer>
 			<LogoContainer>
@@ -55,22 +70,22 @@ export default function Navbar() {
 			<LinksContainer>
 				<Link className='first-link' to='/about'>
 					<LinkDiv className='first-link'>
-						<span>Why BetBro?</span>
+						<Span underline={headline === 'about'}>Why BetBro?</Span>
 					</LinkDiv>
 				</Link>
 				<Link to='/breakdowns'>
 					<LinkDiv>
-						<span>Bro's Breakdowns</span>
+						<Span underline={headline === 'breakdowns'}>Bro's Breakdowns</Span>
 					</LinkDiv>
 				</Link>
 				<Link to='/mybetbro'>
 					<LinkDiv>
-						<span>My BetBro</span>
+						<Span underline={headline === 'mybetbro'}>My BetBro</Span>
 					</LinkDiv>
 				</Link>
 				<Link to='/contact'>
 					<LinkDiv>
-						<span>Contact</span>
+						<Span underline={headline === 'contact'}>Contact</Span>
 					</LinkDiv>
 				</Link>
 			</LinksContainer>

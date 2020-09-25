@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import selectionList from '../tools/selectionList';
 import LoadingScreen from './LoadingScreen';
@@ -12,11 +12,9 @@ import TileDetailedView from './TileDetailedView';
 const BreakdownsDiv = styled.div`
 	display: flex;
 	position: relative;
-	background: #222;
 	margin: 0;
-	height: calc(100vh - 10rem);
+	height: 100%;
 	width: 100%;
-	overflow: auto;
 `;
 
 const MatchupContainer = styled.div`
@@ -36,10 +34,11 @@ export default function Breakdowns(props) {
 		matchups,
 		rankings,
 		records,
+		setHeadline,
 	} = props.propList;
 
 	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');
-	const [siteLayout, setSiteLayout] = useState('tile');
+	const [siteLayout, setSiteLayout] = useState('grid');
 	const [tileDetailedView, setTileDetailedView] = useState(null);
 
 	const getTeamIndex = (matchupIndex, team) => {
@@ -68,7 +67,9 @@ export default function Breakdowns(props) {
 		}
 	};
 
-	// setHeadline(`Bro's Breakdowns Week ${thisWeek}`);
+	useEffect(() => {
+		setHeadline(`breakdowns`);
+	}, [setHeadline]);
 
 	const handleSelectorChange = (e, i) => {
 		const newSelections = [...selections];
@@ -88,6 +89,7 @@ export default function Breakdowns(props) {
 		selectionList,
 		rankings,
 		getOddsData,
+		oddsSnapshotSite,
 	};
 
 	const gridProps = {
@@ -97,6 +99,8 @@ export default function Breakdowns(props) {
 		selectionList,
 		handleSelectorChange,
 		matchups,
+		oddsSnapshotSite,
+		setOddsSnapshotSite,
 	};
 
 	const tileProps = {

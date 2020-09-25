@@ -1,25 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import moment from 'moment';
+import styled from 'styled-components';
 import fetchStats, { initialSelections } from './tools/database';
 import selectionList from './tools/selectionList';
 import ranker from './tools/ranker';
 import NavBar from './components/Navbar';
-import Headline from './components/Headline';
 import Home from './components/Home';
 import Breakdowns from './components/Breakdowns';
 import About from './components/About';
 import MyBetBro from './components/MyBetBro';
 import NotFound from './components/NotFound';
+import Contact from './components/Contact';
 const weeks = require('./tools/weeks');
 const { thisWeek } = weeks;
 
-function App() {
-	const [headline, setHeadline] = useState(window.location.pathname);
-	useEffect(() => {
-		setHeadline(window.location.pathname);
-	}, []);
+const MainContainer = styled.div`
+	display: flex;
+	width: 100%;
+	height: calc(100% - 6rem - 4px);
+	background: url('images/bg.png');
+	background-size: contain;
+	overflow: auto;
+`;
 
+function App() {
+	const [headline, setHeadline] = useState('');
 	const [selections, setSelections] = useState(initialSelections);
 	const [matchups, setMatchups] = useState([]);
 	const [rankings, setRankings] = useState({});
@@ -118,18 +124,36 @@ function App() {
 	}, [selections]);
 
 	return (
-		<div className='App' style={{ height: '100%' }}>
-			<NavBar />
-			{headline !== '/' && <Headline headline={headline} />}
-			<Switch>
-				<Route exact path='/' component={Home} />
-				<Route path='/about' component={About} />
-				<Route path='/breakdowns'>
-					<Breakdowns propList={propList} />{' '}
-				</Route>
-				<Route path='/mybetbro' component={MyBetBro} />
-				<Route path='*' component={NotFound} />
-			</Switch>
+		<div
+			className='App'
+			style={{
+				height: '100%',
+			}}
+		>
+			<NavBar headline={headline} />
+			{/* {headline !== '' && <Headline headline={headline} />} */}
+			<MainContainer>
+				<Switch>
+					<Route exact path='/'>
+						<Home setHeadline={setHeadline} />
+					</Route>
+					<Route path='/about'>
+						<About setHeadline={setHeadline} />
+					</Route>
+					<Route path='/breakdowns'>
+						<Breakdowns propList={propList} />{' '}
+					</Route>
+					<Route path='/mybetbro'>
+						<MyBetBro setHeadline={setHeadline} />
+					</Route>
+					<Route path='/contact'>
+						<Contact setHeadline={setHeadline} />
+					</Route>
+					<Route path='*'>
+						<NotFound setHeadline={setHeadline} />
+					</Route>
+				</Switch>
+			</MainContainer>
 		</div>
 	);
 }

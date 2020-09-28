@@ -19,8 +19,8 @@ const MainContainer = styled.div`
 	display: flex;
 	width: 100%;
 	height: calc(100% - 6rem - 4px);
-	background: url('images/bg.png');
-	background-size: contain;
+	background: url('images/bg.png') no-repeat center center;
+	background-size: cover;
 	overflow: hidden;
 `;
 

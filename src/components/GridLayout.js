@@ -10,6 +10,7 @@ const MainContainer = styled.div`
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
+	min-width: calc(100% - 0.2rem);
 `;
 
 const SelectorColumn = styled.div`

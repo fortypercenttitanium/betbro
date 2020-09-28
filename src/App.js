@@ -21,7 +21,7 @@ const MainContainer = styled.div`
 	height: calc(100% - 6rem - 4px);
 	background: url('images/bg.png');
 	background-size: contain;
-	overflow: auto;
+	overflow: hidden;
 `;
 
 function App() {
@@ -45,9 +45,7 @@ function App() {
 	useEffect(() => {
 		async function fetchOdds(week = thisWeek()) {
 			try {
-				const key = process.env.hasOwnProperty('REACT_APP_API_KEY')
-					? process.env.REACT_APP_API_KEY
-					: process.env.API_KEY;
+				const key = process.env.REACT_APP_API_KEY;
 				const oddsDataRaw = await fetch(
 					process.env.NODE_ENV === 'development'
 						? '/odds'

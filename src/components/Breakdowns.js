@@ -15,6 +15,7 @@ const BreakdownsDiv = styled.div`
 	margin: 0;
 	height: 100%;
 	width: 100%;
+	overflow-y: hidden;
 `;
 
 const MatchupContainer = styled.div`
@@ -38,7 +39,7 @@ export default function Breakdowns(props) {
 	} = props.propList;
 
 	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');
-	const [siteLayout, setSiteLayout] = useState('tile');
+	const [siteLayout, setSiteLayout] = useState('grid');
 	const [tileDetailedView, setTileDetailedView] = useState(null);
 
 	const getTeamIndex = (matchupIndex, team) => {

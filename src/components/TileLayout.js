@@ -33,13 +33,17 @@ const MatchupCard = styled.div`
 			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 		}
 	}
+	@media (max-width: 900px) {
+		flex-basis: 11rem;
+	}
 `;
 
 const H1 = styled.h1`
 	font-weight: bold;
-	font-size: 1.7rem;
+	font-size: 1.4rem;
+	padding: 3px 0;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
-	@media (max-width: 450px) {
+	@media (max-width: 900px) {
 		font-size: 1.3rem;
 	}
 `;
@@ -47,7 +51,8 @@ const H1 = styled.h1`
 const H2 = styled.h2`
 	font-size: 1.2rem;
 	font-weight: normal;
-	@media (max-width: 450px) {
+	padding: 3px 0;
+	@media (max-width: 900px) {
 		font-size: 1rem;
 	}
 `;
@@ -56,8 +61,9 @@ const H3 = styled.h3`
 	font-size: 1rem;
 	font-weight: normal;
 	margin: auto;
-	@media (max-width: 450px) {
-		font-size: 0.8rem;
+	padding: 3px 0;
+	@media (max-width: 900px) {
+		font-size: 0.6rem;
 	}
 `;
 
@@ -83,7 +89,7 @@ export default function TileLayout(props) {
 						}}
 						key={index}
 					>
-						<H3 style={{ display: 'inline', marginRight: '1rem' }}>
+						<H3 style={{ display: 'inline', marginRight: '%' }}>
 							{records[matchup.awayTeam.team]}
 						</H3>
 						{'  '}
@@ -94,7 +100,7 @@ export default function TileLayout(props) {
 							@ {abbTeam(matchup.homeTeam.team)}
 						</H1>
 						{'  '}
-						<H3 style={{ display: 'inline', marginLeft: '1rem' }}>
+						<H3 style={{ display: 'inline', marginLeft: '%' }}>
 							{records[matchup.homeTeam.team]}
 						</H3>
 						<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>

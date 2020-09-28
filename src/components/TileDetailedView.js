@@ -16,6 +16,7 @@ import abbTeam from '../tools/teamAbbreviations';
 const TileGrid = styled(Grid)`
 	height: 100%;
 	width: 100%;
+	overflow-y: auto;
 `;
 
 const TileWideCell = styled(WideCell)`

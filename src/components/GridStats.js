@@ -15,6 +15,7 @@ export const MiniGrid = styled.div`
 	width: var(--cell-width);
 	grid-template-rows: 2fr 1fr;
 	grid-template-columns: repeat(2, 1fr);
+	border: 1px solid rgb(190, 190, 190);
 `;
 
 export const MiniGridNoBottom = styled(MiniGrid)`

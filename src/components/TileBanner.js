@@ -14,6 +14,11 @@ const Container = styled.div`
 	flex: 1;
 	flex-direction: column;
 	text-align: center;
+	@media (max-width: 900px) {
+		&.no-mobile {
+			display: none;
+		}
+	}
 `;
 
 const ToggleLayoutButton = styled.div`
@@ -30,6 +35,9 @@ const ToggleLayoutButton = styled.div`
 		background-color: #ddd;
 		color: var(--betbro-blue);
 		transition: 0.3s;
+	}
+	@media (max-width: 900px) {
+		display: none;
 	}
 `;
 
@@ -63,7 +71,7 @@ export default function TileBanner(props) {
 	} = props.propsList;
 	return (
 		<BannerDiv>
-			<Container>
+			<Container className={'no-mobile'}>
 				<CenteredDiv>
 					<Text>Click to switch view mode:</Text>
 				</CenteredDiv>

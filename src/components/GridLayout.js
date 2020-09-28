@@ -5,17 +5,21 @@ import abbTeam from '../tools/teamAbbreviations';
 import statNameAPI from '../tools/statNameAPI';
 
 const MainContainer = styled.div`
-	height: 99%;
 	display: flex;
 	margin: 0.2rem;
+	height: 100%;
 	overflow-x: hidden;
+	overflow-y: auto;
 `;
 
 const SelectorColumn = styled.div`
 	display: flex;
+	padding-bottom: 1rem;
+	height: -moz-min-content;
+	height: min-intrinsic;
+	height: min-content;
 	gap: 5px;
 	border-right: 8px solid transparent;
-	height: 100%;
 	flex-direction: column;
 	& > * {
 		flex-basis: 48px;
@@ -37,16 +41,20 @@ const BannerSelector = styled.select`
 export const Grid = styled.div`
 	display: grid;
 	grid-auto-rows: 48px;
+	height: -moz-min-content;
+	height: min-intrinsic;
+	height: min-content;
+	padding: 0 1rem 1rem 0;
 	gap: 5px;
 	background-color: transparent;
-	overflow: auto;
-	height: 100%;
+	overflow-x: auto;
 	color: var(--betbro-blue);
 `;
 
 export const Selector = styled.select`
 	font-size: 1rem;
 	background: #2c2837;
+	height: 100%;
 	color: #eee;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 	@media (max-width: 600px) {
@@ -57,6 +65,7 @@ export const Selector = styled.select`
 const Cell = styled.div`
 	display: flex;
 	background: #ddd;
+	height: 48px;
 	width: var(--cell-width);
 	text-align: center;
 `;
@@ -89,7 +98,7 @@ const ToggleLayoutButton = styled.div`
 
 const Text = styled.span`
 	margin: auto;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 `;
@@ -111,7 +120,6 @@ export default function GridLayout(props) {
 				<WideCell
 					style={{
 						display: 'flex',
-						height: '3rem',
 						background: 'var(--betbro-blue)',
 						gridRowStart: '1',
 						gridColumnStart: '1',
@@ -155,7 +163,7 @@ export default function GridLayout(props) {
 					);
 				})}
 			</SelectorColumn>
-			<Grid>
+			<Grid rows={selections.length}>
 				{/* render matchup headers */}
 				{matchups.map((matchup, i) => {
 					return (

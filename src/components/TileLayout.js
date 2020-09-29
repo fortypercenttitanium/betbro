@@ -68,6 +68,16 @@ const H3 = styled.h3`
 	}
 `;
 
+const SmallSpan = styled.span`
+	font-size: 1rem;
+	font-weight: normal;
+	margin: auto;
+	padding: 3px 0;
+	@media (max-width: 900px) {
+		font-size: 0.6rem;
+	}
+`;
+
 export default function TileLayout(props) {
 	const {
 		matchups,
@@ -90,9 +100,9 @@ export default function TileLayout(props) {
 						}}
 						key={index}
 					>
-						<H3 style={{ display: 'inline', marginRight: '3%' }}>
+						<SmallSpan style={{ display: 'inline', marginRight: '3%' }}>
 							{records[matchup.awayTeam.team]}
-						</H3>
+						</SmallSpan>
 						{'  '}
 						<H1 style={{ display: 'inline' }}>
 							{abbTeam(matchup.awayTeam.team)}
@@ -101,9 +111,9 @@ export default function TileLayout(props) {
 							@ {abbTeam(matchup.homeTeam.team)}
 						</H1>
 						{'  '}
-						<H3 style={{ display: 'inline', marginLeft: '3%' }}>
+						<SmallSpan style={{ display: 'inline', marginLeft: '3%' }}>
 							{records[matchup.homeTeam.team]}
-						</H3>
+						</SmallSpan>
 						<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>
 						<H3>
 							Moneyline: {abbTeam(matchup.awayTeam.team)}{' '}

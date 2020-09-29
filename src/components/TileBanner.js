@@ -85,6 +85,7 @@ export default function TileBanner(props) {
 				<CenteredDiv>
 					<Text>Odds data site:</Text>
 				</CenteredDiv>
+				<label style={{ display: 'none' }}>Select book for odds data</label>
 				<BannerSelector
 					value={oddsSnapshotSite}
 					onChange={(e) => {

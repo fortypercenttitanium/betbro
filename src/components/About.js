@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function About(props) {
 	useEffect(() => {
@@ -6,6 +7,15 @@ export default function About(props) {
 	}, [props]);
 	return (
 		<div>
+			<Helmet>
+				<meta charSet='utf-8' />
+				<meta
+					name='description'
+					content='Betbro is here for you, designed to give you consistent,
+					reliable information for NFL sports betting, all in one place.'
+				/>
+				<title>Why BetBro?</title>
+			</Helmet>
 			<h1>Consult</h1>
 			<p>
 				Yeah, we know you know what you’re doing. But everyone has a tough week

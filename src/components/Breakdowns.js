@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import selectionList from '../tools/selectionList';
 import LoadingScreen from './LoadingScreen';
@@ -6,8 +7,8 @@ import TileBanner from './TileBanner';
 import GridLayout from './GridLayout';
 import TileLayout from './TileLayout';
 import TileDetailedView from './TileDetailedView';
-// const weeks = require('../tools/weeks');
-// const thisWeek = weeks.thisWeek();
+const weeks = require('../tools/weeks');
+const thisWeek = weeks.thisWeek();
 
 const BreakdownsDiv = styled.div`
 	display: flex;
@@ -125,6 +126,14 @@ export default function Breakdowns(props) {
 
 	return (
 		<BreakdownsDiv>
+			<Helmet>
+				<meta charSet='utf-8' />
+				<meta
+					name='description'
+					content="Don't place your NFL bets until you analyze this week's matchup statistics!"
+				/>
+				<title>Bro's Breakdowns - Week {thisWeek}</title>
+			</Helmet>
 			{!matchups.length && <LoadingScreen />}
 			{tileDetailedView !== null && (
 				<TileDetailedView propsList={tileDetailProps} />

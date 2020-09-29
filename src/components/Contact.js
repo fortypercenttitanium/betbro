@@ -86,10 +86,10 @@ export default function Contact(props) {
 				...formData,
 			}),
 		})
-			.then(() => {
-				setSessionStorage();
-				checkSessionStorage();
-			})
+			// .then(() => {
+			// 	setSessionStorage();
+			// 	checkSessionStorage();
+			// })
 			.catch((error) => alert(error));
 	};
 

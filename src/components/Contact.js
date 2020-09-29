@@ -48,7 +48,6 @@ export default function Contact(props) {
 		name: '',
 		email: '',
 		message: '',
-		token: '',
 	});
 
 	const [formSubmitted, setFormSubmitted] = useState(false);
@@ -76,13 +75,16 @@ export default function Contact(props) {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const token = await reCaptchaRef.current.executeAsync();
-		formData.token = token;
 		const postPath =
 			process.env.REACT_APP_NODE_ENV === 'dev' ? 'https://betbro.io/' : '/';
 		fetch(postPath, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({ 'form-name': 'contact', ...formData }),
+			body: encode({
+				'form-name': 'contact',
+				'g-recaptcha-response': token,
+				...formData,
+			}),
 		})
 			.then(() => {
 				setSessionStorage();
@@ -111,6 +113,7 @@ export default function Contact(props) {
 				method='POST'
 				name='contact'
 				data-netlify='true'
+				data-netlify-recaptcha='true'
 			>
 				<ReCAPTCHA
 					ref={reCaptchaRef}

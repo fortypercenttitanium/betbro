@@ -64,9 +64,9 @@ export default function Contact(props) {
 		}
 	};
 
-	// const setSessionStorage = () => {
-	// 	sessionStorage.setItem('betBroFormSubmitted', JSON.stringify(true));
-	// };
+	const setSessionStorage = () => {
+		sessionStorage.setItem('betBroFormSubmitted', JSON.stringify(true));
+	};
 
 	useEffect(() => {
 		checkSessionStorage();
@@ -86,10 +86,10 @@ export default function Contact(props) {
 				...formData,
 			}),
 		})
-			// .then(() => {
-			// 	setSessionStorage();
-			// 	checkSessionStorage();
-			// })
+			.then(() => {
+				setSessionStorage();
+				checkSessionStorage();
+			})
 			.catch((error) => alert(error));
 	};
 

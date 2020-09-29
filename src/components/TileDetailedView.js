@@ -57,10 +57,11 @@ export default function TileDetailedView(props) {
 									style={{ gridRowStart: i + 2, gridColumnStart: 1 }}
 									key={i}
 								>
-									<label style={{ display: 'none' }}>
+									<label for='data-selector' style={{ display: 'none' }}>
 										Select data to display
 									</label>
 									<Selector
+										name='data-selector'
 										onChange={(e) => handleSelectorChange(e, i)}
 										value={sel}
 									>

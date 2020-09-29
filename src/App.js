@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
+
 import moment from 'moment';
 import styled from 'styled-components';
 import fetchStats, { initialSelections } from './tools/database';
@@ -12,6 +13,7 @@ import About from './components/About';
 import MyBetBro from './components/MyBetBro';
 import NotFound from './components/NotFound';
 import Contact from './components/Contact';
+
 const weeks = require('./tools/weeks');
 const { thisWeek } = weeks;
 

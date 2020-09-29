@@ -32,13 +32,14 @@ const Form = styled.form`
 
 const Input = styled.input`
 	display: block;
-	width: 50%;
+	width: 18rem;
 	padding: 0.5rem;
 	margin: 0.5rem auto;
 `;
 const TextArea = styled.textarea`
 	display: block;
-	width: 50%;
+	width: 18rem;
+	height: 10rem;
 	padding: 0.5rem;
 	margin: 0.5rem auto;
 `;
@@ -143,20 +144,25 @@ export default function Contact(props) {
 					onChange={handleChange}
 					required
 				/>
-				<button style={{ padding: '0.5rem' }}>Submit</button>
+				<button style={{ padding: '0.5rem' }}>
+					<span style={{ margin: 'auto' }}>Submit</span>
+				</button>
 			</Form>
 			<p
 				style={{
 					margin: 'auto',
 					textAlign: 'center',
-					width: '40%',
+					width: '20rem',
 					fontSize: '0.7rem',
 					marginBottom: '0.5rem',
+					textShadow: '1px 1px 1px black',
 				}}
 			>
-				Note: Google reCAPTCHA is implemented for this form. The use of
-				reCAPTCHA is subject to the Google{' '}
-				<a href='https://www.google.com/policies/privacy/'>Privacy Policy</a>{' '}
+				Note: Google reCAPTCHA is implemented for this form.
+				<br /> The use of reCAPTCHA is subject to the Google{' '}
+				<a href='https://www.google.com/policies/privacy/'>
+					Privacy Policy
+				</a>{' '}
 				and <a href='https://www.google.com/policies/terms/'>Terms of Use.</a>
 			</p>
 		</FormDiv>

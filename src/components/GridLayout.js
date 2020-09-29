@@ -8,19 +8,21 @@ const MainContainer = styled.div`
 	display: flex;
 	margin: 0.2rem;
 	height: 100%;
-	overflow-x: hidden;
+	overflow-x: auto;
 	overflow-y: auto;
 	min-width: calc(100% - 0.2rem);
 `;
 
 const SelectorColumn = styled.div`
 	display: flex;
+	position: sticky;
+	left: 0;
 	padding-bottom: 1rem;
 	height: -moz-min-content;
 	height: min-intrinsic;
 	height: min-content;
 	gap: 5px;
-	border-right: 8px solid transparent;
+	border-right: 4px solid rgba(20, 20, 20, 0.5);
 	flex-direction: column;
 	& > * {
 		flex-basis: 48px;
@@ -48,7 +50,7 @@ export const Grid = styled.div`
 	padding: 0 1rem 1rem 0;
 	gap: 5px;
 	background-color: transparent;
-	overflow-x: auto;
+	/* overflow-x: auto; */
 	color: var(--betbro-blue);
 `;
 
@@ -164,6 +166,7 @@ export default function GridLayout(props) {
 					);
 				})}
 			</SelectorColumn>
+
 			<Grid rows={selections.length}>
 				{/* render matchup headers */}
 				{matchups.map((matchup, i) => {

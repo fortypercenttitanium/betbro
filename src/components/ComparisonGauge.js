@@ -56,9 +56,9 @@ export default function ComparisonGauge(props) {
 			height='20'
 			style={{ margin: 'auto' }}
 		>
-			<line x1='10' x2='110' y1='11' y2='11' stroke='black' />
-			<line x1='60' x2='60' y1='0' y2='11' stroke='black' />
-			<circle cy='11' r='5' cx={circlePosition} fill={circleColor} />
+			<line x1='10' x2='110' y1='10' y2='10' stroke='black' />
+			<line x1='60' x2='60' y1='0' y2='10' stroke='black' />
+			<circle cy='10' r='5' cx={circlePosition} fill={circleColor} />
 		</svg>
 	);
 }

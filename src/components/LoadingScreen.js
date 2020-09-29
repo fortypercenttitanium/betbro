@@ -12,7 +12,7 @@ export const Background = styled.div`
 	width: 100%;
 	overflow: none;
 	z-index: 2;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.7);
 `;
 
 const LoadingDiv = styled.div`

@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import statNameAPI from '../tools/statNameAPI';
 
 const BannerDiv = styled.div`
-	width: 80%;
+	width: 100%;
 	display: flex;
 	padding: 1rem;
 	height: 7rem;
+	border-bottom: 3px solid #ddd;
 `;
 
 const Container = styled.div`
@@ -27,9 +28,10 @@ const ToggleLayoutButton = styled.div`
 	cursor: pointer;
 	transition: 0.3s;
 	background-color: rgba(44, 40, 55, 0.6);
-	color: #ddd;
+	color: #eee;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 	text-align: center;
-	border: 1px solid #ddd;
+	border: 1px solid #8a8a8a;
 	border-radius: 5px;
 	&:hover {
 		background-color: #ddd;
@@ -43,7 +45,7 @@ const ToggleLayoutButton = styled.div`
 
 const Text = styled.span`
 	margin: auto;
-	font-size: 1.2rem;
+	font-size: 1rem;
 `;
 
 const CenteredDiv = styled.div`
@@ -57,7 +59,7 @@ const BannerSelector = styled.select`
 	color: #eee;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 	border-radius: 5px;
-	padding: 1rem;
+	padding: calc(1rem + 3px);
 	text-align: center;
 	cursor: pointer;
 `;

@@ -5,11 +5,12 @@ import abbTeam from '../tools/teamAbbreviations';
 const TileContainer = styled.div`
 	display: flex;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0.2rem auto;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
 	cursor: pointer;
+	overflow-y: auto;
 `;
 
 const MatchupCard = styled.div`
@@ -89,7 +90,7 @@ export default function TileLayout(props) {
 						}}
 						key={index}
 					>
-						<H3 style={{ display: 'inline', marginRight: '%' }}>
+						<H3 style={{ display: 'inline', marginRight: '3%' }}>
 							{records[matchup.awayTeam.team]}
 						</H3>
 						{'  '}
@@ -100,7 +101,7 @@ export default function TileLayout(props) {
 							@ {abbTeam(matchup.homeTeam.team)}
 						</H1>
 						{'  '}
-						<H3 style={{ display: 'inline', marginLeft: '%' }}>
+						<H3 style={{ display: 'inline', marginLeft: '3%' }}>
 							{records[matchup.homeTeam.team]}
 						</H3>
 						<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>

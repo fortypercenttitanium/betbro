@@ -16,7 +16,6 @@ import abbTeam from '../tools/teamAbbreviations';
 const TileGrid = styled(Grid)`
 	height: 100%;
 	width: 100%;
-	overflow-y: auto;
 `;
 
 const TileWideCell = styled(WideCell)`
@@ -24,7 +23,13 @@ const TileWideCell = styled(WideCell)`
 `;
 
 const DetailedViewContainer = styled.div`
+	height: 80%;
 	margin: auto;
+	overflow-y: auto;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 1.5rem 0 1.5rem 1.5rem;
+	background-color: #000;
 `;
 
 export default function TileDetailedView(props) {

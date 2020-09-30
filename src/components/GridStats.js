@@ -62,7 +62,7 @@ export default function GridStats(props) {
 						style={{
 							gridRowStart: i + 2,
 							gridColumnStart: index + 2,
-							backgroundColor: index % 2 === 0 ? '#eee' : 'ccc',
+							backgroundColor: index % 2 === 0 ? '#eee' : '#c4c4c4',
 						}}
 					>
 						<StatDiv>
@@ -98,7 +98,7 @@ export default function GridStats(props) {
 						style={{
 							gridRowStart: i + 2,
 							gridColumnStart: index + 2,
-							backgroundColor: index % 2 === 0 ? '#eee' : 'ccc',
+							backgroundColor: index % 2 === 0 ? '#eee' : '#c4c4c4',
 						}}
 					>
 						<StatDiv>
@@ -129,7 +129,7 @@ export default function GridStats(props) {
 						style={{
 							gridRowStart: i + 2,
 							gridColumnStart: index + 2,
-							backgroundColor: index % 2 === 0 ? '#eee' : 'ccc',
+							backgroundColor: index % 2 === 0 ? '#eee' : '#c4c4c4',
 						}}
 					>
 						<Span>

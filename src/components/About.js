@@ -14,7 +14,7 @@ export default function About(props) {
 					content='Betbro is here for you, designed to give you consistent,
 					reliable information for NFL sports betting, all in one place.'
 				/>
-				<title>Why BetBro?</title>
+				<title>{'Why BetBro?'}</title>
 			</Helmet>
 			<h1>Consult</h1>
 			<p>

@@ -29,7 +29,7 @@ const DetailedViewContainer = styled.div`
 	border: 1px solid #ddd;
 	border-radius: 5px;
 	padding: 1.5rem 0 1.5rem 1.5rem;
-	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.7);
 `;
 
 export default function TileDetailedView(props) {
@@ -42,6 +42,7 @@ export default function TileDetailedView(props) {
 		rankings,
 		handleSelectorChange,
 		matchups,
+		oddsSnapshotSite,
 	} = props.propsList;
 
 	const matchup = matchups[tileDetailedView];
@@ -57,7 +58,7 @@ export default function TileDetailedView(props) {
 									style={{ gridRowStart: i + 2, gridColumnStart: 1 }}
 									key={i}
 								>
-									<label for='data-selector' style={{ display: 'none' }}>
+									<label htmlFor='data-selector' style={{ display: 'none' }}>
 										Select data to display
 									</label>
 									<Selector
@@ -147,8 +148,8 @@ export default function TileDetailedView(props) {
 											{/* check whether that data exists for the selected site */}
 											{getOddsData(
 												matchup,
-												selectionList[sel].name,
-												selectionList[sel].site,
+												selectionList[selections[i]].name,
+												oddsSnapshotSite,
 												matchup.awayTeam.team
 											)}
 										</Span>
@@ -157,8 +158,8 @@ export default function TileDetailedView(props) {
 										<Span>
 											{getOddsData(
 												matchup,
-												selectionList[sel].name,
-												selectionList[sel].site,
+												selectionList[selections[i]].name,
+												oddsSnapshotSite,
 												matchup.homeTeam.team
 											)}
 										</Span>
@@ -176,8 +177,8 @@ export default function TileDetailedView(props) {
 									<Span>
 										{getOddsData(
 											matchup,
-											selectionList[sel].name,
-											selectionList[sel].site
+											selectionList[selections[i]].name,
+											oddsSnapshotSite
 										)}
 									</Span>
 								</Cell>

@@ -109,7 +109,7 @@ export default function Contact(props) {
 					name='description'
 					content='BetBro is pretty great, but everything can be better. Let us know your suggestions!'
 				/>
-				<title>BetBro - Contact Us</title>
+				<title>{'BetBro - Contact Us'}</title>
 			</Helmet>
 			{formSubmitted ? (
 				<FormDiv>

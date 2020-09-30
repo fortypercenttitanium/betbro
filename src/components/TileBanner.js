@@ -85,7 +85,7 @@ export default function TileBanner(props) {
 				<CenteredDiv>
 					<Text>Odds data site:</Text>
 				</CenteredDiv>
-				<label for='odds-selector' style={{ display: 'none' }}>
+				<label htmlFor='odds-selector' style={{ display: 'none' }}>
 					Select book for odds data
 				</label>
 				<BannerSelector

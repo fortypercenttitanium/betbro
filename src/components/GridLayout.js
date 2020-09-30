@@ -131,7 +131,7 @@ export default function GridLayout(props) {
 					<ToggleLayoutButton onClick={toggleLayout}>
 						<Text>{siteLayout === 'grid' ? 'Tile mode' : 'Grid mode'}</Text>
 					</ToggleLayoutButton>
-					<label for='odds-selector' style={{ display: 'none' }}>
+					<label htmlFor='odds-selector' style={{ display: 'none' }}>
 						Select book for odds data
 					</label>
 					<BannerSelector
@@ -154,7 +154,7 @@ export default function GridLayout(props) {
 				{selections.map((sel, i) => {
 					return (
 						<WideCell key={i}>
-							<label for='data-selector' style={{ display: 'none' }}>
+							<label htmlFor='data-selector' style={{ display: 'none' }}>
 								Select data to display
 							</label>
 							<Selector

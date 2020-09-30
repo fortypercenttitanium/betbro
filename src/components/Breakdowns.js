@@ -122,6 +122,7 @@ export default function Breakdowns(props) {
 		rankings,
 		handleSelectorChange,
 		matchups,
+		oddsSnapshotSite,
 	};
 
 	return (
@@ -132,7 +133,7 @@ export default function Breakdowns(props) {
 					name='description'
 					content="Don't place your NFL bets until you analyze this week's matchup statistics!"
 				/>
-				<title>Bro's Breakdowns - Week {thisWeek}</title>
+				<title>{`Bro's Breakdowns - Week ${thisWeek}`}</title>
 			</Helmet>
 			{!matchups.length && <LoadingScreen />}
 			{tileDetailedView !== null && (

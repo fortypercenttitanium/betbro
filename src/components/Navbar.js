@@ -53,6 +53,7 @@ const LinkDiv = styled.div`
 const LinkDivMobile = styled(LinkDiv)`
 	flex: 1;
 	padding: 2rem 1rem;
+	font-size: 1.4rem;
 `;
 
 const HamburgerDiv = styled(LinkDiv)`

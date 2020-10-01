@@ -19,11 +19,12 @@ const MatchupCard = styled.div`
 	color: #ddd;
 	background-color: rgba(44, 40, 55, 0.6);
 	max-width: 320px;
+	min-width: 210px;
 	flex: 1 1;
 	margin: 1rem;
 	padding: 1rem;
 	flex: 1;
-	flex-basis: 16rem;
+	flex-basis: 17rem;
 	text-align: center;
 	transition: 0.3s;
 	&:hover {
@@ -64,7 +65,7 @@ const H3 = styled.h3`
 	margin: auto;
 	padding: 3px 0;
 	@media (max-width: 900px) {
-		font-size: 0.6rem;
+		font-size: 0.75rem;
 	}
 `;
 

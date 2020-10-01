@@ -200,7 +200,7 @@ export default function ranker(statsList, stat) {
 					? 1
 					: 0;
 			case 'passesDefensedPG':
-				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
+				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'defIntPct':
 				return Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
 					? -1
@@ -220,11 +220,11 @@ export default function ranker(statsList, stat) {
 					? 1
 					: 0;
 			case 'sackYdsPG':
-				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
+				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'qbHitsPG':
-				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
+				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'tacklesForLossPG':
-				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
+				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'sackPctDef':
 				return Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
 					? -1

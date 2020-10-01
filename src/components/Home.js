@@ -142,14 +142,13 @@ export default function Home(props) {
 					<H1>
 						The most successful sports betters use <br />
 					</H1>
-					<BBH1>
-						{' '}
-						<strong>
-							<i>BETBRO</i>
-						</strong>
-					</BBH1>
 					<MobileLogo src='images/logo-no-sub-trans.png' />
 				</TopTextDiv>
+				<BBH1>
+					<strong>
+						<i>BETBRO</i>
+					</strong>
+				</BBH1>
 				<BottomTextDiv>
 					<H2>
 						“<i>BETBRO</i> is the stat tool I didn’t know I needed to give me

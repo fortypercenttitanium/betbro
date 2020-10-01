@@ -72,8 +72,7 @@ export default function About(props) {
 				</StyledP>
 				<H1>Continue</H1>
 				<StyledP>
-					{' '}
-					- Bet bro is a tool designed for you. Save your pages and see past
+					Bet bro is a tool designed for you. Save your pages and see past
 					history, NFL game results and stats to make informed decisions on your
 					next bets so you can continue to earn. Only Betbro offers fast,
 					reliable information, that’s always for you. Maybe buy us a beer

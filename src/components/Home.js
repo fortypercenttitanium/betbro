@@ -94,8 +94,9 @@ const H3 = styled(H1)`
 		color: #ddd;
 	}
 	@media (max-width: 1100px) {
-		font-size: 1.5rem;
+		font-size: calc(0.5rem + 3vw);
 		margin: 3rem auto;
+		text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 	}
 `;
 

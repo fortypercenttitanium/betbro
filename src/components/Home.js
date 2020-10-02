@@ -143,7 +143,7 @@ export default function Home(props) {
 					<H1>
 						The most successful sports betters use <br />
 					</H1>
-					<MobileLogo src='images/logo-no-sub-trans.png' />
+					<MobileLogo src='images/logo-no-sub-trans.png' alt='BETBRO logo' />
 				</TopTextDiv>
 				<BBH1>
 					<strong>

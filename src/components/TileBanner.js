@@ -7,7 +7,7 @@ const BannerDiv = styled.div`
 	width: 100%;
 	display: flex;
 	padding: 1rem;
-	height: 7rem;
+	min-height: 7rem;
 	border-bottom: 3px solid #ddd;
 `;
 
@@ -28,6 +28,11 @@ const RelativeContainer = styled(Container)`
 	left: 3%;
 	bottom: 12px;
 	margin-bottom: 0;
+	@media (max-width: 900px) {
+		position: inherit;
+		margin: auto auto 0;
+		left: initial;
+	}
 `;
 
 export const ToggleLayoutButton = styled.div`

@@ -135,7 +135,7 @@ export default function Home(props) {
 		<HomeContainer>
 			<LeftContainer>
 				<CircleDiv>
-					<LogoImg src='images/logo.png' />
+					<LogoImg src='images/logo.png' alt='BETBRO logo' />
 				</CircleDiv>
 			</LeftContainer>
 			<RightContainer>

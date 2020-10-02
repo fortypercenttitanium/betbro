@@ -9,30 +9,29 @@ const MainContainer = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	overflow-x: auto;
+	overflow-y: auto;
 `;
 
 const GridContainer = styled.div`
 	display: flex;
 	margin: 0.2rem;
 	height: 100%;
-	overflow-x: auto;
-	overflow-y: auto;
 	min-width: calc(100% - 0.2rem);
 `;
 
 const FixedContainer = styled(Container)`
-	position: fixed;
-	top: 6rem;
-	left: 0;
-	right: 0;
+	margin: auto;
 `;
 
 const BannerDiv = styled.div`
 	width: 100%;
+	position: sticky;
+	left: 0;
 	margin: auto;
 	display: flex;
 	padding: 1rem;
-	height: 7rem;
+	min-height: 7rem;
 	border-bottom: 3px solid #ddd;
 `;
 
@@ -103,6 +102,9 @@ const Span = styled.span`
 	font-size: 1.3rem;
 	margin: auto;
 `;
+const SmallSpan = styled(Span)`
+	font-size: 0.8rem;
+`;
 
 const Text = styled.span`
 	margin: auto;
@@ -124,6 +126,7 @@ export default function GridLayout(props) {
 	} = props.gridProps;
 	return (
 		<MainContainer>
+			{/* render banner to switch view modes */}
 			<BannerDiv>
 				<FixedContainer>
 					<CenteredDiv>
@@ -200,6 +203,7 @@ export default function GridLayout(props) {
 									background: '#2c2837',
 									textShadow: '2px 2px 2px rgba(0, 0, 0, 0.6)',
 									color: '#eee',
+									flexDirection: 'column',
 								}}
 							>
 								<Span>
@@ -207,6 +211,9 @@ export default function GridLayout(props) {
 										matchup.homeTeam.team
 									)}`}
 								</Span>
+								<SmallSpan>
+									{matchup.time.format('ddd MMM. Do, h:mma')}
+								</SmallSpan>
 							</Cell>
 						);
 					})}

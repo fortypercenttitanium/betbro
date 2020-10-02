@@ -93,7 +93,7 @@ body {
 :root {
 	--midgrey: #c4c4c4;
 	--betbro-blue: #2c2837;
-	--cell-width: 140px;
+	--cell-width: 150px;
 }
 #root {
 	height: 100%;

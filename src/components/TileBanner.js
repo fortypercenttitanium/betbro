@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import statNameAPI from '../tools/statNameAPI';
 
 const BannerDiv = styled.div`
+	position: relative;
 	width: 100%;
 	display: flex;
 	padding: 1rem;
@@ -20,6 +21,13 @@ export const Container = styled.div`
 			display: none;
 		}
 	}
+`;
+
+const RelativeContainer = styled(Container)`
+	position: absolute;
+	left: 3%;
+	bottom: 12px;
+	margin-bottom: 0;
 `;
 
 export const ToggleLayoutButton = styled.div`
@@ -73,18 +81,7 @@ export default function TileBanner(props) {
 	} = props.propsList;
 	return (
 		<BannerDiv>
-			<Container className={'no-mobile'}>
-				<CenteredDiv>
-					<Text>Click to switch view mode:</Text>
-				</CenteredDiv>
-				<ToggleLayoutButton onClick={toggleLayout}>
-					<Text>{siteLayout === 'grid' ? 'Tile mode' : 'Grid mode'}</Text>
-				</ToggleLayoutButton>
-			</Container>
-			<Container>
-				<CenteredDiv>
-					<Text>Odds data site:</Text>
-				</CenteredDiv>
+			<RelativeContainer>
 				<label htmlFor='odds-selector' style={{ display: 'none' }}>
 					Select book for odds data
 				</label>
@@ -98,11 +95,19 @@ export default function TileBanner(props) {
 					{Object.values(statNameAPI.sites).map((site, i) => {
 						return (
 							<option key={i} value={Object.keys(statNameAPI.sites)[i]}>
-								{site}
+								Book: {site}
 							</option>
 						);
 					})}
 				</BannerSelector>
+			</RelativeContainer>
+			<Container className={'no-mobile'}>
+				<CenteredDiv>
+					<Text>Click to switch view mode:</Text>
+				</CenteredDiv>
+				<ToggleLayoutButton onClick={toggleLayout}>
+					<Text>{siteLayout === 'grid' ? 'Tile mode' : 'Grid mode'}</Text>
+				</ToggleLayoutButton>
 			</Container>
 		</BannerDiv>
 	);

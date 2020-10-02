@@ -10,7 +10,7 @@ const BannerDiv = styled.div`
 	border-bottom: 3px solid #ddd;
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
 	display: flex;
 	flex: 1;
 	flex-direction: column;
@@ -22,7 +22,7 @@ const Container = styled.div`
 	}
 `;
 
-const ToggleLayoutButton = styled.div`
+export const ToggleLayoutButton = styled.div`
 	margin: auto;
 	padding: 1rem;
 	cursor: pointer;
@@ -48,7 +48,7 @@ const Text = styled.span`
 	font-size: 1rem;
 `;
 
-const CenteredDiv = styled.div`
+export const CenteredDiv = styled.div`
 	margin: auto;
 `;
 

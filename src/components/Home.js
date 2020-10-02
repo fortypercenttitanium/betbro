@@ -45,7 +45,7 @@ const CircleDiv = styled.div`
 const TopTextDiv = styled.div`
 	display: flex;
 	width: 95%;
-	margin: 6rem auto 0 0;
+	margin: 3rem auto 0 0;
 	text-align: center;
 	@media (max-width: 1100px) {
 		flex-direction: column;
@@ -88,7 +88,7 @@ const H3 = styled(H1)`
 	font-style: italic;
 	line-height: 3rem;
 	font-weight: 300;
-	margin: 0 2rem 0 auto;
+	margin: 1rem 2rem 0 auto;
 	text-decoration: underline;
 	&:visited {
 		color: #ddd;
@@ -101,6 +101,7 @@ const H3 = styled(H1)`
 `;
 
 const BBH1 = styled(H1)`
+	margin: 3% auto;
 	@media (max-width: 1100px) {
 		display: none;
 	}

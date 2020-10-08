@@ -47,7 +47,7 @@ const SelectorColumn = styled.div`
 	border-right: 4px solid rgba(20, 20, 20, 0.5);
 	flex-direction: column;
 	& > * {
-		flex-basis: 48px;
+		flex-basis: 52px;
 	}
 `;
 const BannerSelector = styled.select`
@@ -64,7 +64,7 @@ const BannerSelector = styled.select`
 
 export const Grid = styled.div`
 	display: grid;
-	grid-auto-rows: 48px;
+	grid-auto-rows: 52px;
 	height: -moz-min-content;
 	height: min-intrinsic;
 	height: min-content;
@@ -89,7 +89,7 @@ export const Selector = styled.select`
 const Cell = styled.div`
 	display: flex;
 	background: #ddd;
-	height: 48px;
+	height: 52px;
 	width: var(--cell-width);
 	text-align: center;
 `;

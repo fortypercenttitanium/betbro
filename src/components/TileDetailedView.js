@@ -16,6 +16,8 @@ import abbTeam from '../tools/teamAbbreviations';
 const TileGrid = styled(Grid)`
 	height: 100%;
 	width: 100%;
+	margin: auto;
+	padding: 2.5rem;
 `;
 
 const TileWideCell = styled(WideCell)`
@@ -28,7 +30,7 @@ const DetailedViewContainer = styled.div`
 	overflow-y: auto;
 	border: 1px solid #ddd;
 	border-radius: 5px;
-	padding: 1.5rem 0 1.5rem 1.5rem;
+	/* padding: 2.5rem 0 2.5rem 2.5rem; */
 	background-color: rgba(0, 0, 0, 0.7);
 `;
 
@@ -134,13 +136,13 @@ export default function TileDetailedView(props) {
 										)}
 									</GaugeContainer>
 								</MiniGrid>
-							) : selectionList[sel].name !== 'overUnder' ? (
+							) : selectionList[sel].name === 'moneyLine' ? (
 								<MiniGridNoBottom
 									key={i}
 									style={{
 										gridRowStart: i + 2,
 										gridColumnStart: 2,
-										backgroundColor: 'eee',
+										backgroundColor: '#eee',
 									}}
 								>
 									<StatDiv>
@@ -167,6 +169,67 @@ export default function TileDetailedView(props) {
 										</Span>
 									</StatDiv>
 								</MiniGridNoBottom>
+							) : selectionList[sel].name === 'spreads' ? (
+								<MiniGridNoBottom
+									key={i}
+									style={{
+										gridRowStart: i + 2,
+										gridColumnStart: 2,
+										backgroundColor: '#eee',
+									}}
+								>
+									<StatDiv
+										style={{ padding: '0', margin: '0 auto', height: '100%' }}
+									>
+										<Span>
+											{/* check whether that data exists for the selected site */}
+											{
+												getOddsData(
+													matchups,
+													matchup,
+													selectionList[selections[i]].name,
+													oddsSnapshotSite,
+													matchup.awayTeam.team
+												).points
+											}
+											<br />(
+											{
+												getOddsData(
+													matchups,
+													matchup,
+													selectionList[selections[i]].name,
+													oddsSnapshotSite,
+													matchup.awayTeam.team
+												).odds
+											}
+											)
+										</Span>
+									</StatDiv>
+									<StatDiv>
+										<Span>
+											{
+												getOddsData(
+													matchups,
+													matchup,
+													selectionList[selections[i]].name,
+													oddsSnapshotSite,
+													matchup.homeTeam.team
+												).points
+											}
+											<br />(
+											{
+												getOddsData(
+													matchups,
+													matchup,
+													selectionList[selections[i]].name,
+													oddsSnapshotSite,
+													matchup.homeTeam.team
+												).odds
+											}
+											)
+										</Span>
+									</StatDiv>
+								</MiniGridNoBottom>
 							) : (
 								<Cell
 									key={i}
@@ -176,16 +239,101 @@ export default function TileDetailedView(props) {
 										backgroundColor: '#eee',
 									}}
 								>
-									<Span>
-										{getOddsData(
-											matchups,
-											matchup,
-											selectionList[selections[i]].name,
-											oddsSnapshotSite
-										)}
-									</Span>
+									<div style={{ width: '100%' }}>
+										<Span>
+											<strong>
+												{
+													getOddsData(
+														matchups,
+														matchup,
+														selectionList[selections[i]].name,
+														oddsSnapshotSite
+													).points
+												}
+											</strong>
+										</Span>
+										<br />
+										<Span>
+											U:{' '}
+											{
+												getOddsData(
+													matchups,
+													matchup,
+													selectionList[selections[i]].name,
+													oddsSnapshotSite
+												).oddsUnder
+											}
+											{'  '}|
+										</Span>
+
+										<Span>
+											{' '}
+											O:{' '}
+											{
+												getOddsData(
+													matchups,
+													matchup,
+													selectionList[selections[i]].name,
+													oddsSnapshotSite
+												).oddsOver
+											}
+										</Span>
+									</div>
 								</Cell>
 							);
+
+							// selectionList[sel].name !== 'overUnder' ? (
+							// 	<MiniGridNoBottom
+							// 		key={i}
+							// 		style={{
+							// 			gridRowStart: i + 2,
+							// 			gridColumnStart: 2,
+							// 			backgroundColor: 'eee',
+							// 		}}
+							// 	>
+							// 		<StatDiv>
+							// 			<Span>
+							// 				{/* check whether that data exists for the selected site */}
+							// 				{getOddsData(
+							// 					matchups,
+							// 					matchup,
+							// 					selectionList[selections[i]].name,
+							// 					oddsSnapshotSite,
+							// 					matchup.awayTeam.team
+							// 				)}
+							// 			</Span>
+							// 		</StatDiv>
+							// 		<StatDiv>
+							// 			<Span>
+							// 				{getOddsData(
+							// 					matchups,
+							// 					matchup,
+							// 					selectionList[selections[i]].name,
+							// 					oddsSnapshotSite,
+							// 					matchup.homeTeam.team
+							// 				)}
+							// 			</Span>
+							// 		</StatDiv>
+							// 	</MiniGridNoBottom>
+							// ) : (
+							// 	<Cell
+							// 		key={i}
+							// 		style={{
+							// 			gridRowStart: i + 2,
+							// 			gridColumnStart: 2,
+							// 			backgroundColor: '#eee',
+							// 		}}
+							// 	>
+							// 		<Span>
+							// 			{getOddsData(
+							// 				matchups,
+							// 				matchup,
+							// 				selectionList[selections[i]].name,
+							// 				oddsSnapshotSite
+							// 			)}
+							// 		</Span>
+							// 	</Cell>
+							// );
 						})}
 					</TileGrid>
 				</DetailedViewContainer>

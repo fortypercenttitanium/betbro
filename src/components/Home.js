@@ -9,9 +9,9 @@ const HomeContainer = styled.div`
 	position: relative;
 	width: 100%;
 	height: 100%;
-	min-width: 1297px;
-	overflow-y: auto;
-	overflow-x: auto;
+	min-width: 81rem;
+	min-height: 38.75rem;
+	overflow: auto;
 	text-align: center;
 
 	@media (max-width: 1170px) {
@@ -25,7 +25,6 @@ const SplashImg = styled.img`
 	display: block;
 	object-fit: cover;
 	height: 100%;
-	min-height: 580px;
 	width: auto;
 	margin: auto;
 	@media (max-width: 1170px) {
@@ -109,12 +108,15 @@ const H2 = styled.h2`
 const LinkDiv = styled.div`
 	position: absolute;
 	display: flex;
-	left: 60%;
-	top: 300px;
+	left: 59%;
+	top: 54%;
 	height: 10rem;
 	overflow: hidden;
 	@media (max-width: 1171px) {
 		display: none;
+	}
+	@media (min-width: 1800px) {
+		left: 62%;
 	}
 `;
 
@@ -138,7 +140,7 @@ const H3 = styled(H1)`
 	}
 	@media (min-width: 1171px) {
 		position: relative;
-		font-size: calc(1rem + 0.5vw);
+		font-size: calc(1.7vw);
 	}
 `;
 

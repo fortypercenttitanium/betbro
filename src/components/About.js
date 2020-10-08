@@ -11,7 +11,7 @@ const ScrollContainer = styled.div`
 const AboutContainer = styled.div`
 	position: relative;
 	width: 80%;
-	max-width: 500px;
+	max-width: 650px;
 	text-align: center;
 	display: flex;
 	flex-direction: column;

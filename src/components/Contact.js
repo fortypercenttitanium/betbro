@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import Bouncer from 'formbouncerjs';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const encode = (data) => {
@@ -9,8 +8,6 @@ const encode = (data) => {
 		.map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
 		.join('&');
 };
-
-new Bouncer('form', { disableSubmit: true });
 
 const FormDiv = styled.div`
 	overflow: auto;
@@ -149,11 +146,11 @@ export default function Contact(props) {
 							required
 						/>
 						<TextArea
-							placeholder='Message'
+							placeholder='Message (min: 15 chars)'
 							name='message'
 							height='60px'
 							width='auto'
-							minLength='20'
+							minLength='15'
 							onChange={handleChange}
 							required
 						/>

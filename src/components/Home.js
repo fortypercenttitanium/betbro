@@ -16,15 +16,15 @@ const HomeContainer = styled.div`
 	}
 `;
 
-const LeftContainer = styled.div`
-	display: none;
-	position: relative;
-	color: #ddd;
-	width: 45%;
-	@media (max-width: 1170px) {
-		display: none;
-	}
-`;
+// const LeftContainer = styled.div`
+// 	display: none;
+// 	position: relative;
+// 	color: #ddd;
+// 	width: 45%;
+// 	@media (max-width: 1170px) {
+// 		display: none;
+// 	}
+// `;
 
 const RightContainer = styled.div`
 	display: none;
@@ -38,15 +38,15 @@ const RightContainer = styled.div`
 	}
 `;
 
-const CircleDiv = styled.div`
-	display: flex;
-	background: transparent;
-	margin: auto;
-	height: auto;
-	margin-right: 0;
-	margin-top: 5%;
-	width: 95%;
-`;
+// const CircleDiv = styled.div`
+// 	display: flex;
+// 	background: transparent;
+// 	margin: auto;
+// 	height: auto;
+// 	margin-right: 0;
+// 	margin-top: 5%;
+// 	width: 95%;
+// `;
 
 const TopTextDiv = styled.div`
 	display: flex;
@@ -141,16 +141,16 @@ const MobileLogo = styled.img`
 	}
 `;
 
-const LogoImg = styled.img`
-	display: block;
-	max-height: 32rem;
-	max-width: 32rem;
-	height: auto;
-	width: 100%;
-	margin-left: auto;
-	border: 7px solid #ddd;
-	border-radius: 50%;
-`;
+// const LogoImg = styled.img`
+// 	display: block;
+// 	max-height: 32rem;
+// 	max-width: 32rem;
+// 	height: auto;
+// 	width: 100%;
+// 	margin-left: auto;
+// 	border: 7px solid #ddd;
+// 	border-radius: 50%;
+// `;
 
 export default function Home(props) {
 	useEffect(() => {

@@ -21,7 +21,7 @@ const AboutContainer = styled.div`
 const HeaderContainer = styled.div`
 	border: 2px solid #ddd;
 	position: sticky;
-	top: -2px;
+	top: 0;
 	background: rgb(0, 0, 0);
 	background: linear-gradient(
 		90deg,
@@ -144,11 +144,16 @@ export default function About(props) {
 					sometime?
 				</StyledP>
 				<StyledP
-					style={{ backgroundColor: 'transparent', textAlign: 'center' }}
+					style={{
+						backgroundColor: 'transparent',
+						textAlign: 'center',
+						margin: '1rem auto',
+						paddingBottom: '0',
+					}}
 				>
 					But don't take our word for it...
 				</StyledP>
-				<Link style={{ margin: 'auto' }} to='/breakdowns'>
+				<Link style={{ margin: '1rem auto' }} to='/breakdowns'>
 					<Button>
 						<Span>Check it out for yourself!</Span>
 					</Button>

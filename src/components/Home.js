@@ -8,7 +8,7 @@ const HomeContainer = styled.div`
 	height: 100%;
 	width: 100%;
 	min-width: 1297px;
-	overflow: auto;
+	/* overflow-y: auto; */
 	overflow-x: hidden;
 	background-image: url('images/bb-homepage.png');
 	background-size: cover;

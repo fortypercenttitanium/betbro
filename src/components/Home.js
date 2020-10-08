@@ -11,7 +11,7 @@ const HomeContainer = styled.div`
 	height: 100%;
 	min-width: 1297px;
 	overflow-y: auto;
-	overflow-x: hidden;
+	overflow-x: auto;
 	text-align: center;
 
 	@media (max-width: 1170px) {
@@ -23,6 +23,7 @@ const HomeContainer = styled.div`
 
 const SplashImg = styled.img`
 	display: block;
+	object-fit: cover;
 	height: 100%;
 	min-height: 580px;
 	width: auto;
@@ -109,7 +110,7 @@ const LinkDiv = styled.div`
 	position: absolute;
 	display: flex;
 	left: 60%;
-	top: calc(17.3rem + 3vw);
+	top: 300px;
 	height: 10rem;
 	overflow: hidden;
 	@media (max-width: 1171px) {

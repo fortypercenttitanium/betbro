@@ -100,6 +100,7 @@ body {
 	width: 100%;
 	background: url('images/bg.png') no-repeat center center;
 	background-size: cover;
+	background-position: 0% 10%;
 }
 a {
 	text-decoration: none;

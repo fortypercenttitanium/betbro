@@ -5,14 +5,18 @@ import styled from 'styled-components';
 const HomeContainer = styled.div`
 	display: flex;
 	height: 100%;
+	width: 100%;
 	overflow: auto;
+	background-image: url('images/bb-homepage.png');
+	background-size: cover;
 	@media (max-width: 1100px) {
 		flex-direction: column;
+		background: none;
 	}
 `;
 
 const LeftContainer = styled.div`
-	display: flex;
+	display: none;
 	position: relative;
 	color: #ddd;
 	width: 45%;
@@ -22,11 +26,12 @@ const LeftContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
-	display: flex;
+	display: none;
 	flex-direction: column;
 	width: 55%;
 	color: #ddd;
 	@media (max-width: 1100px) {
+		display: flex;
 		width: 80%;
 		margin: 2rem auto;
 	}

@@ -20,10 +20,9 @@ const { thisWeek } = weeks;
 const MainContainer = styled.div`
 	display: flex;
 	width: 100%;
-	height: calc(100% - 6rem - 4px);
+	height: 100%;
 	background: url('images/bg.png') no-repeat center center;
 	background-size: cover;
-	overflow: hidden;
 `;
 
 function App() {

@@ -13,6 +13,7 @@ const HomeContainer = styled.div`
 	background-image: url('images/bb-homepage.png');
 	background-size: cover;
 	@media (max-width: 1170px) {
+		min-width: initial;
 		flex-direction: column;
 		background: none;
 	}

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import bbHomepage from '../images/bb-homepage.png';
+import logoNoSub from '../images/logo-no-sub-trans.png';
 
 const HomeContainer = styled.div`
 	display: flex;
@@ -188,9 +189,9 @@ export default function Home(props) {
 			<RightContainer>
 				<TopTextDiv>
 					<H1>
-						The most successful sports betters use <br />
+						The most successful sports bettors use <br />
 					</H1>
-					<MobileLogo src='../images/logo-no-sub-trans.png' alt='BETBRO logo' />
+					<MobileLogo src={logoNoSub} alt='BETBRO logo' />
 				</TopTextDiv>
 				<BBH1>
 					<strong>

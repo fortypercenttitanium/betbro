@@ -1,21 +1,33 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import bbHomepage from '../images/bb-homepage.png';
 
 const HomeContainer = styled.div`
 	display: flex;
 	position: relative;
-	height: 100%;
 	width: 100%;
+	height: 100%;
 	min-width: 1297px;
-	/* overflow-y: auto; */
+	overflow-y: auto;
 	overflow-x: hidden;
-	background-image: url('images/bb-homepage.png');
-	background-size: cover;
+	text-align: center;
+
 	@media (max-width: 1170px) {
 		min-width: initial;
 		flex-direction: column;
 		background: none;
+	}
+`;
+
+const SplashImg = styled.img`
+	display: block;
+	height: 100%;
+	min-height: 580px;
+	width: auto;
+	margin: auto;
+	@media (max-width: 1170px) {
+		display: none;
 	}
 `;
 
@@ -93,10 +105,10 @@ const H2 = styled.h2`
 `;
 
 const LinkDiv = styled.div`
-	position: relative;
+	position: absolute;
 	display: flex;
 	left: 60%;
-	top: calc(7rem + 17vw);
+	top: calc(17.3rem + 3vw);
 	height: 10rem;
 	overflow: hidden;
 	@media (max-width: 1171px) {
@@ -124,7 +136,7 @@ const H3 = styled(H1)`
 	}
 	@media (min-width: 1171px) {
 		position: relative;
-		font-size: calc(0.5rem + 1.5vw);
+		font-size: calc(1rem + 0.5vw);
 	}
 `;
 
@@ -161,6 +173,7 @@ export default function Home(props) {
 	}, [props]);
 	return (
 		<HomeContainer>
+			<SplashImg src={bbHomepage} />
 			<LinkDiv>
 				<H3 className='desktop'>
 					<Link to='/about'>Here's the reason why... </Link>
@@ -169,7 +182,7 @@ export default function Home(props) {
 
 			{/* <LeftContainer>
 				<CircleDiv>
-					<LogoImg src='images/logo.png' alt='BETBRO logo' />
+					<LogoImg src='../images/logo.png' alt='BETBRO logo' />
 				</CircleDiv>
 			</LeftContainer> */}
 			<RightContainer>
@@ -177,7 +190,7 @@ export default function Home(props) {
 					<H1>
 						The most successful sports betters use <br />
 					</H1>
-					<MobileLogo src='images/logo-no-sub-trans.png' alt='BETBRO logo' />
+					<MobileLogo src='../images/logo-no-sub-trans.png' alt='BETBRO logo' />
 				</TopTextDiv>
 				<BBH1>
 					<strong>

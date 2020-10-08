@@ -123,7 +123,7 @@ export default function Navbar(props) {
 			<LogoContainer>
 				<Link to='/'>
 					<img
-						src='images/logo-no-sub.png'
+						src={require('../images/logo-no-sub.png')}
 						alt='BetBro logo'
 						style={{ width: '150px', position: 'relative', top: '-25px' }}
 					/>
@@ -156,7 +156,10 @@ export default function Navbar(props) {
 					menuOpen ? closeMenu() : openMenu();
 				}}
 			>
-				<img src='images/hamburger.svg' alt='Click to open nav menu' />
+				<img
+					src={require('../images/hamburger.svg')}
+					alt='Click to open nav menu'
+				/>
 			</HamburgerDiv>
 			{menuOpen && (
 				<MenuBackground onClick={closeMenu}>

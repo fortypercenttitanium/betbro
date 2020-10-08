@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 const ScrollContainer = styled.div`
-	overflow: auto;
+	/* overflow: auto; */
 	width: 100%;
 `;
 
@@ -20,8 +20,7 @@ const AboutContainer = styled.div`
 
 const HeaderContainer = styled.div`
 	border: 2px solid #ddd;
-	position: sticky;
-	top: 0;
+
 	background: rgb(0, 0, 0);
 	background: linear-gradient(
 		90deg,
@@ -32,6 +31,11 @@ const HeaderContainer = styled.div`
 		rgba(0, 0, 0, 1) 100%
 	);
 	z-index: ${(props) => props.zIndex};
+
+	@media (max-width: 1171px) {
+		position: sticky;
+		top: 0;
+	}
 `;
 
 const H1 = styled.h1`

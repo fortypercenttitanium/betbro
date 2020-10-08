@@ -4,12 +4,13 @@ import styled from 'styled-components';
 
 const HomeContainer = styled.div`
 	display: flex;
+	position: relative;
 	height: 100%;
 	width: 100%;
 	overflow: auto;
 	background-image: url('images/bb-homepage.png');
 	background-size: cover;
-	@media (max-width: 1100px) {
+	@media (max-width: 1170px) {
 		flex-direction: column;
 		background: none;
 	}
@@ -20,7 +21,7 @@ const LeftContainer = styled.div`
 	position: relative;
 	color: #ddd;
 	width: 45%;
-	@media (max-width: 1100px) {
+	@media (max-width: 1170px) {
 		display: none;
 	}
 `;
@@ -30,7 +31,7 @@ const RightContainer = styled.div`
 	flex-direction: column;
 	width: 55%;
 	color: #ddd;
-	@media (max-width: 1100px) {
+	@media (max-width: 1170px) {
 		display: flex;
 		width: 80%;
 		margin: 2rem auto;
@@ -52,7 +53,7 @@ const TopTextDiv = styled.div`
 	width: 95%;
 	margin: 3rem auto 0 0;
 	text-align: center;
-	@media (max-width: 1100px) {
+	@media (max-width: 1170px) {
 		flex-direction: column;
 		margin: 2rem auto 1rem;
 	}
@@ -70,7 +71,7 @@ const H1 = styled.h1`
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 	line-height: 4.2rem;
 	margin: auto;
-	@media (max-width: 1100px) {
+	@media (max-width: 1170px) {
 		line-height: 3rem;
 	}
 `;
@@ -80,11 +81,23 @@ const H2 = styled.h2`
 	font-weight: 400;
 	line-height: 3rem;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
-	@media (max-width: 1100px) {
+	@media (max-width: 1170px) {
 		font-size: 1rem;
 		line-height: 1.6rem;
 		width: 80%;
 		margin: auto;
+	}
+`;
+
+const LinkDiv = styled.div`
+	position: relative;
+	display: flex;
+	left: 58.5%;
+	top: 24.5vw;
+	height: 10rem;
+	overflow: hidden;
+	@media (max-width: 1171px) {
+		display: none;
 	}
 `;
 
@@ -98,16 +111,23 @@ const H3 = styled(H1)`
 	&:visited {
 		color: #ddd;
 	}
-	@media (max-width: 1100px) {
+	@media (max-width: 1170px) {
 		font-size: calc(0.5rem + 3vw);
 		margin: 3rem auto;
 		text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+		&.desktop {
+			display: none;
+		}
+	}
+	@media (min-width: 1171px) {
+		position: relative;
+		font-size: calc(0.7rem + 1.5vw);
 	}
 `;
 
 const BBH1 = styled(H1)`
 	margin: 3% auto;
-	@media (max-width: 1100px) {
+	@media (max-width: 1170px) {
 		display: none;
 	}
 `;
@@ -116,7 +136,7 @@ const MobileLogo = styled.img`
 	display: none;
 	height: 6rem;
 	margin: 2rem auto;
-	@media (max-width: 1100px) {
+	@media (max-width: 1170px) {
 		display: block;
 	}
 `;
@@ -138,11 +158,17 @@ export default function Home(props) {
 	}, [props]);
 	return (
 		<HomeContainer>
-			<LeftContainer>
+			<LinkDiv>
+				<H3 className='desktop'>
+					<Link to='/about'>Here's the reason why... </Link>
+				</H3>
+			</LinkDiv>
+
+			{/* <LeftContainer>
 				<CircleDiv>
 					<LogoImg src='images/logo.png' alt='BETBRO logo' />
 				</CircleDiv>
-			</LeftContainer>
+			</LeftContainer> */}
 			<RightContainer>
 				<TopTextDiv>
 					<H1>

@@ -7,7 +7,9 @@ const HomeContainer = styled.div`
 	position: relative;
 	height: 100%;
 	width: 100%;
+	min-width: 1297px;
 	overflow: auto;
+	overflow-x: hidden;
 	background-image: url('images/bb-homepage.png');
 	background-size: cover;
 	@media (max-width: 1170px) {
@@ -92,8 +94,8 @@ const H2 = styled.h2`
 const LinkDiv = styled.div`
 	position: relative;
 	display: flex;
-	left: 58.5%;
-	top: 24.5vw;
+	left: 60%;
+	top: calc(7rem + 17vw);
 	height: 10rem;
 	overflow: hidden;
 	@media (max-width: 1171px) {
@@ -121,7 +123,7 @@ const H3 = styled(H1)`
 	}
 	@media (min-width: 1171px) {
 		position: relative;
-		font-size: calc(0.7rem + 1.5vw);
+		font-size: calc(0.5rem + 1.5vw);
 	}
 `;
 

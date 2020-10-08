@@ -117,8 +117,10 @@ export default function TileLayout(props) {
 						</SmallSpan>
 						<H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>
 						<H3>
-							Moneyline: {abbTeam(matchup.awayTeam.team)}{' '}
+							<strong>Moneyline:</strong>
+							<br /> {abbTeam(matchup.awayTeam.team)}{' '}
 							{getOddsData(
+								matchups,
 								matchup,
 								'moneyLine',
 								oddsSnapshotSite,
@@ -126,6 +128,7 @@ export default function TileLayout(props) {
 							)}
 							, {abbTeam(matchup.homeTeam.team)}{' '}
 							{getOddsData(
+								matchups,
 								matchup,
 								'moneyLine',
 								oddsSnapshotSite,
@@ -133,22 +136,74 @@ export default function TileLayout(props) {
 							)}
 						</H3>
 						<H3>
-							Spread: {abbTeam(matchup.awayTeam.team)}{' '}
-							{getOddsData(
-								matchup,
-								'spreads',
-								oddsSnapshotSite,
-								matchup.awayTeam.team
-							)}
-							, {abbTeam(matchup.homeTeam.team)}{' '}
-							{getOddsData(
-								matchup,
-								'spreads',
-								oddsSnapshotSite,
-								matchup.homeTeam.team
-							)}
+							<strong>Spread:</strong>
+							<br /> {abbTeam(matchup.awayTeam.team)}{' '}
+							{
+								getOddsData(
+									matchups,
+									matchup,
+									'spreads',
+									oddsSnapshotSite,
+									matchup.awayTeam.team
+								).points
+							}{' '}
+							(
+							{
+								getOddsData(
+									matchups,
+									matchup,
+									'spreads',
+									oddsSnapshotSite,
+									matchup.awayTeam.team
+								).odds
+							}
+							), {abbTeam(matchup.homeTeam.team)}{' '}
+							{
+								getOddsData(
+									matchups,
+									matchup,
+									'spreads',
+									oddsSnapshotSite,
+									matchup.homeTeam.team
+								).points
+							}{' '}
+							(
+							{
+								getOddsData(
+									matchups,
+									matchup,
+									'spreads',
+									oddsSnapshotSite,
+									matchup.homeTeam.team
+								).odds
+							}
+							)
 						</H3>
-						<H3>O/U: {getOddsData(matchup, 'overUnder', oddsSnapshotSite)}</H3>
+						<H3>
+							Over{' '}
+							{
+								getOddsData(matchups, matchup, 'overUnder', oddsSnapshotSite)
+									.points
+							}{' '}
+							(
+							{
+								getOddsData(matchups, matchup, 'overUnder', oddsSnapshotSite)
+									.oddsOver
+							}
+							)
+							<br />
+							Under{' '}
+							{
+								getOddsData(matchups, matchup, 'overUnder', oddsSnapshotSite)
+									.points
+							}{' '}
+							(
+							{
+								getOddsData(matchups, matchup, 'overUnder', oddsSnapshotSite)
+									.oddsUnder
+							}
+							)
+						</H3>
 					</MatchupCard>
 				);
 			})}

@@ -147,6 +147,7 @@ export default function TileDetailedView(props) {
 										<Span>
 											{/* check whether that data exists for the selected site */}
 											{getOddsData(
+												matchups,
 												matchup,
 												selectionList[selections[i]].name,
 												oddsSnapshotSite,
@@ -157,6 +158,7 @@ export default function TileDetailedView(props) {
 									<StatDiv>
 										<Span>
 											{getOddsData(
+												matchups,
 												matchup,
 												selectionList[selections[i]].name,
 												oddsSnapshotSite,
@@ -176,6 +178,7 @@ export default function TileDetailedView(props) {
 								>
 									<Span>
 										{getOddsData(
+											matchups,
 											matchup,
 											selectionList[selections[i]].name,
 											oddsSnapshotSite

@@ -7,6 +7,7 @@ import TileBanner from './TileBanner';
 import GridLayout from './GridLayout';
 import TileLayout from './TileLayout';
 import TileDetailedView from './TileDetailedView';
+import getOddsData from '../tools/getOddsData';
 const weeks = require('../tools/weeks');
 const thisWeek = weeks.thisWeek();
 
@@ -43,30 +44,8 @@ export default function Breakdowns(props) {
 	const [siteLayout, setSiteLayout] = useState('tile');
 	const [tileDetailedView, setTileDetailedView] = useState(null);
 
-	const getTeamIndex = (matchupIndex, team) => {
-		const odds = matchups[matchupIndex].betting;
-		return odds.teams.indexOf(team);
-	};
-
 	const toggleLayout = () => {
 		setSiteLayout(siteLayout === 'grid' ? 'tile' : 'grid');
-	};
-
-	const getOddsData = (matchup, type, site, team = null) => {
-		if (
-			matchup.betting.sites.find((item) => item.site_key === site) &&
-			matchup.betting.sites.find((item) => item.site_key === site).odds[type]
-		) {
-			return type !== 'overUnder'
-				? matchup.betting.sites.find((item) => item.site_key === site).odds[
-						type
-				  ][getTeamIndex(matchups.indexOf(matchup), team)]
-				: matchup.betting.sites.find((item) => item.site_key === site).odds[
-						type
-				  ][0];
-		} else {
-			return 'n/a';
-		}
 	};
 
 	useEffect(() => {

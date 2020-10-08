@@ -92,7 +92,7 @@ export default function GridStats(props) {
 							)}
 						</GaugeContainer>
 					</MiniGrid>
-				) : selectionList[selections[i]].name !== 'overUnder' ? (
+				) : selectionList[selections[i]].name === 'moneyLine' ? (
 					<MiniGridNoBottom
 						key={index}
 						style={{
@@ -105,6 +105,7 @@ export default function GridStats(props) {
 							<Span>
 								{/* check whether that data exists for the selected site */}
 								{getOddsData(
+									matchups,
 									matchup,
 									selectionList[selections[i]].name,
 									oddsSnapshotSite,
@@ -115,11 +116,71 @@ export default function GridStats(props) {
 						<StatDiv>
 							<Span>
 								{getOddsData(
+									matchups,
 									matchup,
 									selectionList[selections[i]].name,
 									oddsSnapshotSite,
 									matchup.homeTeam.team
 								)}
+							</Span>
+						</StatDiv>
+					</MiniGridNoBottom>
+				) : selectionList[selections[i]].name === 'spreads' ? (
+					<MiniGridNoBottom
+						key={index}
+						style={{
+							gridRowStart: i + 2,
+							gridColumnStart: index + 2,
+							backgroundColor: index % 2 === 0 ? '#eee' : '#c4c4c4',
+						}}
+					>
+						<StatDiv>
+							<Span>
+								{/* check whether that data exists for the selected site */}
+								{
+									getOddsData(
+										matchups,
+										matchup,
+										selectionList[selections[i]].name,
+										oddsSnapshotSite,
+										matchup.awayTeam.team
+									).points
+								}
+								<br />(
+								{
+									getOddsData(
+										matchups,
+										matchup,
+										selectionList[selections[i]].name,
+										oddsSnapshotSite,
+										matchup.awayTeam.team
+									).odds
+								}
+								)
+							</Span>
+						</StatDiv>
+						<StatDiv>
+							<Span>
+								{
+									getOddsData(
+										matchups,
+										matchup,
+										selectionList[selections[i]].name,
+										oddsSnapshotSite,
+										matchup.homeTeam.team
+									).points
+								}
+								<br />(
+								{
+									getOddsData(
+										matchups,
+										matchup,
+										selectionList[selections[i]].name,
+										oddsSnapshotSite,
+										matchup.homeTeam.team
+									).odds
+								}
+								)
 							</Span>
 						</StatDiv>
 					</MiniGridNoBottom>
@@ -132,13 +193,46 @@ export default function GridStats(props) {
 							backgroundColor: index % 2 === 0 ? '#eee' : '#c4c4c4',
 						}}
 					>
-						<Span>
-							{getOddsData(
-								matchup,
-								selectionList[selections[i]].name,
-								oddsSnapshotSite
-							)}
-						</Span>
+						<div style={{ width: '100%' }}>
+							<Span>
+								<strong>
+									{
+										getOddsData(
+											matchups,
+											matchup,
+											selectionList[selections[i]].name,
+											oddsSnapshotSite
+										).points
+									}
+								</strong>
+							</Span>
+							<br />
+							<Span>
+								U:{' '}
+								{
+									getOddsData(
+										matchups,
+										matchup,
+										selectionList[selections[i]].name,
+										oddsSnapshotSite
+									).oddsUnder
+								}
+								{'  '}|
+							</Span>
+
+							<Span>
+								{' '}
+								O:{' '}
+								{
+									getOddsData(
+										matchups,
+										matchup,
+										selectionList[selections[i]].name,
+										oddsSnapshotSite
+									).oddsOver
+								}
+							</Span>
+						</div>
 					</Cell>
 				);
 			})

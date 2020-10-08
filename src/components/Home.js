@@ -206,7 +206,7 @@ export default function Home(props) {
 						“<i>BETBRO</i> is the stat tool I didn’t know I needed to give me
 						the edge with my weekly football picks.”
 						<br />
-						<i style={{ marginLeft: '2rem' }}>-Anthony, NJ</i>
+						<i style={{ textAlign: 'center' }}>-Anthony, NJ</i>
 					</H2>
 
 					<H3>

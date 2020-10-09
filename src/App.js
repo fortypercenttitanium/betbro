@@ -13,6 +13,7 @@ import About from './components/About';
 import MyBetBro from './components/MyBetBro';
 import NotFound from './components/NotFound';
 import Contact from './components/Contact';
+import DisclaimerPopup from './components/Disclaimer';
 
 const weeks = require('./tools/weeks');
 const { thisWeek } = weeks;
@@ -130,6 +131,7 @@ function App() {
 			}}
 		>
 			<NavBar headline={headline} />
+			<DisclaimerPopup />
 			{/* {headline !== '' && <Headline headline={headline} />} */}
 			<MainContainer>
 				<Switch>

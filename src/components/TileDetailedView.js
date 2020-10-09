@@ -205,7 +205,9 @@ export default function TileDetailedView(props) {
 											)
 										</Span>
 									</StatDiv>
-									<StatDiv>
+									<StatDiv
+										style={{ padding: '0', margin: '0 auto', height: '100%' }}
+									>
 										<Span>
 											{
 												getOddsData(

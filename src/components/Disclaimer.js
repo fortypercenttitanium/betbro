@@ -8,16 +8,27 @@ const StyledPopup = styled(Popup)`
 		background-color: rgba(0, 0, 0, 0.2);
 	}
 	&-content {
-		background-color: #ccc;
+		background-color: rgba(200, 200, 200, 1);
 		display: flex;
 		color: #222;
-		padding: 3rem;
-		text-align: center;
+		padding: 3rem 1rem;
+		text-align: left;
+		max-height: 80%;
+		width: 50%;
+		min-width: 300px;
+		overflow: auto;
 	}
 `;
 
 const StyledP = styled.p`
 	margin: 1rem auto;
+	font-size: 1.2rem;
+	text-align: left;
+	padding: 1rem;
+	@media (max-width: 750px) {
+		font-size: 0.9rem;
+		padding: 0;
+	}
 `;
 
 export default function Disclaimer() {
@@ -46,7 +57,7 @@ export default function Disclaimer() {
 			closeOnEscape={false}
 			modal
 		>
-			<div>
+			<div style={{ textAlign: 'center' }}>
 				<h1>Disclaimer</h1>
 				<StyledP>
 					<strong>
@@ -63,6 +74,8 @@ export default function Disclaimer() {
 						<i>BETBRO</i>
 					</strong>{' '}
 					is currently in beta testing.{' '}
+				</StyledP>
+				<StyledP>
 					<strong>
 						<i>BETBRO</i>
 					</strong>{' '}
@@ -78,7 +91,11 @@ export default function Disclaimer() {
 				</StyledP>
 				<button
 					onClick={handleClick}
-					style={{ padding: '0.5rem 1rem', margin: 'auto', cursor: 'pointer' }}
+					style={{
+						padding: '0.5rem 1rem',
+						margin: 'auto auto 1rem',
+						cursor: 'pointer',
+					}}
 				>
 					I agree
 				</button>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import statNameAPI from '../tools/statNameAPI';
+import moment from 'moment';
 
 const BannerDiv = styled.div`
 	position: relative;
@@ -9,6 +10,10 @@ const BannerDiv = styled.div`
 	padding: 1rem;
 	min-height: 7rem;
 	border-bottom: 3px solid #ddd;
+	@media (max-width: 500px) {
+		flex-direction: column;
+		padding: 0;
+	}
 `;
 
 export const Container = styled.div`
@@ -20,18 +25,6 @@ export const Container = styled.div`
 		&.no-mobile {
 			display: none;
 		}
-	}
-`;
-
-const RelativeContainer = styled(Container)`
-	position: absolute;
-	left: 3%;
-	bottom: 12px;
-	margin-bottom: 0;
-	@media (max-width: 900px) {
-		position: inherit;
-		margin: auto auto 0;
-		left: initial;
 	}
 `;
 
@@ -61,8 +54,16 @@ const Text = styled.span`
 	font-size: 1rem;
 `;
 
+const OddsText = styled(Text)`
+	padding-left: 1rem;
+	@media (max-width: 500px) {
+		padding: 0;
+	}
+`;
+
 export const CenteredDiv = styled.div`
 	margin: auto;
+	text-align: center;
 `;
 
 const BannerSelector = styled.select`
@@ -83,10 +84,11 @@ export default function TileBanner(props) {
 		setOddsSnapshotSite,
 		siteLayout,
 		toggleLayout,
+		oddsLastUpdated,
 	} = props.propsList;
 	return (
 		<BannerDiv>
-			<RelativeContainer>
+			<Container>
 				<label htmlFor='odds-selector' style={{ display: 'none' }}>
 					Select book for odds data
 				</label>
@@ -105,7 +107,7 @@ export default function TileBanner(props) {
 						);
 					})}
 				</BannerSelector>
-			</RelativeContainer>
+			</Container>
 			<Container className={'no-mobile'}>
 				<CenteredDiv>
 					<Text>Click to switch view mode:</Text>
@@ -113,6 +115,11 @@ export default function TileBanner(props) {
 				<ToggleLayoutButton onClick={toggleLayout}>
 					<Text>{siteLayout === 'grid' ? 'Tile mode' : 'Grid mode'}</Text>
 				</ToggleLayoutButton>
+			</Container>
+			<Container>
+				<CenteredDiv>
+					<OddsText>Odds updated {moment(oddsLastUpdated).fromNow()}</OddsText>
+				</CenteredDiv>
 			</Container>
 		</BannerDiv>
 	);

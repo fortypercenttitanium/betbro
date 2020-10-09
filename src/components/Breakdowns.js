@@ -17,7 +17,7 @@ const BreakdownsDiv = styled.div`
 	margin: 0;
 	height: 100%;
 	width: 100%;
-	overflow-y: hidden;
+	overflow: hidden;
 `;
 
 const MatchupContainer = styled.div`
@@ -38,6 +38,7 @@ export default function Breakdowns(props) {
 		rankings,
 		records,
 		setHeadline,
+		oddsLastUpdated,
 	} = props.propList;
 
 	const [oddsSnapshotSite, setOddsSnapshotSite] = useState('draftkings');
@@ -62,6 +63,7 @@ export default function Breakdowns(props) {
 		toggleLayout,
 		oddsSnapshotSite,
 		setOddsSnapshotSite,
+		oddsLastUpdated,
 	};
 
 	const gridStatProps = {
@@ -82,6 +84,7 @@ export default function Breakdowns(props) {
 		matchups,
 		oddsSnapshotSite,
 		setOddsSnapshotSite,
+		oddsLastUpdated,
 	};
 
 	const tileProps = {

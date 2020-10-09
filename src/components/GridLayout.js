@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import moment from 'moment';
 import GridStats from './GridStats';
 import abbTeam from '../tools/teamAbbreviations';
 import statNameAPI from '../tools/statNameAPI';
@@ -17,11 +18,25 @@ const GridContainer = styled.div`
 	display: flex;
 	margin: 0.2rem;
 	height: 100%;
-	min-width: calc(100% - 0.2rem);
+	width: -moz-min-content;
+	width: min-intrinsic;
+	width: min-content;
 `;
 
 const FixedContainer = styled(Container)`
 	margin: auto;
+`;
+
+const RelativeContainer = styled(Container)`
+	position: absolute;
+	left: 3%;
+	bottom: 12px;
+	margin-bottom: 0;
+	@media (max-width: 900px) {
+		position: inherit;
+		margin: auto auto 0;
+		left: initial;
+	}
 `;
 
 const BannerDiv = styled.div`
@@ -60,6 +75,10 @@ const BannerSelector = styled.select`
 	padding: 0.5rem;
 	text-align: center;
 	cursor: pointer;
+`;
+
+const StaticToggleLayoutButton = styled(ToggleLayoutButton)`
+	display: flex;
 `;
 
 export const Grid = styled.div`
@@ -123,18 +142,22 @@ export default function GridLayout(props) {
 		matchups,
 		oddsSnapshotSite,
 		setOddsSnapshotSite,
+		oddsLastUpdated,
 	} = props.gridProps;
 	return (
 		<MainContainer>
 			{/* render banner to switch view modes */}
 			<BannerDiv>
+				<RelativeContainer>
+					Odds updated {moment(oddsLastUpdated).fromNow()}
+				</RelativeContainer>
 				<FixedContainer>
 					<CenteredDiv>
 						<Text>Click to switch view mode:</Text>
 					</CenteredDiv>
-					<ToggleLayoutButton onClick={toggleLayout}>
+					<StaticToggleLayoutButton onClick={toggleLayout}>
 						<Text>{siteLayout === 'grid' ? 'Tile mode' : 'Grid mode'}</Text>
-					</ToggleLayoutButton>
+					</StaticToggleLayoutButton>
 				</FixedContainer>
 			</BannerDiv>
 			<GridContainer>

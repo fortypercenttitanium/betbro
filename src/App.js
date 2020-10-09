@@ -30,6 +30,7 @@ function App() {
 	const [matchups, setMatchups] = useState([]);
 	const [rankings, setRankings] = useState({});
 	const [records, setRecords] = useState({});
+	const [oddsLastUpdated, setOddsLastUpdated] = useState('');
 	//const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const propList = {
@@ -40,6 +41,7 @@ function App() {
 		rankings,
 		records,
 		setHeadline,
+		oddsLastUpdated,
 	};
 
 	useEffect(() => {
@@ -49,8 +51,6 @@ function App() {
 				const oddsDataRaw = await fetch(
 					process.env.NODE_ENV === 'development'
 						? '/odds'
-						: process.env.hasOwnProperty('REACT_APP_API_URL')
-						? `${process.env.REACT_APP_API_URL}/odds`
 						: `${process.env.REACT_APP_API_URL}/odds`,
 					{
 						method: 'POST',
@@ -99,6 +99,7 @@ function App() {
 				});
 
 				setMatchups(currentMatchups);
+				setOddsLastUpdated(odds.lastUpdated);
 			} catch (err) {
 				console.error(err);
 			}

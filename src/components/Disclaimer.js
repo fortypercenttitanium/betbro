@@ -58,7 +58,7 @@ export default function Disclaimer() {
 			modal
 		>
 			<div style={{ textAlign: 'center' }}>
-				<h1>Disclaimer</h1>
+				<h1 tabIndex='0'>Disclaimer</h1>
 				<StyledP>
 					<strong>
 						<i>BETBRO</i>

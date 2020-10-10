@@ -177,7 +177,10 @@ export default function Home(props) {
 	}, [props]);
 	return (
 		<HomeContainer>
-			<SplashImg src={bbHomepage} />
+			<SplashImg
+				src={bbHomepage}
+				alt={'The most successful sports bettors use BETBRO'}
+			/>
 			<LinkDiv>
 				<H3 className='desktop'>
 					<Link to='/about'>Here's the reason why... </Link>

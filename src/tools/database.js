@@ -146,7 +146,7 @@ export default async function fetchStats(statList) {
 				case 'passLong':
 					return findTeamStats(team, OS).passLong;
 				case 'passYdsPerComp':
-					return findTeamStats(team, OS).passYdsPerComp;
+					return findTeamStats(team, OS).passYdsPerCmp;
 				case 'passRating':
 					return findTeamStats(team, OS).passRating;
 				case 'sacksAllowed':

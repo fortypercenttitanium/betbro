@@ -74,21 +74,13 @@ export default function ranker(statsList, stat) {
 			case 'scoringPctFor':
 				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'offensiveTurnoverPct':
-				return Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
-					? -1
-					: Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
-					? 1
-					: 0;
+				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'passCompPct':
 				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'passTouchdownPct':
 				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'passIntPct':
-				return Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
-					? -1
-					: Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
-					? 1
-					: 0;
+				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'passLong':
 				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'passYdsPerComp':
@@ -100,11 +92,7 @@ export default function ranker(statsList, stat) {
 			case 'sacksAllowedYds':
 				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'sackPctOff':
-				return Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
-					? -1
-					: Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
-					? 1
-					: 0;
+				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'comebacks':
 				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'gwd':
@@ -114,21 +102,24 @@ export default function ranker(statsList, stat) {
 			case 'fumblesAllowed':
 				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'thirdDownPct':
-				return Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
+				return Number(a.slice(0, a.length - 1)) >
+					Number(b.slice(0, b.length - 1))
 					? -1
-					: Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
+					: Number(a.slice(0, a.length - 1)) < Number(b.slice(0, b.length - 1))
 					? 1
 					: 0;
 			case 'fourthDownPct':
-				return Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
+				return Number(a.slice(0, a.length - 1)) >
+					Number(b.slice(0, b.length - 1))
 					? -1
-					: Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
+					: Number(a.slice(0, a.length - 1)) < Number(b.slice(0, b.length - 1))
 					? 1
 					: 0;
 			case 'redzonePct':
-				return Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
+				return Number(a.slice(0, a.length - 1)) >
+					Number(b.slice(0, b.length - 1))
 					? -1
-					: Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
+					: Number(a.slice(0, a.length - 1)) < Number(b.slice(0, b.length - 1))
 					? 1
 					: 0;
 			case 'turnoverDiff':
@@ -176,37 +167,17 @@ export default function ranker(statsList, stat) {
 			case 'defensivePenaltyYdsPG':
 				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'scoringPctAg':
-				return Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
-					? -1
-					: Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
-					? 1
-					: 0;
+				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'defensiveTurnoverPct':
-				return Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
-					? -1
-					: Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
-					? 1
-					: 0;
+				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'passCompPctAllowed':
-				return Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
-					? -1
-					: Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
-					? 1
-					: 0;
+				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'passTdPctAg':
-				return Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
-					? -1
-					: Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
-					? 1
-					: 0;
+				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'passesDefensedPG':
 				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'defIntPct':
-				return Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
-					? -1
-					: Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
-					? 1
-					: 0;
+				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'passYardsPerAttAg':
 				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'passYardsPerCompAllowed':
@@ -214,11 +185,7 @@ export default function ranker(statsList, stat) {
 			case 'passRatingAg':
 				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'sacksPG':
-				return Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
-					? -1
-					: Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
-					? 1
-					: 0;
+				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'sackYdsPG':
 				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'qbHitsPG':
@@ -226,29 +193,28 @@ export default function ranker(statsList, stat) {
 			case 'tacklesForLossPG':
 				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'sackPctDef':
-				return Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
-					? -1
-					: Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
-					? 1
-					: 0;
+				return Number(a) > Number(b) ? -1 : Number(a) < Number(b) ? 1 : 0;
 			case 'passYdsPGAllowed':
 				return Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0;
 			case 'thirdDownPctAg':
-				return Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
+				return Number(a.slice(0, a.length - 1)) <
+					Number(b.slice(0, b.length - 1))
 					? -1
-					: Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
+					: Number(a.slice(0, a.length - 1)) > Number(b.slice(0, b.length - 1))
 					? 1
 					: 0;
 			case 'fourthDownPctAg':
-				return Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
+				return Number(a.slice(0, a.length - 1)) <
+					Number(b.slice(0, b.length - 1))
 					? -1
-					: Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
+					: Number(a.slice(0, a.length - 1)) > Number(b.slice(0, b.length - 1))
 					? 1
 					: 0;
 			case 'redzonePctAg':
-				return Number(a.slice(a.length - 1)) < Number(b.slice(b.length - 1))
+				return Number(a.slice(0, a.length - 1)) <
+					Number(b.slice(0, b.length - 1))
 					? -1
-					: Number(a.slice(a.length - 1)) > Number(b.slice(b.length - 1))
+					: Number(a.slice(0, a.length - 1)) > Number(b.slice(0, b.length - 1))
 					? 1
 					: 0;
 			default:

@@ -72,7 +72,7 @@ const statNameAPI = {
 		passYardsPerAttAg: 'Pass Yds Per Att Agst',
 		passYardsPerCompAllowed: 'Pass Yds Per Comp. Agst',
 		passRatingAg: 'Passer Rating Agst',
-		sacksPG: 'Def. Sack %',
+		sacksPG: 'Def. Sacks P/G',
 		sackYdsPG: 'Def. Sack Yds P/G',
 		qbHitsPG: 'Def. QB Hits P/G',
 		tacklesForLossPG: 'Tackles For Loss P/G',

@@ -231,7 +231,7 @@ export default async function fetchStats(statList) {
 				case 'defensiveTurnoverPct':
 					return findTeamStats(team, DS).turnoverPct;
 				case 'passCompPctAllowed':
-					return findTeamStats(team, DS).passCompPct;
+					return findTeamStats(team, DS).passCmpPerc;
 				case 'passTdPctAg':
 					return findTeamStats(team, DS).passTdPerc;
 				case 'passesDefensedPG':

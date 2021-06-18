@@ -2,14 +2,15 @@ import React from 'react';
 import { render } from 'react-snapshot';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import Offline from './Offline';
+// import Offline from './Offline';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 render(
-	<BrowserRouter>
-		<Offline />
-	</BrowserRouter>,
-	document.getElementById('root')
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change

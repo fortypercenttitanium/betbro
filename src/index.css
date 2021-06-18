@@ -2,13 +2,13 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default padding */
 ul[class],
 ol[class] {
-	padding: 0;
+  padding: 0;
 }
 
 /* Remove default margin */
@@ -26,37 +26,37 @@ figcaption,
 blockquote,
 dl,
 dd {
-	margin: 0;
+  margin: 0;
 }
 
 /* Set core body defaults */
 body {
-	min-height: 100vh;
-	scroll-behavior: smooth;
-	text-rendering: optimizeSpeed;
-	line-height: 1.5;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
-	list-style: none;
+  list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-	text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img {
-	max-width: 100%;
-	display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Natural flow and rhythm in articles by default */
 article > * + * {
-	margin-top: 1em;
+  margin-top: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -64,17 +64,17 @@ input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-	* {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* html {
@@ -82,47 +82,121 @@ select {
 } */
 
 body {
-	margin: 0;
-	font-family: 'Epilogue', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	/* height: 100%; */
-	color: #ddd;
+  margin: 0;
+  font-family: 'Epilogue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* height: 100%; */
+  color: #ddd;
 }
 :root {
-	--midgrey: #c4c4c4;
-	--betbro-blue: #2c2837;
-	--cell-width: 150px;
+  --midgrey: #c4c4c4;
+  --betbro-blue: #2c2837;
+  --cell-width: 150px;
 }
 #root {
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	background: url('images/bg.png') no-repeat center center;
-	background-size: cover;
-	background-position: 0% 10%;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url('images/bg.png') no-repeat center center;
+  background-size: cover;
+  background-position: 0% 10%;
 }
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 a:visited {
-	color: inherit;
+  color: inherit;
 }
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 /**
  * Form Validation Errors
  */
 .error {
-	border-color: red;
+  border-color: red;
 }
 
 .error-message {
-	color: red;
-	font-style: italic;
-	margin-bottom: 1em;
+  color: red;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.lds-grid {
+  display: inline-block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+}
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  animation: lds-grid 1.2s linear infinite;
+}
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+@keyframes lds-grid {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }

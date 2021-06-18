@@ -136,13 +136,13 @@ function App() {
       <MainContainer>
         <Switch>
           <Route exact path="/">
+            <Breakdowns propList={propList} />{' '}
+          </Route>
+          <Route path="/home">
             <Home setHeadline={setHeadline} />
           </Route>
           <Route path="/about">
             <About setHeadline={setHeadline} />
-          </Route>
-          <Route path="/breakdowns">
-            <Breakdowns propList={propList} />{' '}
           </Route>
           <Route path="/mybetbro">
             <MyBetBro setHeadline={setHeadline} />

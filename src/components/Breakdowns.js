@@ -9,8 +9,8 @@ import TileLayout from './TileLayout';
 import Loading from './Loading';
 import TileDetailedView from './TileDetailedView';
 import getOddsData from '../tools/getOddsData';
-const weeks = require('../tools/weeks');
-const thisWeek = weeks.thisWeek();
+// const weeks = require('../tools/weeks');
+// const thisWeek = weeks.thisWeek();
 
 const BreakdownsDiv = styled.div`
   display: flex;
@@ -117,7 +117,7 @@ export default function Breakdowns({ propList }) {
           name="description"
           content="Don't place your NFL bets until you analyze this week's matchup statistics!"
         />
-        <title>{`Bro's Breakdowns - Week ${thisWeek}`}</title>
+        <title>{`Bro's Breakdowns`}</title>
       </Helmet>
       {dataIsLoading ? (
         <Loading />

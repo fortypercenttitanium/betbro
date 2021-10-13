@@ -1,0 +1,2 @@
+1) update weeks in tools (frontend)
+2) update pull site in scrapers (backend) for offense AND defense

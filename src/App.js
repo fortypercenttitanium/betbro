@@ -136,7 +136,7 @@ function App() {
       <MainContainer>
         <Switch>
           <Route exact path="/">
-            <Breakdowns propList={propList} />{' '}
+            <Breakdowns propList={propList} />
           </Route>
           <Route path="/home">
             <Home setHeadline={setHeadline} />

@@ -5,7 +5,7 @@ import { Background } from './LoadingScreen';
 
 const NavContainer = styled.nav`
   width: 100%;
-  height: 6rem;
+  height: 96px;
   background: rgb(0, 0, 0);
   background: linear-gradient(
     90deg,

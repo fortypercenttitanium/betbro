@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Select from 'react-select';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import toDate from 'date-fns/toDate';
 import statNames from '../../tools/namingLibrary/statNames';
@@ -8,7 +9,6 @@ const Header = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  min-height: 7rem;
   border-bottom: 3px solid #ddd;
   @media (max-width: 500px) {
     flex-direction: column;
@@ -31,15 +31,25 @@ const Header = styled.div`
     .layout-select-label {
       display: block;
       padding: 24px;
-
-      .layout-select {
-        display: flex;
-        font-size: 1.3rem;
-        padding: 6px 12px;
-      }
     }
   }
 `;
+
+const selectStyles = {
+  input: (styles) => ({
+    ...styles,
+    minWidth: '140px',
+  }),
+  option: (styles) => ({
+    ...styles,
+    color: '#444',
+  }),
+};
+
+const siteOptions = Object.entries(statNames.sites).map(([value, label]) => ({
+  value,
+  label,
+}));
 
 function BreakdownsHeader({
   onChangeSportsbook: handleChangeSportsbook,
@@ -54,22 +64,18 @@ function BreakdownsHeader({
       <div className="header-container">
         <label htmlFor="odds-selector" className="layout-select-label hidden">
           <h3>Sportsbook</h3>
-          <select
+          <Select
+            styles={selectStyles}
             className="layout-select"
             name="odds-selector"
-            value={sportsbook}
-            onChange={(e) => {
-              handleChangeSportsbook(e.target.value);
+            isLoading={!sportsbook}
+            options={siteOptions}
+            value={siteOptions.find((option) => option.value === sportsbook)}
+            onChange={(option) => {
+              console.log(option);
+              handleChangeSportsbook(option.value);
             }}
-          >
-            {Object.values(statNames.sites).map((site, i) => {
-              return (
-                <option key={i} value={Object.keys(statNames.sites)[i]}>
-                  {site}
-                </option>
-              );
-            })}
-          </select>
+          ></Select>
         </label>
       </div>
       <div className="header-container no-mobile">
@@ -89,23 +95,22 @@ function BreakdownsHeader({
         <div className="centered">
           {oddsLastUpdated && (
             <>
-              <h4>Odds updated</h4>
-              <p>
+              <h4>
+                Odds last updated:{' '}
                 {formatDistanceToNow(new Date(oddsLastUpdated), {
                   addSuffix: true,
                 })}
-                {/* {oddsLastUpdated} */}
-              </p>
+              </h4>
             </>
           )}
           {statsLastUpdated && (
             <>
-              <h4>Stats updated</h4>
-              <p>
+              <h4>
+                Stats last updated:{' '}
                 {formatDistanceToNow(new Date(statsLastUpdated), {
                   addSuffix: true,
                 })}
-              </p>
+              </h4>
             </>
           )}
         </div>

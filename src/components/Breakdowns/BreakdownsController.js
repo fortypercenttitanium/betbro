@@ -1,7 +1,7 @@
 import React from 'react';
 
 function BreakdownsController() {
-  return <div>Controller</div>;
+  return <div style={{ minHeight: '100vh' }}>Controller</div>;
 }
 
 export default BreakdownsController;

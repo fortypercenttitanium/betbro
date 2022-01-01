@@ -10,7 +10,6 @@ import NavBar from './components/Navbar';
 import Home from './components/Home';
 import Breakdowns from './components/Breakdowns/BreakdownsLayout';
 import About from './components/About';
-import MyBetBro from './components/MyBetBro';
 import NotFound from './components/NotFound';
 import Contact from './components/Contact';
 // import DisclaimerPopup from './components/Disclaimer';
@@ -142,9 +141,6 @@ function App() {
           </Route>
           <Route path="/about">
             <About setHeadline={setHeadline} />
-          </Route>
-          <Route path="/mybetbro">
-            <MyBetBro setHeadline={setHeadline} />
           </Route>
           <Route path="/contact">
             <Contact setHeadline={setHeadline} />

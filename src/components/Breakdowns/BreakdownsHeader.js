@@ -35,16 +35,18 @@ const Header = styled.div`
   }
 `;
 
-const selectStyles = {
-  input: (styles) => ({
+const selectStyles = (width) => ({
+  control: (styles) => ({
     ...styles,
-    minWidth: '140px',
+    minWidth: width,
+    cursor: 'pointer',
   }),
   option: (styles) => ({
     ...styles,
     color: '#444',
+    cursor: 'pointer',
   }),
-};
+});
 
 const siteOptions = Object.entries(statNames.sites).map(([value, label]) => ({
   value,
@@ -76,14 +78,14 @@ function BreakdownsHeader({
         <label htmlFor="odds-selector" className="layout-select-label hidden">
           <h3>Sportsbook</h3>
           <Select
-            styles={selectStyles}
+            styles={selectStyles(180)}
             name="odds-selector"
             isLoading={!sportsbook}
             options={siteOptions}
             value={siteOptions.find((option) => option.value === sportsbook)}
-            onChange={(option) => {
-              handleChangeSportsbook(option.value);
-            }}
+            onChange={(option) => handleChangeSportsbook(option.value)}
+            isClearable={false}
+            isSearchable={false}
           />
         </label>
       </div>
@@ -91,10 +93,12 @@ function BreakdownsHeader({
         <label htmlFor="view-mode" className="layout-select-label">
           <h3>Layout</h3>
           <Select
-            styles={selectStyles}
+            styles={selectStyles(120)}
             options={layoutOptions}
             onChange={(option) => handleChangeLayout(option.value)}
             value={layoutOptions.find((option) => option.value === siteLayout)}
+            isClearable={false}
+            isSearchable={false}
           />
         </label>
       </div>

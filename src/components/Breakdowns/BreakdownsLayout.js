@@ -114,7 +114,7 @@ function BreakdownsLayout() {
         onChangeSportsbook={handleChangeSportsbook}
         statsLastUpdated={statsLastUpdated}
         oddsLastUpdated={oddsLastUpdated}
-        onChangeLayout={(e) => setSiteLayout(e.target.value)}
+        onChangeLayout={setSiteLayout}
         siteLayout={siteLayout}
       />
       <BreakdownsController

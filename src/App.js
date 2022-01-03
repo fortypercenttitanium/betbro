@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-import moment from 'moment';
 import styled from 'styled-components';
 import fetchStats, { initialSelections } from './tools/database';
 import selectionList from './tools/selectionList';
@@ -12,10 +11,6 @@ import Breakdowns from './components/Breakdowns/BreakdownsLayout';
 import About from './components/About';
 import NotFound from './components/NotFound';
 import Contact from './components/Contact';
-// import DisclaimerPopup from './components/Disclaimer';
-
-const weeks = require('./tools/weeks');
-const { thisWeek } = weeks;
 
 const MainContainer = styled.div`
   display: flex;
@@ -132,23 +127,18 @@ function App() {
       {/* <DisclaimerPopup /> */}
       {/* {headline !== '' && <Headline headline={headline} />} */}
       <MainContainer>
-        <Switch>
-          <Route exact path="/">
-            <Breakdowns propList={propList} />
-          </Route>
-          <Route path="/home">
-            <Home setHeadline={setHeadline} />
-          </Route>
-          <Route path="/about">
-            <About setHeadline={setHeadline} />
-          </Route>
-          <Route path="/contact">
-            <Contact setHeadline={setHeadline} />
-          </Route>
-          <Route path="*">
-            <NotFound setHeadline={setHeadline} />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<Breakdowns propList={propList} />} />
+
+          <Route path="/home" element={<Home setHeadline={setHeadline} />} />
+
+          <Route path="/about" element={<About setHeadline={setHeadline} />} />
+          <Route
+            path="/contact"
+            element={<Contact setHeadline={setHeadline} />}
+          />
+          <Route path="*" element={<NotFound setHeadline={setHeadline} />} />
+        </Routes>
       </MainContainer>
     </div>
   );

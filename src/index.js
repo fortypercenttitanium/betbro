@@ -1,12 +1,12 @@
 import React from 'react';
-import { render } from 'react-snapshot';
+import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 // import Offline from './Offline';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-render(
+ReactDOM.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,

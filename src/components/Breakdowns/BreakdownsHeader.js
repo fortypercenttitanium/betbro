@@ -51,6 +51,17 @@ const siteOptions = Object.entries(statNames.sites).map(([value, label]) => ({
   label,
 }));
 
+const layoutOptions = [
+  {
+    value: 'grid',
+    label: 'Grid',
+  },
+  {
+    value: 'tile',
+    label: 'Tile',
+  },
+];
+
 function BreakdownsHeader({
   onChangeSportsbook: handleChangeSportsbook,
   onChangeLayout: handleChangeLayout,
@@ -66,29 +77,25 @@ function BreakdownsHeader({
           <h3>Sportsbook</h3>
           <Select
             styles={selectStyles}
-            className="layout-select"
             name="odds-selector"
             isLoading={!sportsbook}
             options={siteOptions}
             value={siteOptions.find((option) => option.value === sportsbook)}
             onChange={(option) => {
-              console.log(option);
               handleChangeSportsbook(option.value);
             }}
-          ></Select>
+          />
         </label>
       </div>
       <div className="header-container no-mobile">
         <label htmlFor="view-mode" className="layout-select-label">
           <h3>Layout</h3>
-          <select
-            onChange={handleChangeLayout}
-            value={siteLayout}
-            className="layout-select"
-          >
-            <option value="tile">Tile</option>
-            <option value="grid">Grid</option>
-          </select>
+          <Select
+            styles={selectStyles}
+            options={layoutOptions}
+            onChange={(option) => handleChangeLayout(option.value)}
+            value={layoutOptions.find((option) => option.value === siteLayout)}
+          />
         </label>
       </div>
       <div className="header-container">

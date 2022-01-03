@@ -124,7 +124,6 @@ function App() {
       }}
     >
       <NavBar headline={headline} />
-      {/* <DisclaimerPopup /> */}
       {/* {headline !== '' && <Headline headline={headline} />} */}
       <MainContainer>
         <Routes>

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Background } from './LoadingScreen';
+import logo from '../images/logo-no-sub.png';
+import hamburger from '../images/hamburger.svg';
 
 const NavContainer = styled.nav`
   width: 100%;
@@ -124,7 +126,7 @@ export default function Navbar(props) {
       <LogoContainer>
         <Link to="/home">
           <img
-            src={require('../images/logo-no-sub.png')}
+            src={logo}
             alt="BetBro logo"
             style={{ width: '150px', position: 'relative', top: '-25px' }}
           />
@@ -157,10 +159,7 @@ export default function Navbar(props) {
           menuOpen ? closeMenu() : openMenu();
         }}
       >
-        <img
-          src={require('../images/hamburger.svg')}
-          alt="Click to open nav menu"
-        />
+        <img src={hamburger} alt="Click to open nav menu" />
       </HamburgerDiv>
       {menuOpen && (
         <MenuBackground onClick={closeMenu}>

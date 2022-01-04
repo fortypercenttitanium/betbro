@@ -8,6 +8,9 @@ import BreakdownsHeader from './BreakdownsHeader';
 import BreakdownsController from './BreakdownsController';
 
 const store = new Store();
+const statsFetcher = new StatsFetcher();
+const oddsFetcher = new OddsFetcher();
+
 const defaultStatSelections = [0, 81, 82, 83, 2, 3, 17, 11, 41, 44, 47, 50, 52];
 const defaultSportsbook = 'draftkings';
 
@@ -34,8 +37,7 @@ function BreakdownsLayout() {
 
   useEffect(() => {
     async function fetchStats() {
-      const fetcher = new StatsFetcher();
-      const result = await fetcher.getStats();
+      const result = await statsFetcher.getStats();
 
       if (result.error) {
         return setInErrorState(true);
@@ -50,8 +52,7 @@ function BreakdownsLayout() {
 
   useEffect(() => {
     async function fetchOdds() {
-      const fetcher = new OddsFetcher();
-      const result = await fetcher.getOdds();
+      const result = await oddsFetcher.getOdds();
 
       if (result.error) {
         return setInErrorState(true);

@@ -128,9 +128,7 @@ function App() {
       <MainContainer>
         <Routes>
           <Route exact path="/" element={<Breakdowns propList={propList} />} />
-
           <Route path="/home" element={<Home setHeadline={setHeadline} />} />
-
           <Route path="/about" element={<About setHeadline={setHeadline} />} />
           <Route
             path="/contact"

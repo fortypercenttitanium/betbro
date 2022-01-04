@@ -100,6 +100,11 @@ function BreakdownsLayout() {
     setSportsbook(book);
   }
 
+  function handleChangeSelections(selections) {
+    store.setStatSelections(selections);
+    setStatSelections(selections);
+  }
+
   return (
     <BreakdownsContainer>
       <Helmet>
@@ -125,6 +130,8 @@ function BreakdownsLayout() {
         sportsbook={sportsbook}
         stats={stats}
         matchups={matchups}
+        statSelections={statSelections}
+        setStatSelections={handleChangeSelections}
       />
     </BreakdownsContainer>
   );

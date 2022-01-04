@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import selectionList from '../tools/selectionList';
+import selectionList from '../tools/namingLibrary/selectionList';
 // import LoadingScreen from './LoadingScreen';
 import TileBanner from './TileBanner';
 import GridLayout from './GridLayout';

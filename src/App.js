@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import styled from 'styled-components';
 import fetchStats, { initialSelections } from './tools/database';
-import selectionList from './tools/selectionList';
+import selectionList from './tools/namingLibrary/selectionList';
 import ranker from './tools/ranker';
 import NavBar from './components/Navbar';
 import Home from './components/Home';

@@ -1,4 +1,4 @@
-import statNameAPI from './namingLibrary/statNames';
+import statNameAPI from './statNames';
 
 const selectionList = Object.keys(statNameAPI.stats).map((stat) => {
   return { category: 'stats', name: stat, value: statNameAPI.stats[stat] };

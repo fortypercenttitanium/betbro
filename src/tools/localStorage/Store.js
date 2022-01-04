@@ -17,6 +17,6 @@ export default class Store {
   }
 
   setStatSelections(selections) {
-    localStorage.setItem(this.sportsbookStoreKey, JSON.stringify(selections));
+    localStorage.setItem(this.statsSelectionKey, JSON.stringify(selections));
   }
 }

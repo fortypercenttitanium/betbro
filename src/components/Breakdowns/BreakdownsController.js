@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import ErrorState from './ErrorState';
 import Loading from '../Loading';
+import GridLayout from './controllerLayouts/grid/GridLayout';
+import TileLayout from './controllerLayouts/tile/TileLayout';
 
 const ControllerContainer = styled.div`
   min-height: 400px;
@@ -19,8 +21,6 @@ const ControllerContainer = styled.div`
   }
 `;
 
-const Success = () => <div>Success!</div>;
-
 function renderSwitch(state, components) {
   switch (state) {
     case 'loading':
@@ -32,6 +32,15 @@ function renderSwitch(state, components) {
   }
 }
 
+function renderView(state, components) {
+  switch (state) {
+    case 'tile':
+      return components.tile;
+    default:
+      return components.grid;
+  }
+}
+
 function BreakdownsController({
   siteLayout,
   loading,
@@ -39,14 +48,36 @@ function BreakdownsController({
   sportsbook,
   stats,
   matchups,
+  statSelections,
+  setStatSelections,
 }) {
   const controllerState = loading ? 'loading' : inErrorState ? 'error' : '';
+
+  function handleChangeStatSelections(selection, i) {
+    const newSelections = [...statSelections];
+    newSelections[i] = selection;
+
+    setStatSelections(newSelections);
+  }
+
   return (
     <ControllerContainer>
       {renderSwitch(controllerState, {
         loading: <Loading />,
         error: <ErrorState />,
-        success: <Success />,
+        success: renderView(siteLayout, {
+          grid: (
+            <GridLayout
+              sportsbook={sportsbook}
+              stats={stats}
+              matchups={matchups}
+              statSelections={statSelections}
+              setStatSelections={setStatSelections}
+              handleChangeStatSelections={handleChangeStatSelections}
+            />
+          ),
+          tile: <TileLayout />,
+        }),
       })}
     </ControllerContainer>
   );

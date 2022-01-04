@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import statNameAPI from '../tools/namingLibrary/statNames';
-import moment from 'moment';
+import statNameAPI from '../../../tools/namingLibrary/statNames';
 
 const BannerDiv = styled.div`
   position: relative;
@@ -118,7 +117,7 @@ export default function TileBanner(props) {
       </Container>
       <Container>
         <CenteredDiv>
-          <OddsText>Odds updated {moment(oddsLastUpdated).fromNow()}</OddsText>
+          <OddsText>Odds updated {'fix me'}</OddsText>
         </CenteredDiv>
       </Container>
     </BannerDiv>

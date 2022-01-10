@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import GridStats from './GridStats';
-import abbTeam from '../../../../tools/teamAbbreviations';
-import statNameAPI from '../../../../tools/namingLibrary/statNames';
-import StatSelections from './StatSelections';
-import { Cell } from '../sharedStyles';
+import Selectors from './Selectors';
+import Grid from './Grid';
 
 const MainContainer = styled.div`
   position: relative;
@@ -41,52 +38,13 @@ const MainContainer = styled.div`
   }
 `;
 
-export const Grid = styled.div`
-  display: grid;
-  grid-auto-rows: 52px;
-  height: -moz-min-content;
-  height: min-intrinsic;
-  height: min-content;
-  padding: 0 1rem 1rem 0;
-  gap: 5px;
-  background-color: transparent;
-  color: var(--betbro-blue);
-`;
-
-export const Selector = styled.select`
-  font-size: 1rem;
-  background: #2c2837;
-  height: 100%;
-  color: #eee;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
-  @media (max-width: 600px) {
-    font-size: 0.6rem;
-  }
-`;
-
-const Span = styled.span`
-  font-size: 1.3rem;
-  margin: auto;
-`;
-const SmallSpan = styled(Span)`
-  font-size: 0.8rem;
-`;
-
-const Text = styled.span`
-  margin: auto;
-  font-size: 0.9rem;
-  color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-`;
-
 export default function GridLayout(props) {
   const {
+    selectionList,
     statSelections,
     handleChangeStatSelections,
     matchups,
-    oddsSnapshotSite,
-    setOddsSnapshotSite,
-    oddsLastUpdated,
+    sportsbook,
     stats,
   } = props;
 
@@ -95,39 +53,18 @@ export default function GridLayout(props) {
       <div className="grid-container">
         <div className="selector-column">
           <div className="blank-cell" />
-          <StatSelections
+          <Selectors
             selections={statSelections}
+            selectionList={selectionList}
             onChange={handleChangeStatSelections}
           />
         </div>
-
-        {/* <Grid rows={statSelections.length}>
-          {matchups.map((matchup, i) => {
-            return (
-              <Cell
-                key={i}
-                style={{
-                  gridRowStart: 1,
-                  gridColumnStart: i + 2,
-                  background: '#2c2837',
-                  textShadow: '2px 2px 2px rgba(0, 0, 0, 0.6)',
-                  color: '#eee',
-                  flexDirection: 'column',
-                }}
-              >
-                <Span>
-                  {`${abbTeam(matchup.awayTeam.team)} @ ${abbTeam(
-                    matchup.homeTeam.team,
-                  )}`}
-                </Span>
-                <SmallSpan>
-                  {matchup.time.format('ddd MMM. Do, h:mma')}
-                </SmallSpan>
-              </Cell>
-            );
-          })}
-          <GridStats />
-        </Grid> */}
+        <Grid
+          matchups={matchups}
+          statSelections={statSelections}
+          stats={stats}
+          sportsbook={sportsbook}
+        />
       </div>
     </MainContainer>
   );

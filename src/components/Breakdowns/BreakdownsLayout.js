@@ -6,13 +6,12 @@ import StatsFetcher from '../../tools/fetchers/StatsFetcher';
 import OddsFetcher from '../../tools/fetchers/OddsFetcher';
 import BreakdownsHeader from './BreakdownsHeader';
 import BreakdownsController from './BreakdownsController';
+import createSelectionList from '../../tools/namingLibrary/selectionList';
+import { defaultStatSelections, defaultSportsbook } from './defaults/defaults';
 
 const store = new Store();
 const statsFetcher = new StatsFetcher();
 const oddsFetcher = new OddsFetcher();
-
-const defaultStatSelections = [0, 81, 82, 83, 2, 3, 17, 11, 41, 44, 47, 50, 52];
-const defaultSportsbook = 'draftkings';
 
 const BreakdownsContainer = styled.div`
   display: flex;
@@ -30,6 +29,7 @@ function BreakdownsLayout() {
   const [stats, setStats] = useState();
   const [matchups, setMatchups] = useState();
   const [sportsbook, setSportsbook] = useState();
+  const [selectionList, setSelectionList] = useState([]);
   const [statSelections, setStatSelections] = useState([]);
   const [statsLastUpdated, setStatsLastUpdated] = useState('');
   const [oddsLastUpdated, setOddsLastUpdated] = useState('');
@@ -38,13 +38,14 @@ function BreakdownsLayout() {
   useEffect(() => {
     async function fetchStats() {
       const result = await statsFetcher.getStats();
-
       if (result.error) {
         return setInErrorState(true);
       }
 
       setStatsLastUpdated(result.lastUpdated);
-      setStats(result.stats);
+      setSelectionList(createSelectionList(result.stats));
+      console.log(result);
+      setStats(result);
     }
 
     fetchStats();
@@ -130,6 +131,7 @@ function BreakdownsLayout() {
         sportsbook={sportsbook}
         stats={stats}
         matchups={matchups}
+        selectionList={selectionList}
         statSelections={statSelections}
         setStatSelections={handleChangeSelections}
       />

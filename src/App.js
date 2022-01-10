@@ -4,7 +4,6 @@ import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import fetchStats, { initialSelections } from './tools/database';
 import selectionList from './tools/namingLibrary/selectionList';
-import ranker from './tools/ranker';
 import NavBar from './components/Navbar';
 import Home from './components/Home';
 import Breakdowns from './components/Breakdowns/BreakdownsLayout';
@@ -63,16 +62,16 @@ function App() {
   //       const statsArr = await setNewStats();
 
   //       //set team rankings for each stat
-  //       const rankObj = {};
-  //       selections.forEach((sel) => {
-  //         if (selectionList[sel].category === 'stats') {
-  //           rankObj[selectionList[sel].name] = ranker(
-  //             statsArr,
-  //             selectionList[sel].name,
-  //           );
-  //         }
-  //       });
-  //       setRankings(rankObj);
+  // const rankObj = {};
+  // selections.forEach((sel) => {
+  //   if (selectionList[sel].category === 'stats') {
+  //     rankObj[selectionList[sel].name] = ranker(
+  //       statsArr,
+  //       selectionList[sel].name,
+  //     );
+  //   }
+  // });
+  // setRankings(rankObj);
 
   //       const currentMatchups = thisWeeksOdds.map((matchup) => {
   //         return {

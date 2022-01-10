@@ -13,7 +13,14 @@ export default class Store {
   }
 
   getStatSelections() {
-    return JSON.parse(localStorage.getItem(this.statsSelectionKey));
+    const selections = JSON.parse(localStorage.getItem(this.statsSelectionKey));
+
+    // if the stored selections match the API, return them, otherwise return null
+    return selections.every(
+      (sel) => sel.hasOwnProperty('category') && sel.hasOwnProperty('name'),
+    )
+      ? selections
+      : null;
   }
 
   setStatSelections(selections) {

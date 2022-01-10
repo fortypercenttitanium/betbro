@@ -47,6 +47,7 @@ const selectStyles = (width) => ({
   }),
 });
 
+// TODO: refactor this to be supplied by API, not hard-coded
 const siteOptions = Object.entries(statNames.sites).map(([value, label]) => ({
   value,
   label,

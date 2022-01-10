@@ -50,6 +50,7 @@ function BreakdownsController({
   matchups,
   statSelections,
   setStatSelections,
+  selectionList,
 }) {
   const controllerState = loading ? 'loading' : inErrorState ? 'error' : '';
 
@@ -69,10 +70,11 @@ function BreakdownsController({
           grid: (
             <GridLayout
               sportsbook={sportsbook}
-              stats={stats}
+              stats={stats?.stats}
               matchups={matchups}
               statSelections={statSelections}
               setStatSelections={setStatSelections}
+              selectionList={selectionList}
               handleChangeStatSelections={handleChangeStatSelections}
             />
           ),

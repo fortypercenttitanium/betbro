@@ -16,7 +16,7 @@ export default class Store {
     const selections = JSON.parse(localStorage.getItem(this.statsSelectionKey));
 
     // if the stored selections match the API, return them, otherwise return null
-    return selections.every(
+    return selections?.every(
       (sel) => sel.hasOwnProperty('category') && sel.hasOwnProperty('name'),
     )
       ? selections

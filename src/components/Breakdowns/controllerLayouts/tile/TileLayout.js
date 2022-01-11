@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import abbTeam from '../../../../tools/teamAbbreviations';
+import TileCard from './TileCard';
+
+const MainContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: hidden;
+`;
 
 const TileContainer = styled.div`
   display: flex;
@@ -79,132 +87,35 @@ const SmallSpan = styled.span`
   }
 `;
 
-export default function TileLayout(props) {
-  const {
-    matchups,
-    getOddsData,
-    oddsSnapshotSite,
-    records,
-    setTileDetailedView,
-  } = props.propsList;
+export default function TileLayout({
+  sportsbook,
+  stats,
+  matchups,
+  statSelections,
+  setStatSelections,
+  selectionList,
+  handleChangeStatSelections,
+}) {
+  const [tileDetails, setTileDetails] = useState(null);
 
-  const handleClick = (matchup) => {
-    setTileDetailedView(matchups.indexOf(matchup));
+  const handleClick = (index) => {
+    setTileDetails(matchups[index]);
   };
+
   return (
     <TileContainer>
       {matchups.map((matchup, index) => {
+        const homeRecord = stats[matchup.home_team].record.record.value;
+        const awayRecord = stats[matchup.away_team].record.record.value;
         return (
-          <MatchupCard
-            onClick={() => {
-              handleClick(matchup);
-            }}
-            key={index}
-          >
-            <SmallSpan style={{ display: 'inline', marginRight: '3%' }}>
-              {records[matchup.awayTeam.team]}
-            </SmallSpan>
-            {'  '}
-            <H1 style={{ display: 'inline' }}>
-              {abbTeam(matchup.awayTeam.team)}
-            </H1>{' '}
-            <H1 style={{ display: 'inline' }}>
-              @ {abbTeam(matchup.homeTeam.team)}
-            </H1>
-            {'  '}
-            <SmallSpan style={{ display: 'inline', marginLeft: '3%' }}>
-              {records[matchup.homeTeam.team]}
-            </SmallSpan>
-            <H2>{matchup.time.format('dddd MMM. Do, h:mma')}</H2>
-            <H3>
-              <strong>Moneyline:</strong>
-              <br /> {abbTeam(matchup.awayTeam.team)}{' '}
-              {getOddsData(
-                matchups,
-                matchup,
-                'moneyLine',
-                oddsSnapshotSite,
-                matchup.awayTeam.team,
-              )}
-              , {abbTeam(matchup.homeTeam.team)}{' '}
-              {getOddsData(
-                matchups,
-                matchup,
-                'moneyLine',
-                oddsSnapshotSite,
-                matchup.homeTeam.team,
-              )}
-            </H3>
-            <H3>
-              <strong>Spread:</strong>
-              <br /> {abbTeam(matchup.awayTeam.team)}{' '}
-              {
-                getOddsData(
-                  matchups,
-                  matchup,
-                  'spreads',
-                  oddsSnapshotSite,
-                  matchup.awayTeam.team,
-                ).points
-              }{' '}
-              (
-              {
-                getOddsData(
-                  matchups,
-                  matchup,
-                  'spreads',
-                  oddsSnapshotSite,
-                  matchup.awayTeam.team,
-                ).odds
-              }
-              ), {abbTeam(matchup.homeTeam.team)}{' '}
-              {
-                getOddsData(
-                  matchups,
-                  matchup,
-                  'spreads',
-                  oddsSnapshotSite,
-                  matchup.homeTeam.team,
-                ).points
-              }{' '}
-              (
-              {
-                getOddsData(
-                  matchups,
-                  matchup,
-                  'spreads',
-                  oddsSnapshotSite,
-                  matchup.homeTeam.team,
-                ).odds
-              }
-              )
-            </H3>
-            <H3>
-              Over{' '}
-              {
-                getOddsData(matchups, matchup, 'overUnder', oddsSnapshotSite)
-                  .points
-              }{' '}
-              (
-              {
-                getOddsData(matchups, matchup, 'overUnder', oddsSnapshotSite)
-                  .oddsOver
-              }
-              )
-              <br />
-              Under{' '}
-              {
-                getOddsData(matchups, matchup, 'overUnder', oddsSnapshotSite)
-                  .points
-              }{' '}
-              (
-              {
-                getOddsData(matchups, matchup, 'overUnder', oddsSnapshotSite)
-                  .oddsUnder
-              }
-              )
-            </H3>
-          </MatchupCard>
+          <TileCard
+            handleClick={handleClick}
+            index={index}
+            matchup={matchup}
+            sportsbook={sportsbook}
+            homeRecord={homeRecord}
+            awayRecord={awayRecord}
+          />
         );
       })}
     </TileContainer>

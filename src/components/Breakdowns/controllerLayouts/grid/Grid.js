@@ -9,7 +9,7 @@ const GridContainer = styled.div`
   height: -moz-min-content;
   height: min-intrinsic;
   height: min-content;
-  padding: 0 1rem 1rem 0;
+  padding: 0 16px 0 0;
   gap: 5px;
   background-color: transparent;
   color: var(--betbro-blue);

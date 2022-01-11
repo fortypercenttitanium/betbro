@@ -78,7 +78,17 @@ function BreakdownsController({
               handleChangeStatSelections={handleChangeStatSelections}
             />
           ),
-          tile: <TileLayout />,
+          tile: (
+            <TileLayout
+              sportsbook={sportsbook}
+              stats={stats?.stats}
+              matchups={matchups}
+              statSelections={statSelections}
+              setStatSelections={setStatSelections}
+              selectionList={selectionList}
+              handleChangeStatSelections={handleChangeStatSelections}
+            />
+          ),
         }),
       })}
     </ControllerContainer>

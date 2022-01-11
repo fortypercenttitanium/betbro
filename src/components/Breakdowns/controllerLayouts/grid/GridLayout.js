@@ -8,23 +8,24 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow-x: auto;
-  overflow-y: auto;
+  overflow-y: hidden;
 
   .grid-container {
     display: flex;
     margin: auto;
     height: 100%;
-    background-color: rgba(250, 250, 250, 0.8);
+    background-color: rgba(200, 200, 200, 0.8);
     border-radius: 6px;
   }
 
   .selector-column {
     display: flex;
+    background-color: var(--betbro-blue);
+    border-right: 1px solid #ddd;
     position: sticky;
     left: 0;
-    padding-bottom: 1rem;
+    padding: 0 4px 4px;
     gap: 5px;
-    border-right: 4px solid rgba(20, 20, 20, 0.5);
     flex-direction: column;
     grid-row-start: 2;
     & > * {

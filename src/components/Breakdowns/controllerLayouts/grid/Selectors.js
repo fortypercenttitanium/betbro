@@ -7,6 +7,8 @@ const SelectionContainer = styled.div`
   background: transparent;
   height: 52px;
   text-align: center;
+  border: 1px solid white;
+  border-radius: 5px;
 `;
 
 function findOption(optionsArr, selection) {

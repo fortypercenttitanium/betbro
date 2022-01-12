@@ -33,7 +33,7 @@ function BreakdownsLayout() {
   const [statSelections, setStatSelections] = useState([]);
   const [statsLastUpdated, setStatsLastUpdated] = useState('');
   const [oddsLastUpdated, setOddsLastUpdated] = useState('');
-  const [siteLayout, setSiteLayout] = useState('grid');
+  const [siteLayout, setSiteLayout] = useState('tile');
 
   useEffect(() => {
     async function fetchStats() {

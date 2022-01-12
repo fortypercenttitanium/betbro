@@ -4,19 +4,14 @@ import abbTeam from '../../../../tools/teamAbbreviations';
 import format from 'date-fns/format';
 
 const MatchupCard = styled.div`
-  border-radius: 1rem;
+  border-radius: 16px;
   border: 1px solid #ddd;
   color: #ddd;
-  background-color: rgba(44, 40, 55, 0.6);
-  max-width: 320px;
-  min-width: 210px;
-  flex: 1 1;
-  margin: 1rem;
-  padding: 1rem;
-  flex: 1;
-  flex-basis: 17rem;
+  background-color: rgba(44, 40, 55, 0.9);
+  padding: 16px;
   text-align: center;
   transition: 0.3s;
+  cursor: pointer;
   &:hover {
     background-color: #ddd;
     color: var(--betbro-blue);
@@ -25,8 +20,45 @@ const MatchupCard = styled.div`
       text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     }
   }
-  @media (max-width: 900px) {
-    flex-basis: 11rem;
+
+  .matchup-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 2px #222;
+  }
+
+  .matchup-header-team {
+    display: block;
+    text-align: center;
+  }
+
+  .team-name {
+    line-height: 2rem;
+  }
+
+  .record {
+    font-weight: normal;
+    font-size: 1rem;
+  }
+
+  .matchup-at {
+    padding: 12px;
+  }
+
+  .matchup-time {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+  .odds-container {
+    line-height: 1.3;
+    padding: 4px;
+  }
+
+  .odds-name {
+    font-weight: bold;
+    font-size: 1.1rem;
   }
 `;
 
@@ -54,42 +86,54 @@ function TileCard({
       }}
       key={matchup.teams.toString()}
     >
-      <h3 className="record" style={{ display: 'inline', marginRight: '3%' }}>
-        {awayRecord}
-      </h3>
-      {'  '}
-      <h1 className="team-name" style={{ display: 'inline' }}>
-        {abbTeam(matchup.away_team)}
-      </h1>{' '}
-      <h1 className="team-name" style={{ display: 'inline' }}>
-        @ {abbTeam(matchup.home_team)}
-      </h1>
-      {'  '}
-      <h3 className="record" style={{ display: 'inline', marginLeft: '3%' }}>
-        {homeRecord}
-      </h3>
+      <div className="matchup-header-container">
+        <div className="matchup-header-team">
+          <h1 className="team-name">{abbTeam(matchup.away_team)}</h1>
+          <h3 className="record">{awayRecord}</h3>
+        </div>
+        <div className="matchup-at">
+          <h1 className="team-name">@</h1>
+        </div>
+        <div className="matchup-header-team">
+          <h1 className="team-name">{abbTeam(matchup.home_team)}</h1>
+          <h3 className="record">{homeRecord}</h3>
+        </div>
+      </div>
+
       <h2 className="matchup-time">
         {format(new Date(matchup.commence_time), 'EEE MMM Do, h:mma')}
       </h2>
-      <p className="odds-name">Moneyline:</p>
-      <p className="odds-data">
-        {abbTeam(matchup.away_team)} {moneyLineData?.data.odds[1] || 'n/a'},{' '}
-        {abbTeam(matchup.home_team)} {moneyLineData?.data.odds[0] || 'n/a'}
-      </p>
-      <p className="odds-name">Spread:</p>
-      <p className="odds-data">
-        {abbTeam(matchup.away_team)} {spreadsData?.data.points[1] || 'n/a'}{' '}
-        {spreadsData && `(${spreadsData?.data.odds[1]})`},{' '}
-        {abbTeam(matchup.home_team)} {spreadsData?.data.points[0] || 'n/a'}{' '}
-        {spreadsData && `(${spreadsData?.data.odds[0]})`}
-      </p>
-      <p className="odds-name">Over/Under:</p>
-      <p className="odds-data">
-        Over {overUnderData?.data.points || 'n/a'}{' '}
-        {overUnderData && `(${overUnderData?.data.odds[0]})`}, Under{' '}
-        {overUnderData?.data.points || 'n/a'}{' '}
-        {overUnderData && `(${overUnderData?.data.odds[1]})`}
-      </p>
+      <div className="odds-container">
+        <p className="odds-name">Moneyline:</p>
+        <p className="odds-data">
+          {abbTeam(matchup.away_team)} {moneyLineData?.data.odds[1] || 'n/a'},{' '}
+          {abbTeam(matchup.home_team)} {moneyLineData?.data.odds[0] || 'n/a'}
+        </p>
+      </div>
+
+      <div className="odds-container">
+        <p className="odds-name">Spread:</p>
+        <p className="odds-data">
+          {abbTeam(matchup.away_team)} {spreadsData?.data.points[1] || 'n/a'}{' '}
+          {spreadsData && `(${spreadsData?.data.odds[1]})`}
+        </p>
+        <p className="odds-data">
+          {abbTeam(matchup.home_team)} {spreadsData?.data.points[0] || 'n/a'}{' '}
+          {spreadsData && `(${spreadsData?.data.odds[0]})`}
+        </p>
+      </div>
+
+      <div className="odds-container">
+        <p className="odds-name">Over/Under:</p>
+        <p className="odds-data">
+          Over {overUnderData?.data.points || 'n/a'}{' '}
+          {overUnderData && `(${overUnderData?.data.odds[0]})`}
+        </p>
+        <p className="odds-data">
+          Under {overUnderData?.data.points || 'n/a'}{' '}
+          {overUnderData && `(${overUnderData?.data.odds[1]})`}
+        </p>
+      </div>
     </MatchupCard>
   );
 }

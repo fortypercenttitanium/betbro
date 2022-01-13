@@ -141,6 +141,7 @@ function BreakdownsLayout() {
         oddsLastUpdated={oddsLastUpdated}
         onChangeLayout={handleChangeLayout}
         siteLayout={siteLayout}
+        matchups={matchups}
       />
       <BreakdownsController
         siteLayout={siteLayout}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Select from 'react-select';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
@@ -54,12 +54,6 @@ const selectStyles = (width) => ({
   }),
 });
 
-// TODO: refactor this to be supplied by API, not hard-coded
-const siteOptions = Object.entries(statNames.sites).map(([value, label]) => ({
-  value,
-  label,
-}));
-
 const layoutOptions = [
   {
     value: 'grid',
@@ -78,7 +72,41 @@ function BreakdownsHeader({
   sportsbook,
   oddsLastUpdated,
   statsLastUpdated,
+  matchups,
 }) {
+  const [siteOptions, setSiteOptions] = useState([]);
+
+  useEffect(() => {
+    if (matchups && matchups.length) {
+      // loop through matchups
+      const newSiteOptions = matchups.reduce((acc, matchup) => {
+        // combine all three odds types
+        const combinedOdds = [
+          ...matchup.moneyLine,
+          ...matchup.spreads,
+          ...matchup.overUnder,
+        ].reduce((acc, oddsData) => {
+          if (!acc.some((foundSite) => oddsData.site_key === foundSite.value)) {
+            acc.push({ value: oddsData.site_key, label: oddsData.site_nice });
+          }
+
+          return acc;
+        }, []);
+
+        // add unique values to list
+        combinedOdds.forEach((site) => {
+          if (!acc.some((foundSite) => site.value === foundSite.value)) {
+            acc.push(site);
+          }
+        });
+
+        return acc;
+      }, []);
+
+      setSiteOptions(newSiteOptions);
+    }
+  }, [matchups]);
+
   return (
     <Header>
       <div className="header-container">
@@ -87,7 +115,7 @@ function BreakdownsHeader({
           <Select
             styles={selectStyles(180)}
             name="odds-selector"
-            isLoading={!sportsbook}
+            isLoading={!sportsbook && !siteOptions.length}
             options={siteOptions}
             value={siteOptions.find((option) => option.value === sportsbook)}
             onChange={(option) => handleChangeSportsbook(option.value)}

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Select from 'react-select';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
-import statNames from '../../tools/namingLibrary/statNames';
 
 const Header = styled.div`
   position: relative;

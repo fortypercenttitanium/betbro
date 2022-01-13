@@ -22,7 +22,7 @@ export default function NotFound() {
     setTimeout(() => {
       navigate('/');
     }, 3000);
-  }, []);
+  }, [navigate]);
 
   return (
     <NotFoundContainer>

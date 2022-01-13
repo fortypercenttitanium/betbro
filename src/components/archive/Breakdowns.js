@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import selectionList from '../tools/namingLibrary/selectionList';
+import selectionList from '../../tools/namingLibrary/selectionList';
 // import LoadingScreen from './LoadingScreen';
 import TileBanner from './TileBanner';
 import GridLayout from './GridLayout';
 import TileLayout from './TileLayout';
-import Loading from './Loading';
+import Loading from '../Loading';
 import TileDetailedView from './TileDetailedView';
-import getOddsData from '../tools/getOddsData';
+import getOddsData from '../../tools/getOddsData';
 // const weeks = require('../tools/weeks');
 // const thisWeek = weeks.thisWeek();
 

@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Background } from './LoadingScreen';
 import logo from '../images/logo-no-sub.png';
-import hamburger from '../images/hamburger.svg';
 
 const NavContainer = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px 0 24px;
   width: 100%;
   height: 96px;
   background: rgb(0, 0, 0);
@@ -18,171 +20,47 @@ const NavContainer = styled.nav`
     rgba(0, 0, 0, 1) 100%
   );
   border-bottom: 4px solid #ddd;
-  display: flex;
   overflow: hidden;
+
   @media (max-width: 600px) {
     background: black;
   }
-`;
 
-const LinksContainer = styled.div`
-  display: flex;
-  flex: 3 1 auto;
-  justify-content: flex-end;
-  height: 100%;
-  margin: auto 3%;
-  @media (max-width: 900px) {
-    display: none;
+  .link-container {
   }
-`;
 
-const LinkDiv = styled.div`
-  text-align: center;
-  display: flex;
-  height: 100%;
-  color: #fff;
-  margin: auto;
-  padding: 0 1rem;
-  cursor: pointer;
-  &:hover > span {
-    text-decoration: underline;
-  }
-  & > span {
-    margin: auto;
-  }
-`;
-
-const LinkDivMobile = styled(LinkDiv)`
-  flex: 1;
-  padding: 2rem 1rem;
-  font-size: 1.4rem;
-`;
-
-const HamburgerDiv = styled(LinkDiv)`
-  display: none;
-  margin-right: 5%;
-  height: 32px;
-  &:hover > span {
-    text-decoration: none;
-  }
-  @media (max-width: 900px) {
-    display: flex;
-  }
-`;
-
-const LogoContainer = styled.div`
-  display: flex;
-  height: 100%;
-  margin: auto auto auto 5%;
-`;
-
-const Span = styled.span`
-  text-decoration: ${(props) => (props.underline ? 'underline' : 'none')};
-  transform: ${(props) => (props.underline ? 'scale(1.1)' : 'none')};
-`;
-
-const MenuBackground = styled(Background)`
-  overflow: hidden;
-  top: 6rem;
-  z-index: 5;
-`;
-
-const NavDrawer = styled.div`
-  background: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  display: flex;
-  z-index: 0;
-  flex-direction: column;
-  top: 6rem;
-  right: 0;
-  left: 0;
-  border-bottom: 2px solid white;
-  overflow: hidden;
-  animation: slidein 0.5s;
-  @keyframes slidein {
-    from {
-      /* transform: translateY(-100%); */
-      max-height: 0;
+  .link {
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    :hover {
+      text-decoration: underline;
+      color: white;
     }
-    to {
-      /* transform: translateY(0); */
-      max-height: 100%;
+  }
+
+  .nav-logo {
+    height: 140px;
+    transition: 0.5s;
+    :hover {
+      transform: scale(1.1);
     }
   }
 `;
 
-export default function Navbar(props) {
-  const { headline } = props;
-  const [menuOpen, setMenuOpen] = useState(false);
-  const openMenu = () => {
-    setMenuOpen(true);
-  };
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+export default function Navbar() {
   return (
     <NavContainer>
-      <LogoContainer>
-        <Link to="/home">
-          <img
-            src={logo}
-            alt="BetBro logo"
-            style={{ width: '150px', position: 'relative', top: '-25px' }}
-          />
-        </Link>
-      </LogoContainer>
-      <LinksContainer>
+      <div className="logo-container">
         <Link to="/">
-          <LinkDiv>
-            <Span underline={headline === 'breakdowns'}>Bro's Breakdowns</Span>
-          </LinkDiv>
+          <img src={logo} alt="BetBro logo" className="nav-logo" />
         </Link>
-        <Link className="first-link" to="/about">
-          <LinkDiv className="first-link">
-            <Span underline={headline === 'about'}>Why BetBro?</Span>
-          </LinkDiv>
-        </Link>
+      </div>
+      <div className="link-container">
         <Link to="/contact">
-          <LinkDiv>
-            <Span underline={headline === 'contact'}>Contact</Span>
-          </LinkDiv>
+          <p className="link">Contact</p>
         </Link>
-        {/* <Link to='/mybetbro'>
-					<LinkDiv>
-					<Span underline={headline === 'mybetbro'}>My BetBro</Span>
-					</LinkDiv>
-				</Link> */}
-      </LinksContainer>
-      <HamburgerDiv
-        onClick={() => {
-          menuOpen ? closeMenu() : openMenu();
-        }}
-      >
-        <img src={hamburger} alt="Click to open nav menu" />
-      </HamburgerDiv>
-      {menuOpen && (
-        <MenuBackground onClick={closeMenu}>
-          <NavDrawer>
-            <Link className="first-link" to="/about">
-              <LinkDivMobile className="first-link">
-                <Span underline={headline === 'about'}>Why BetBro?</Span>
-              </LinkDivMobile>
-            </Link>
-            <Link to="/">
-              <LinkDivMobile>
-                <Span underline={headline === 'breakdowns'}>
-                  Bro's Breakdowns
-                </Span>
-              </LinkDivMobile>
-            </Link>
-            <Link to="/contact">
-              <LinkDivMobile>
-                <Span underline={headline === 'contact'}>Contact</Span>
-              </LinkDivMobile>
-            </Link>
-          </NavDrawer>
-        </MenuBackground>
-      )}
+      </div>
     </NavContainer>
   );
 }

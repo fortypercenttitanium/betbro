@@ -16,7 +16,7 @@ function SpreadsCell({ row, column, matchup, selection, sportsbook }) {
 
   return (
     <GridCell
-      style={{ gridRowStart: row + 2, gridColumnStart: column + 2 }}
+      style={{ gridRowStart: row, gridColumnStart: column }}
       row={row}
       column={column}
     >

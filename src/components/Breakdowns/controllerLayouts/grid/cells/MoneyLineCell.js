@@ -18,8 +18,8 @@ function MoneyLineCell({ row, column, matchup, selection, sportsbook }) {
   return (
     <GridCell
       style={{
-        gridRowStart: row + 2,
-        gridColumnStart: column + 2,
+        gridRowStart: row,
+        gridColumnStart: column,
         gridTemplateRows: '1fr',
       }}
       row={row}

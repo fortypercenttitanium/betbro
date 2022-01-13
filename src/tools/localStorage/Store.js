@@ -2,6 +2,15 @@ export default class Store {
   constructor() {
     this.sportsbookStoreKey = 'betbro_sportsbook_selection';
     this.statsSelectionKey = 'betbro_stats_selections';
+    this.layoutKey = 'betbro_layout';
+  }
+
+  getLayout() {
+    return localStorage.getItem(this.layoutKey);
+  }
+
+  setLayout(layout) {
+    localStorage.setItem(this.layoutKey, layout);
   }
 
   getBookSelection() {

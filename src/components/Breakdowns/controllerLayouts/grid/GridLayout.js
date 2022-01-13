@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Selectors from './Selectors';
 import Grid from './Grid';
+import NotEnoughRoom from './NotEnoughRoom';
 
 const MainContainer = styled.div`
   position: relative;
@@ -49,7 +50,19 @@ export default function GridLayout(props) {
     stats,
   } = props;
 
-  return (
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function saveWindowWidth() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', saveWindowWidth);
+
+    return () => window.removeEventListener('resize', saveWindowWidth);
+  }, []);
+
+  return windowWidth > 768 ? (
     <MainContainer>
       <div className="grid-container">
         <div className="selector-column">
@@ -68,5 +81,7 @@ export default function GridLayout(props) {
         />
       </div>
     </MainContainer>
+  ) : (
+    <NotEnoughRoom />
   );
 }

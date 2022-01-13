@@ -62,7 +62,6 @@ const HamburgerDiv = styled(LinkDiv)`
   display: none;
   margin-right: 5%;
   height: 32px;
-  z-index: 5;
   &:hover > span {
     text-decoration: none;
   }

@@ -8,8 +8,9 @@ const Header = styled.div`
   position: relative;
   width: 100%;
   display: flex;
+  justify-content: center;
   border-bottom: 3px solid #ddd;
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     flex-direction: column;
     padding: 0;
   }
@@ -21,15 +22,21 @@ const Header = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    @media (max-width: 900px) {
-      &.no-mobile {
-        display: none;
-      }
-    }
+    padding: 8px;
 
-    .layout-select-label {
-      display: block;
-      padding: 24px;
+    .odds-last-updated {
+      display: flex;
+      flex-direction: column;
+      h4 {
+        font-weight: bold;
+      }
+
+      @media (max-width: 600px) {
+        flex-direction: row;
+        h4 {
+          padding-right: 4px;
+        }
+      }
     }
   }
 `;
@@ -89,7 +96,7 @@ function BreakdownsHeader({
           />
         </label>
       </div>
-      <div className="header-container no-mobile">
+      <div className="header-container">
         <label htmlFor="view-mode" className="layout-select-label">
           <h3>Layout</h3>
           <Select
@@ -103,28 +110,26 @@ function BreakdownsHeader({
         </label>
       </div>
       <div className="header-container">
-        <div className="centered">
-          {oddsLastUpdated && (
-            <>
-              <h4>
-                Odds last updated:{' '}
-                {formatDistanceToNow(new Date(oddsLastUpdated), {
-                  addSuffix: true,
-                })}
-              </h4>
-            </>
-          )}
-          {statsLastUpdated && (
-            <>
-              <h4>
-                Stats last updated:{' '}
-                {formatDistanceToNow(new Date(statsLastUpdated), {
-                  addSuffix: true,
-                })}
-              </h4>
-            </>
-          )}
-        </div>
+        {oddsLastUpdated && (
+          <div className="odds-last-updated">
+            <h4>Odds last updated:</h4>
+            <p>
+              {formatDistanceToNow(new Date(oddsLastUpdated), {
+                addSuffix: true,
+              })}
+            </p>
+          </div>
+        )}
+        {statsLastUpdated && (
+          <div className="odds-last-updated">
+            <h4>Stats last updated:</h4>
+            <p>
+              {formatDistanceToNow(new Date(statsLastUpdated), {
+                addSuffix: true,
+              })}
+            </p>
+          </div>
+        )}
       </div>
     </Header>
   );

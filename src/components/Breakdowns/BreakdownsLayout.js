@@ -7,7 +7,11 @@ import OddsFetcher from '../../tools/fetchers/OddsFetcher';
 import BreakdownsHeader from './BreakdownsHeader';
 import BreakdownsController from './BreakdownsController';
 import createSelectionList from '../../tools/namingLibrary/selectionList';
-import { defaultStatSelections, defaultSportsbook } from './defaults/defaults';
+import {
+  defaultStatSelections,
+  defaultSportsbook,
+  defaultLayout,
+} from './defaults/defaults';
 
 const store = new Store();
 const statsFetcher = new StatsFetcher();
@@ -33,7 +37,7 @@ function BreakdownsLayout() {
   const [statSelections, setStatSelections] = useState([]);
   const [statsLastUpdated, setStatsLastUpdated] = useState('');
   const [oddsLastUpdated, setOddsLastUpdated] = useState('');
-  const [siteLayout, setSiteLayout] = useState('tile');
+  const [siteLayout, setSiteLayout] = useState(defaultLayout);
 
   useEffect(() => {
     async function fetchStats() {
@@ -44,7 +48,7 @@ function BreakdownsLayout() {
 
       setStatsLastUpdated(result.lastUpdated);
       setSelectionList(createSelectionList(result.stats));
-      console.log(result);
+
       setStats(result);
     }
 
@@ -89,6 +93,15 @@ function BreakdownsLayout() {
   }, []);
 
   useEffect(() => {
+    // check for preferred layout mode
+    const storedLayout = store.getLayout();
+
+    if (storedLayout) {
+      setSiteLayout(storedLayout);
+    }
+  }, []);
+
+  useEffect(() => {
     if (!inErrorState) {
       if (stats && matchups && statSelections.length) {
         setLoading(false);
@@ -106,6 +119,11 @@ function BreakdownsLayout() {
     setStatSelections(selections);
   }
 
+  function handleChangeLayout(layout) {
+    store.setLayout(layout);
+    setSiteLayout(layout);
+  }
+
   return (
     <BreakdownsContainer>
       <Helmet>
@@ -121,7 +139,7 @@ function BreakdownsLayout() {
         onChangeSportsbook={handleChangeSportsbook}
         statsLastUpdated={statsLastUpdated}
         oddsLastUpdated={oddsLastUpdated}
-        onChangeLayout={setSiteLayout}
+        onChangeLayout={handleChangeLayout}
         siteLayout={siteLayout}
       />
       <BreakdownsController

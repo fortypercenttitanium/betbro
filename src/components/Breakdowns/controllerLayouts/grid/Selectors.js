@@ -59,8 +59,9 @@ const styles = {
     color: '#ddd',
     width: 240,
     textShadow: '2px 2px 2px rgba(0, 0, 0, 0.6)',
-    '@media (max-width: 600px)': {
-      fontSize: '0.6rem',
+    '@media (max-width: 768px)': {
+      fontSize: '0.8rem',
+      width: 150,
     },
   }),
   container: (styles) => ({
@@ -106,6 +107,14 @@ const styles = {
     fontWeight: 'bold',
     fontSize: '1rem',
     textShadow: '1px 1px 1px #999',
+  }),
+  menu: (styles) => ({
+    ...styles,
+    minWidth: '200px',
+  }),
+  menuList: (styles) => ({
+    ...styles,
+    padding: 0,
   }),
 };
 

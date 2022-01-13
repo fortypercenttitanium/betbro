@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import abbTeam from '../../../../tools/teamAbbreviations';
 import format from 'date-fns/format';
+import abbTeam from '../../../../tools/teamAbbreviations';
+import MatchupHeader from './MatchupHeader';
 
 const MatchupCard = styled.div`
   border-radius: 16px;
@@ -19,31 +20,6 @@ const MatchupCard = styled.div`
     & > h1 {
       text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
     }
-  }
-
-  .matchup-header-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 2px 2px 2px #222;
-  }
-
-  .matchup-header-team {
-    display: block;
-    text-align: center;
-  }
-
-  .team-name {
-    line-height: 2rem;
-  }
-
-  .record {
-    font-weight: normal;
-    font-size: 1rem;
-  }
-
-  .matchup-at {
-    padding: 12px;
   }
 
   .matchup-time {
@@ -86,19 +62,11 @@ function TileCard({
       }}
       key={matchup.teams.toString()}
     >
-      <div className="matchup-header-container">
-        <div className="matchup-header-team">
-          <h1 className="team-name">{abbTeam(matchup.away_team)}</h1>
-          <h3 className="record">{awayRecord}</h3>
-        </div>
-        <div className="matchup-at">
-          <h1 className="team-name">@</h1>
-        </div>
-        <div className="matchup-header-team">
-          <h1 className="team-name">{abbTeam(matchup.home_team)}</h1>
-          <h3 className="record">{homeRecord}</h3>
-        </div>
-      </div>
+      <MatchupHeader
+        matchup={matchup}
+        homeRecord={homeRecord}
+        awayRecord={awayRecord}
+      />
 
       <h2 className="matchup-time">
         {format(new Date(matchup.commence_time), 'EEE MMM Do, h:mma')}

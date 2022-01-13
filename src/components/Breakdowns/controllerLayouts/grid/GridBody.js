@@ -1,66 +1,5 @@
 import React from 'react';
-
-import {
-  StatsCell,
-  OverUnderCell,
-  SpreadsCell,
-  MoneyLineCell,
-} from './cells/cells';
-
-// Higher-order component to render the cell with the correct styling and data
-function StatCellType({
-  row,
-  matchup,
-  column,
-  selection,
-  homeTeamStats,
-  awayTeamStats,
-  sportsbook,
-}) {
-  switch (selection.name) {
-    case 'spreads':
-      return (
-        <SpreadsCell
-          sportsbook={sportsbook}
-          row={row}
-          matchup={matchup}
-          column={column}
-          selection={selection.name}
-        />
-      );
-    case 'moneyLine':
-      return (
-        <MoneyLineCell
-          sportsbook={sportsbook}
-          row={row}
-          matchup={matchup}
-          column={column}
-          selection={selection.name}
-        />
-      );
-    case 'overUnder':
-      return (
-        <OverUnderCell
-          sportsbook={sportsbook}
-          row={row}
-          matchup={matchup}
-          column={column}
-          selection={selection.name}
-        />
-      );
-    default:
-      return (
-        <StatsCell
-          row={row}
-          matchup={matchup}
-          column={column}
-          selection={selection}
-          homeTeamStats={homeTeamStats}
-          awayTeamStats={awayTeamStats}
-        />
-      );
-  }
-}
+import GridCellType from './GridCellType';
 
 export default function GridBody({
   matchups,
@@ -74,11 +13,11 @@ export default function GridBody({
     const awayTeamStats = stats[away_team];
 
     return statSelections.map((selection, row) => (
-      <StatCellType
+      <GridCellType
         key={`${row} - ${selection.category}: ${selection.name}`}
-        row={row}
+        row={row + 2}
         matchup={matchup}
-        column={column}
+        column={column + 2}
         selection={selection}
         homeTeamStats={homeTeamStats}
         awayTeamStats={awayTeamStats}

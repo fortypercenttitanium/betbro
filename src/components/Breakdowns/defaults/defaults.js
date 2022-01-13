@@ -54,3 +54,5 @@ export const defaultStatSelections = [
 ];
 
 export const defaultSportsbook = 'draftkings';
+
+export const defaultLayout = 'tile';

@@ -23,10 +23,10 @@ const ControllerContainer = styled.div`
 
 function renderSwitch(state, components) {
   switch (state) {
-    case 'loading':
-      return components.loading;
     case 'error':
       return components.error;
+    case 'loading':
+      return components.loading;
     default:
       return components.success;
   }

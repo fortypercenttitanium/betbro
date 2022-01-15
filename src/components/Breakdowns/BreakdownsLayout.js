@@ -48,6 +48,7 @@ function BreakdownsLayout() {
         setSelectionList(createSelectionList(result.stats));
         setStats(result);
       } catch {
+        setLoading(false);
         return setInErrorState(true);
       }
     }
@@ -63,6 +64,7 @@ function BreakdownsLayout() {
         setOddsLastUpdated(result.lastUpdated);
         setMatchups(result.matchups);
       } catch {
+        setLoading(false);
         return setInErrorState(true);
       }
     }

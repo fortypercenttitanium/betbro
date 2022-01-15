@@ -22,7 +22,6 @@ const ControllerContainer = styled.div`
 `;
 
 function renderSwitch(state, components) {
-  console.log(state);
   switch (state) {
     case 'error':
       return components.error;

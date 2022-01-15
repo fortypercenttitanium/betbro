@@ -43,12 +43,13 @@ function BreakdownsLayout() {
     async function fetchStats() {
       const result = await statsFetcher.getStats();
       if (result.error) {
+        console.log('err', result);
         return setInErrorState(true);
       }
 
       setStatsLastUpdated(result.lastUpdated);
       setSelectionList(createSelectionList(result.stats));
-
+      console.log('stats', result);
       setStats(result);
     }
 
@@ -58,7 +59,7 @@ function BreakdownsLayout() {
   useEffect(() => {
     async function fetchOdds() {
       const result = await oddsFetcher.getOdds();
-
+      console.log('odds', result);
       if (result.error) {
         return setInErrorState(true);
       }

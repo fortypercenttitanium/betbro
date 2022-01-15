@@ -5,9 +5,10 @@ export default class JsonFetcher {
   async fetch(url) {
     try {
       const query = await fetch(url);
-
+      console.log('q', query);
       if (query.ok) {
         const result = await query.json();
+        console.log('r', result);
 
         if (result) {
           return result;

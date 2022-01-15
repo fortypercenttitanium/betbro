@@ -43,7 +43,7 @@ export default function ComparisonGauge({
     'Tampa Bay Buccaneers': '#D50A0A',
     'Tennessee Titans': '#0C2340',
     'Washington Football Team': '#773141',
-    None: '#c4c4c4',
+    None: '#a3a3a3',
   };
   const circleColor =
     teamColors[

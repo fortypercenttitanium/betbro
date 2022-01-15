@@ -22,6 +22,7 @@ const ControllerContainer = styled.div`
 `;
 
 function renderSwitch(state, components) {
+  console.log(state);
   switch (state) {
     case 'error':
       return components.error;
@@ -52,7 +53,7 @@ function BreakdownsController({
   setStatSelections,
   selectionList,
 }) {
-  const controllerState = loading ? 'loading' : inErrorState ? 'error' : '';
+  const controllerState = inErrorState ? 'error' : loading ? 'loading' : '';
 
   function handleChangeStatSelections(selection, i) {
     const newSelections = [...statSelections];

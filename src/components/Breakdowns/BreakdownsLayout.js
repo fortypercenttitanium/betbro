@@ -43,14 +43,9 @@ function BreakdownsLayout() {
     async function fetchStats() {
       try {
         const result = await statsFetcher.getStats();
-        if (result.error) {
-          console.log('err', result);
-          return setInErrorState(true);
-        }
 
         setStatsLastUpdated(result.lastUpdated);
         setSelectionList(createSelectionList(result.stats));
-        console.log('stats', result);
         setStats(result);
       } catch {
         return setInErrorState(true);
@@ -62,14 +57,14 @@ function BreakdownsLayout() {
 
   useEffect(() => {
     async function fetchOdds() {
-      const result = await oddsFetcher.getOdds();
-      console.log('odds', result);
-      if (result.error) {
+      try {
+        const result = await oddsFetcher.getOdds();
+
+        setOddsLastUpdated(result.lastUpdated);
+        setMatchups(result.matchups);
+      } catch {
         return setInErrorState(true);
       }
-
-      setOddsLastUpdated(result.lastUpdated);
-      setMatchups(result.matchups);
     }
 
     fetchOdds();

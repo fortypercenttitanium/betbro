@@ -5,7 +5,6 @@ export default class JsonFetcher {
   async fetch(url) {
     try {
       const query = await fetch(url);
-      console.log('q', query);
       if (query.ok) {
         const result = await query.json();
         console.log('r', result);
@@ -15,9 +14,7 @@ export default class JsonFetcher {
         }
       }
 
-      return {
-        error: 'Failed to fetch',
-      };
+      throw new Error('Failed to fetch');
     } catch (err) {
       console.error(err);
     }

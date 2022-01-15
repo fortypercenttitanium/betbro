@@ -41,16 +41,20 @@ function BreakdownsLayout() {
 
   useEffect(() => {
     async function fetchStats() {
-      const result = await statsFetcher.getStats();
-      if (result.error) {
-        console.log('err', result);
+      try {
+        const result = await statsFetcher.getStats();
+        if (result.error) {
+          console.log('err', result);
+          return setInErrorState(true);
+        }
+
+        setStatsLastUpdated(result.lastUpdated);
+        setSelectionList(createSelectionList(result.stats));
+        console.log('stats', result);
+        setStats(result);
+      } catch {
         return setInErrorState(true);
       }
-
-      setStatsLastUpdated(result.lastUpdated);
-      setSelectionList(createSelectionList(result.stats));
-      console.log('stats', result);
-      setStats(result);
     }
 
     fetchStats();

@@ -128,9 +128,9 @@ code {
 }
 
 .lds-grid {
-  display: inline-block;
-  position: absolute;
-  margin: auto;
+  position: relative;
+  display: flex;
+  margin: 60px auto;
   top: 0;
   bottom: 0;
   left: 0;

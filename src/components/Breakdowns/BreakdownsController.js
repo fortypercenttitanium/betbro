@@ -6,19 +6,9 @@ import GridLayout from './controllerLayouts/grid/GridLayout';
 import TileLayout from './controllerLayouts/tile/TileLayout';
 
 const ControllerContainer = styled.div`
-  min-height: 400px;
   display: flex;
   justify-content: center;
   text-align: center;
-
-  .error-title {
-    margin: 60px auto 24px;
-    padding: 0 12px;
-  }
-
-  .error-details {
-    padding: 12px;
-  }
 `;
 
 function renderSwitch(state, components) {

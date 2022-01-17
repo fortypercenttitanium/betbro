@@ -7,6 +7,7 @@ const Container = styled.div`
   align-items: center;
   text-align: center;
   margin: auto 24px;
+  padding-top: 24px;
 `;
 
 function NotEnoughRoom() {

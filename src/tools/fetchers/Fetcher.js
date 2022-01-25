@@ -1,4 +1,5 @@
 export default class JsonFetcher {
+  // todo: fix dev url?
   baseUrl =
     process.env.NODE_ENV === 'development' ? '' : process.env.REACT_APP_URL;
 

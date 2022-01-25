@@ -55,6 +55,9 @@ function TileCard({
   const overUnderData = matchup.overUnder.find(
     (ouData) => ouData.site_key === sportsbook,
   );
+  const homeIndex = matchup.teams.indexOf(matchup.home_team);
+  const awayIndex = matchup.teams.indexOf(matchup.away_team);
+
   return (
     <MatchupCard
       onClick={() => {
@@ -74,20 +77,24 @@ function TileCard({
       <div className="odds-container">
         <p className="odds-name">Moneyline:</p>
         <p className="odds-data">
-          {abbTeam(matchup.away_team)} {moneyLineData?.data.odds[1] || 'n/a'},{' '}
-          {abbTeam(matchup.home_team)} {moneyLineData?.data.odds[0] || 'n/a'}
+          {abbTeam(matchup.away_team)}{' '}
+          {moneyLineData?.data.odds[awayIndex] || 'n/a'},{' '}
+          {abbTeam(matchup.home_team)}{' '}
+          {moneyLineData?.data.odds[homeIndex] || 'n/a'}
         </p>
       </div>
 
       <div className="odds-container">
         <p className="odds-name">Spread:</p>
         <p className="odds-data">
-          {abbTeam(matchup.away_team)} {spreadsData?.data.points[1] || 'n/a'}{' '}
-          {spreadsData && `(${spreadsData?.data.odds[1]})`}
+          {abbTeam(matchup.away_team)}{' '}
+          {spreadsData?.data.points[awayIndex] || 'n/a'}{' '}
+          {spreadsData && `(${spreadsData?.data.odds[awayIndex]})`}
         </p>
         <p className="odds-data">
-          {abbTeam(matchup.home_team)} {spreadsData?.data.points[0] || 'n/a'}{' '}
-          {spreadsData && `(${spreadsData?.data.odds[0]})`}
+          {abbTeam(matchup.home_team)}{' '}
+          {spreadsData?.data.points[homeIndex] || 'n/a'}{' '}
+          {spreadsData && `(${spreadsData?.data.odds[homeIndex]})`}
         </p>
       </div>
 

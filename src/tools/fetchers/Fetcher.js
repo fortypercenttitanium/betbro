@@ -1,7 +1,10 @@
 export default class JsonFetcher {
-  // todo: fix dev url?
   baseUrl =
-    process.env.NODE_ENV === 'development' ? '' : process.env.REACT_APP_URL;
+    process.env.NODE_ENV === 'development'
+      ? process.env.REACT_APP_DEV_URL
+      : process.env.REACT_APP_URL;
+
+  testing = process.env.REACT_APP_TESTING ? true : false;
 
   async fetch(url) {
     try {

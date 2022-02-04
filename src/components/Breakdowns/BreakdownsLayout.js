@@ -39,6 +39,7 @@ function BreakdownsLayout() {
   const [oddsLastUpdated, setOddsLastUpdated] = useState('');
   const [siteLayout, setSiteLayout] = useState(defaultLayout);
 
+  // Fetch stats from API
   useEffect(() => {
     async function fetchStats() {
       try {
@@ -55,6 +56,7 @@ function BreakdownsLayout() {
     fetchStats();
   }, []);
 
+  // Fetch odds from API
   useEffect(() => {
     async function fetchOdds() {
       try {
@@ -70,8 +72,8 @@ function BreakdownsLayout() {
     fetchOdds();
   }, []);
 
+  // Check for local storage selections of stats. These are saved when the user changes which stats they want to see
   useEffect(() => {
-    // check for local storage selections
     const storedStatSelections = store.getStatSelections();
 
     if (storedStatSelections) {
@@ -81,8 +83,8 @@ function BreakdownsLayout() {
     }
   }, []);
 
+  // check for local storage selection of sportsbook. This is saved when the user changes their sportsbook selection
   useEffect(() => {
-    // check for local storage sportsbook
     const storedSportsbook = store.getBookSelection();
 
     if (storedSportsbook) {
@@ -92,8 +94,8 @@ function BreakdownsLayout() {
     }
   }, []);
 
+  // Check local storage for preferred layout mode. This is saved when the user changes which view omde they want to use
   useEffect(() => {
-    // check for preferred layout mode
     const storedLayout = store.getLayout();
 
     if (storedLayout) {
@@ -135,12 +137,12 @@ function BreakdownsLayout() {
         <title>{`Bro's Breakdowns`}</title>
       </Helmet>
       <BreakdownsHeader
-        sportsbook={sportsbook}
         onChangeSportsbook={handleChangeSportsbook}
-        statsLastUpdated={statsLastUpdated}
-        oddsLastUpdated={oddsLastUpdated}
         onChangeLayout={handleChangeLayout}
         siteLayout={siteLayout}
+        sportsbook={sportsbook}
+        oddsLastUpdated={oddsLastUpdated}
+        statsLastUpdated={statsLastUpdated}
         matchups={matchups}
       />
       <BreakdownsController

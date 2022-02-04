@@ -5,8 +5,12 @@ import TileDetails from './TileDetails';
 
 const MainContainer = styled.div`
   display: grid;
-  width: clamp(800px, 95%, 1200px);
+  width: ${(props) =>
+    props.hasSingleMatchup
+      ? 'clamp(400px, 50%, 600px)'
+      : 'clamp(800px, 95%, 1200px)'};
   padding: 10px 24px;
+  justify-content: center;
   overflow-y: auto;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 12px 8px;
@@ -31,7 +35,7 @@ export default function TileLayout({
   };
 
   return (
-    <MainContainer>
+    <MainContainer hasSingleMatchup={matchups.length === 1}>
       {tileDetails && (
         <TileDetails
           tileDetails={tileDetails}

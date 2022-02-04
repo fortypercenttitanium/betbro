@@ -13,27 +13,7 @@ const ControllerContainer = styled.div`
 `;
 
 function renderSwitch(state, components) {
-  switch (state) {
-    case 'error':
-      return components.error;
-    case 'loading':
-      return components.loading;
-    case 'uninitialized':
-      return <div />;
-    case 'noMatchups':
-      return components.noMatchups;
-    default:
-      return components.success;
-  }
-}
-
-function renderView(state, components) {
-  switch (state) {
-    case 'tile':
-      return components.tile;
-    default:
-      return components.grid;
-  }
+  return components[state];
 }
 
 function BreakdownsController({
@@ -57,7 +37,7 @@ function BreakdownsController({
     } else if (matchups.length < 1) {
       setControllerState('noMatchups');
     } else {
-      setControllerState('');
+      setControllerState('success');
     }
   }, [inErrorState, loading, matchups]);
 
@@ -74,7 +54,7 @@ function BreakdownsController({
         loading: <Loading />,
         error: <ErrorState />,
         noMatchups: <NoMatchups />,
-        success: renderView(siteLayout, {
+        success: renderSwitch(siteLayout, {
           grid: (
             <GridLayout
               sportsbook={sportsbook}

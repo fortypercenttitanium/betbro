@@ -23,8 +23,9 @@ function App() {
       <div className="main-container">
         <Routes>
           <Route exact path="/" element={<BreakdownsLayout />} />
-          {/* <Route path="/home" element={<Home setHeadline={setHeadline} />} />
-          <Route path="/about" element={<About setHeadline={setHeadline} />} /> */}
+          {/* Old pages removed from site */}
+          {/* <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

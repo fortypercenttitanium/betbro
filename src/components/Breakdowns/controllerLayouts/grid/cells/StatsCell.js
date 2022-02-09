@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatCell } from '../../sharedStyles';
-import ComparisonGauge from '../../ComparisonGauge';
+import ComparisonGauge from '../../comparisonGauge/ComparisonGauge';
 
 function StatsCell({
   row,

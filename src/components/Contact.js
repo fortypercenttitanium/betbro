@@ -54,18 +54,18 @@ export default function Contact() {
   const reCaptchaRef = useRef();
 
   const checkSessionStorage = () => {
-    if (JSON.parse(sessionStorage.getItem('betBroFormSubmitted')) === true) {
-      setFormSubmitted(true);
+    if (sessionStorage.getItem('betBroFormSubmitted') === 'true') {
+      setFormSubmitted();
     }
   };
 
   const setSessionStorage = () => {
-    sessionStorage.setItem('betBroFormSubmitted', JSON.stringify(true));
+    sessionStorage.setItem('betBroFormSubmitted', 'true');
   };
 
   useEffect(() => {
     checkSessionStorage();
-  });
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

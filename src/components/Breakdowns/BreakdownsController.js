@@ -30,12 +30,12 @@ function BreakdownsController({
   const [controllerState, setControllerState] = useState('uninitialized');
 
   useEffect(() => {
-    if (inErrorState) {
+    if (matchups && matchups.length < 1) {
+      setControllerState('noMatchups');
+    } else if (inErrorState) {
       setControllerState('error');
     } else if (loading) {
       setControllerState('loading');
-    } else if (matchups.length < 1) {
-      setControllerState('noMatchups');
     } else {
       setControllerState('success');
     }

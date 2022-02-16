@@ -36,7 +36,6 @@ const NoMatchups = () => (
       >
         Check out the demo!
       </a>
-      .
     </p>
   </NoMatchupsContainer>
 );

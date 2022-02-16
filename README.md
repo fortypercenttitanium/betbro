@@ -18,3 +18,9 @@ I challenged myself to come up with a tool for sports bettors to try to get the 
 - Easy-to-read tile mode: click for more details on each matchup.
 - Grid-mode for more users who need more information on a spreadsheet-like interface.
 - Options such as preferred view mode, selected sportsbook, and stat dropdown selections are saved on change, so your choices are remembered between sessions without any kind of log-in.
+
+## Links:
+
+[Live site](https://www.betbro.io/)
+
+[Demo site](https://bet-bro-testing.netlify.app/)

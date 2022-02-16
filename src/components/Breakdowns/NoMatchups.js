@@ -28,6 +28,16 @@ const NoMatchups = () => (
       </Link>
       .
     </p>
+    <p className="details">
+      Want to see what this site normally looks like?{' '}
+      <a
+        style={{ textDecoration: 'underline' }}
+        href="https://bet-bro-testing.netlify.app/"
+      >
+        Check out the demo!
+      </a>
+      .
+    </p>
   </NoMatchupsContainer>
 );
 

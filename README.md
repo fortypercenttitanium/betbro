@@ -1,8 +1,10 @@
 # BetBro
 
-### https://www.betbro.io
+## Link
 
-### https://github.com/fortypercenttitanium/betbro
+Live site: https://www.betbro.io
+
+Demo site: https://github.com/fortypercenttitanium/betbro
 
 #
 

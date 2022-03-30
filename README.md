@@ -4,7 +4,7 @@
 
 Live site: https://www.betbro.io
 
-Demo site: https://github.com/fortypercenttitanium/betbro
+Demo site: https://bet-bro-testing.netlify.app/
 
 #
 

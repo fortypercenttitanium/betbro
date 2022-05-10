@@ -33,7 +33,6 @@ function getAwayTeam(matchup) {
 
   return awayTeam[0];
 }
-
 function GridHeaders({ matchups }) {
   return matchups.map((matchup, i) => {
     return (
@@ -42,7 +41,7 @@ function GridHeaders({ matchups }) {
           {`${abbTeam(getAwayTeam(matchup))} @ ${abbTeam(matchup.home_team)}`}
         </h1>
         <p className="matchup-time">
-          {format(new Date(matchup.commence_time), 'EEE MMM Do, h:mma')}
+          {format(new Date(matchup.commence_time), 'EEE MMM do, h:mma')}
         </p>
       </HeaderCell>
     );

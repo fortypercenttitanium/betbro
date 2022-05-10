@@ -72,7 +72,7 @@ function TileCard({
       />
 
       <h2 className="matchup-time">
-        {format(new Date(matchup.commence_time), 'EEE MMM Do, h:mma')}
+        {format(new Date(matchup.commence_time), 'EEE MMM do, h:mma')}
       </h2>
       <div className="odds-container">
         <p className="odds-name">Moneyline:</p>

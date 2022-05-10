@@ -116,7 +116,7 @@ function TileDetails({
           />
 
           <h2 className="matchup-time">
-            {format(new Date(matchup.commence_time), 'EEE MMM Do, h:mma')}
+            {format(new Date(matchup.commence_time), 'EEE MMM do, h:mma')}
           </h2>
           <div className="details-body">
             <div className="selectors-container">

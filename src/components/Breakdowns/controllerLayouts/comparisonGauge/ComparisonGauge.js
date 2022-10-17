@@ -32,7 +32,7 @@ const teamColors = {
   'San Francisco 49ers': '#AA0000',
   'Tampa Bay Buccaneers': '#D50A0A',
   'Tennessee Titans': '#0C2340',
-  'Washington Football Team': '#773141',
+  'Washington Commanders': '#773141',
   None: '#a3a3a3',
 };
 

@@ -1,0 +1,5160 @@
+{
+  "matchups": [
+    {
+      "home_team": "Denver Broncos",
+      "commence_time": "2022-01-08T21:30:00Z",
+      "teams": ["Denver Broncos", "Kansas City Chiefs"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["+390", "-476"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["+375", "-575"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+390", "-480"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+400", "-550"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+385", "-500"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+360", "-490"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+390", "-480"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+375", "-500"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+375", "-500"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["+420", "-455"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+400", "-589"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["+400", "-550"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+430", "-540"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["+400", "-526"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+400", "-500"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+375", "-500"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+380", "-510"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+390", "-545"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-108", "-105"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+11", "-11"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-106"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-106"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-108"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-108"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-104", "-116"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+11", "-11"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+11", "-11"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-110", "-110"], "points": "45" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "45.0" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "45" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "45" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "45.0" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": "45" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": "45" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "44.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-108", "-114"], "points": "44.5" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "45.0" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "45" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "45.0" }
+        }
+      ],
+      "away_team": "Kansas City Chiefs"
+    },
+    {
+      "home_team": "Philadelphia Eagles",
+      "commence_time": "2022-01-09T01:15:00Z",
+      "teams": ["Dallas Cowboys", "Philadelphia Eagles"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-196", "+170"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-200", "+165"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-195", "+170"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-198", "+166"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-200", "+170"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-200", "+170"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-200", "+170"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-190", "+160"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-196", "+168"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-205", "+165"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-205", "+165"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-200", "+165"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["-185", "+182"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-205", "+170"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-200", "+170"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-189", "+160"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-200", "+170"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-205", "+175"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-105", "-108"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-115", "-105"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-106", "-108"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-106", "-108"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-116", "-104"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-115", "-105"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-115", "-105"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-118", "+100"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4", "+4"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-108", "-112"], "points": "45" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "44.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-113"], "points": "45.0" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-113"], "points": "45.0" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": "44.5" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-108", "-113"], "points": "45" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-108", "-113"], "points": "45" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.0" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        }
+      ],
+      "away_team": "Dallas Cowboys"
+    },
+    {
+      "home_team": "Jacksonville Jaguars",
+      "commence_time": "2022-01-09T18:00:00Z",
+      "teams": ["Indianapolis Colts", "Jacksonville Jaguars"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-1000", "+700"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-1111", "+675"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1000", "+700"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-1115", "+650"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-1115", "+650"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1100", "+700"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1000", "+700"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-1000", "+650"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-1100", "+700"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1000", "+700"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-1010", "+710"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-1101", "+700"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-1100", "+650"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-1010", "+705"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["-909", "+800"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1100", "+675"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-1111", "+700"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-111", "-109"], "points": ["-15.5", "+15.5"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-105", "-115"], "points": ["-15", "+15"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": ["-15.5", "+15.5"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": ["-15.5", "+15.5"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": ["-15.5", "+15.5"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-15", "+15"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": ["-15.5", "+15.5"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-15", "+15"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-15.5", "+15.5"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-15.5", "+15.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["-15", "+15"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-15", "+15"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-15", "+15"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-15", "+15"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-15.5", "+15.5"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-15", "+15"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-111", "-109"], "points": "44" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": "44" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": "44.0" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": "44" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": "44" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": "44.0" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-115", "-105"], "points": "44" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "44" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "43.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.0" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "43.5" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.0" }
+        }
+      ],
+      "away_team": "Indianapolis Colts"
+    },
+    {
+      "home_team": "Houston Texans",
+      "commence_time": "2022-01-09T18:00:00Z",
+      "teams": ["Houston Texans", "Tennessee Titans"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["+405", "-500"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+415", "-515"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+430", "-590"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["+400", "-550"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+350", "-455"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["+415", "-526"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+390", "-530"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+390", "-530"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+375", "-510"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+400", "-550"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+405", "-500"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+405", "-500"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+425", "-550"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+350", "-451"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+380", "-530"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["+400", "-550"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["+480", "-500"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+400", "-530"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-106", "-114"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-125", "+105"], "points": ["+11", "-11"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-107", "-114"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-107", "-114"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-107", "-114"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-107", "-114"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-114", "-104"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+10", "-10"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+10.5", "-10.5"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+10.5", "-10.5"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-112", "-108"], "points": "42.5" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "42.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "42" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "42.5" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "42.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": "42.5" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-113", "-108"], "points": "42.5" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-113", "-108"], "points": "42.5" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "42.5" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "42.5" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-113", "-108"], "points": "42.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-113", "-108"], "points": "42.5" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "42.5" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "42.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "42.5" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "42.5" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "42.5" }
+        }
+      ],
+      "away_team": "Tennessee Titans"
+    },
+    {
+      "home_team": "New York Giants",
+      "commence_time": "2022-01-09T18:00:00Z",
+      "teams": ["New York Giants", "Washington Football Team"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["+245", "-286"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+260", "-310"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+245", "-286"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+245", "-310"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+250", "-303"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+245", "-300"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+260", "-315"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["+260", "-312"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+250", "-320"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+240", "-305"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+245", "-286"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+240", "-305"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["+250", "-300"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+240", "-301"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+255", "-310"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["+255", "-325"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["+280", "-286"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+260", "-320"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-109", "-111"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-114", "-106"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-114", "-104"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-115", "-106"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+7", "-7"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+7", "-7"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-112", "-108"], "points": "38" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-113", "-108"], "points": "38.0" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.5" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-108"], "points": "38" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "37.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-105", "-115"], "points": "37.5" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.5" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-113", "-108"], "points": "38" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-113", "-108"], "points": "38.0" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-113", "-108"], "points": "38" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.5" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.5" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-105", "-115"], "points": "38" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "38.0" }
+        }
+      ],
+      "away_team": "Washington Football Team"
+    },
+    {
+      "home_team": "Minnesota Vikings",
+      "commence_time": "2022-01-09T18:00:00Z",
+      "teams": ["Chicago Bears", "Minnesota Vikings"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["+195", "-222"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+185", "-226"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+190", "-227"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["+205", "-213"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+194", "-235"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+195", "-225"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+195", "-225"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+188", "-235"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+180", "-220"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["+195", "-227"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+188", "-235"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+200", "-235"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["+200", "-250"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+190", "-230"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+190", "-230"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["+200", "-250"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+180", "-220"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+200", "-240"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-111", "-109"], "points": ["+5.5", "-5.5"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+5", "-5"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+5", "-5"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+5.5", "-5.5"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": ["+5.5", "-5.5"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": ["+5.5", "-5.5"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": ["+5.5", "-5.5"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+5", "-5"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": ["+5", "-5"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": ["+5.5", "-5.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["+5", "-5"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+5", "-5"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+5", "-5"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+5", "-5"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+5.5", "-5.5"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+5", "-5"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+5.5", "-5.5"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-111", "-109"], "points": "44" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-112"], "points": "44.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": "44.0" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": "44.0" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": "44" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": "44" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": "44" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "44" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.0" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.0" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44" }
+        }
+      ],
+      "away_team": "Chicago Bears"
+    },
+    {
+      "home_team": "Detroit Lions",
+      "commence_time": "2022-01-09T18:00:00Z",
+      "teams": ["Detroit Lions", "Green Bay Packers"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["+145", "-167"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+143", "-177"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["+148", "-154"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+145", "-167"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+143", "-177"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+145", "-167"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+142", "-168"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["+140", "-165"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+135", "-155"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+140", "-160"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+140", "-171"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["+145", "-167"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+145", "-165"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+135", "-161"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["+140", "-170"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+145", "-170"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+140", "-160"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+145", "-165"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-109", "-111"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-120", "+100"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+3", "-3"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-108", "-114"], "points": "44.5" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "44.5" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        }
+      ],
+      "away_team": "Green Bay Packers"
+    },
+    {
+      "home_team": "Baltimore Ravens",
+      "commence_time": "2022-01-09T18:00:00Z",
+      "teams": ["Baltimore Ravens", "Pittsburgh Steelers"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-182", "+160"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-191", "+160"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-189", "+160"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-195", "+170"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-185", "+150"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-190", "+155"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-182", "+160"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-188", "+158"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-190", "+155"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-192", "+165"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-180", "+155"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-182", "+160"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["-179", "+170"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-200", "+170"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-195", "+165"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-190", "+165"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-190", "+165"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-185", "+160"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-112", "-108"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-113", "-108"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-113", "-108"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-113", "-108"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-113", "-108"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-3.5", "+3.5"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-3.5", "+3.5"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-111", "-109"], "points": "41" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.0" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "41" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": "41" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": "41.0" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-105", "-115"], "points": "41.5" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": "41" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-109", "-112"], "points": "41" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "41" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": "41.0" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "41" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.0" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "41" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "41" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        }
+      ],
+      "away_team": "Pittsburgh Steelers"
+    },
+    {
+      "home_team": "Cleveland Browns",
+      "commence_time": "2022-01-09T18:00:00Z",
+      "teams": ["Cincinnati Bengals", "Cleveland Browns"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["+215", "-250"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["+235", "-244"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+215", "-250"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+210", "-265"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+198", "-240"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+215", "-250"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+230", "-270"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+210", "-265"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["+220", "-263"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+215", "-265"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["+200", "-250"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+220", "-270"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+220", "-260"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+225", "-278"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+220", "-276"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+215", "-260"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+220", "-260"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["+220", "-270"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-108", "-112"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-113"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-108", "-113"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-113"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-108", "-113"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-106", "-115"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-109", "-111"], "points": "37.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": "37.5" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": "37.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-112"], "points": "37.5" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": "37.5" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "37" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": "37.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": "37" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-115", "-105"], "points": "37" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.5" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "37" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "37" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.5" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.0" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.0" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "37.0" }
+        }
+      ],
+      "away_team": "Cincinnati Bengals"
+    },
+    {
+      "home_team": "Miami Dolphins",
+      "commence_time": "2022-01-09T21:25:00Z",
+      "teams": ["Miami Dolphins", "New England Patriots"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["+220", "-263"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+230", "-278"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+220", "-275"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["+230", "-278"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+250", "-310"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+230", "-280"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+220", "-265"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["+225", "-275"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+220", "-265"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+210", "-265"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+210", "-265"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+235", "-275"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+235", "-280"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+240", "-301"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+230", "-280"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["+230", "-280"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["+245", "-256"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+235", "-275"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-111", "-109"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-114", "-104"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6", "-6"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6.5", "-6.5"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+6.5", "-6.5"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-114", "-105"], "points": "39.5" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.0" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "40" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-105", "-115"], "points": "40" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-105", "-115"], "points": "40" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "40" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-114", "-106"], "points": "39.5" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "40" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-114", "-106"], "points": "39.5" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-114", "-106"], "points": "39.5" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-114", "-106"], "points": "39.5" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "40" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "40" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-105", "-115"], "points": "40.0" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.0" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "40" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.0" }
+        }
+      ],
+      "away_team": "New England Patriots"
+    },
+    {
+      "home_team": "Buffalo Bills",
+      "commence_time": "2022-01-09T21:25:00Z",
+      "teams": ["Buffalo Bills", "New York Jets"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-1111", "+700"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-1429", "+800"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-1000", "+660"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-1375", "+800"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-1115", "+650"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-1115", "+650"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1115", "+700"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1400", "+800"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1115", "+700"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1200", "+750"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-1200", "+750"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1200", "+750"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-1160", "+810"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-1250", "+800"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-1300", "+725"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-1400", "+750"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["-909", "+840"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-1200", "+700"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-112", "-108"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-105", "-115"], "points": ["-16.5", "+16.5"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-113", "-108"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-113", "-108"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-113", "-108"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-113", "-108"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-16.5", "+16.5"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-112"], "points": ["-16.5", "+16.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-115", "-105"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-105", "-115"], "points": ["-16.5", "+16.5"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-16", "+16"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-16", "+16"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-111", "-109"], "points": "40.5" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": "40.5" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": "40.5" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-112", "-109"], "points": "40.5" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": "40.5" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-109"], "points": "40.5" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-112", "-108"], "points": "40.5" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "40.5" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.5" }
+        }
+      ],
+      "away_team": "New York Jets"
+    },
+    {
+      "home_team": "Atlanta Falcons",
+      "commence_time": "2022-01-09T21:25:00Z",
+      "teams": ["Atlanta Falcons", "New Orleans Saints"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["+160", "-182"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+160", "-190"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+160", "-182"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+155", "-190"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+155", "-190"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+165", "-190"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+156", "-186"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+160", "-182"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+160", "-189"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+165", "-190"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+150", "-170"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["+165", "-192"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["+155", "-185"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+160", "-191"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+150", "-175"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["+160", "-190"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["+170", "-172"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+160", "-180"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-115", "-105"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3.5", "-3.5"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-109", "-111"], "points": "40" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "40" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": "40.0" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": "40" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": "40" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "39.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "39.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": "40.0" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "39.5" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-104", "-114"], "points": "40" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-115", "-105"], "points": "39.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-105", "-115"], "points": "40" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "40" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "39.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-105", "-115"], "points": "40.0" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "40" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "40.0" }
+        }
+      ],
+      "away_team": "New Orleans Saints"
+    },
+    {
+      "home_team": "Arizona Cardinals",
+      "commence_time": "2022-01-09T21:25:00Z",
+      "teams": ["Arizona Cardinals", "Seattle Seahawks"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-238", "+205"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-256", "+215"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-240", "+200"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-250", "+205"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-250", "+205"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-250", "+205"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-240", "+205"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-250", "+205"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-240", "+205"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-225", "+185"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-250", "+210"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-250", "+210"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-255", "+215"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-250", "+200"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-260", "+215"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-255", "+205"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["-233", "+220"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-250", "+210"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-6", "+6"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-110"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-6", "+6"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-6", "+6"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-6", "+6"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-6", "+6"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-5.5", "+5.5"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-5.5", "+5.5"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-109", "-111"], "points": "48" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": "48" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "48" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "48" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "48" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": "48" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": "48.0" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": "48" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": "48.0" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "48" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "48.0" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "47.5" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "48" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "48.0" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "48.0" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "48" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "48.0" }
+        }
+      ],
+      "away_team": "Seattle Seahawks"
+    },
+    {
+      "home_team": "Los Angeles Rams",
+      "commence_time": "2022-01-09T21:25:00Z",
+      "teams": ["Los Angeles Rams", "San Francisco 49ers"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-200", "+175"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-210", "+175"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-220", "+180"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["-196", "+190"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-220", "+180"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-200", "+170"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-220", "+180"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-200", "+175"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-213", "+180"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-200", "+170"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-200", "+175"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-210", "+170"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-210", "+170"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-220", "+190"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-225", "+180"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-220", "+180"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-213", "+175"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-115", "-105"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-118", "-103"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-115", "-105"], "points": ["-4", "+4"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["-4.5", "+4.5"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-108", "-112"], "points": "44.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-113"], "points": "44.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-115", "-105"], "points": "44.5" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-113"], "points": "44.5" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-108", "-113"], "points": "44.5" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-108", "-113"], "points": "44.5" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "44.5" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "44.5" }
+        }
+      ],
+      "away_team": "San Francisco 49ers"
+    },
+    {
+      "home_team": "Tampa Bay Buccaneers",
+      "commence_time": "2022-01-09T21:25:00Z",
+      "teams": ["Carolina Panthers", "Tampa Bay Buccaneers"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["+300", "-357"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+300", "-375"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+280", "-400"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["+300", "-375"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+300", "-395"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["+300", "-380"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["+320", "-345"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+300", "-375"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+300", "-380"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+300", "-360"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["+290", "-370"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+300", "-360"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+280", "-365"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+290", "-385"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+290", "-385"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+290", "-380"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+300", "-360"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+295", "-370"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8.5", "-8.5"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8", "-8"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8", "-8"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8.5", "-8.5"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+8", "-8"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+8", "-8"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-112"], "points": ["+8", "-8"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8", "-8"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8.5", "-8.5"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": ["+8.5", "-8.5"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8.5", "-8.5"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8", "-8"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8.5", "-8.5"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8.5", "-8.5"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["+8", "-8"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-120", "+100"], "points": ["+9.5", "-9.5"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+8", "-8"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-108", "-112"], "points": "42" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.5" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.5" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.5" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.5" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.5" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.5" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-113"], "points": "42.0" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-105", "-115"], "points": "41.5" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-108", "-113"], "points": "42.0" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.5" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-108", "-113"], "points": "42" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-108", "-113"], "points": "42" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "41.5" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "42.0" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.5" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "41.5" }
+        }
+      ],
+      "away_team": "Carolina Panthers"
+    },
+    {
+      "home_team": "Las Vegas Raiders",
+      "commence_time": "2022-01-10T01:20:00Z",
+      "teams": ["Las Vegas Raiders", "Los Angeles Chargers"],
+      "moneyLine": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["+140", "-159"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+140", "-160"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+135", "-155"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["+135", "-160"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+135", "-160"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+140", "-160"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+138", "-164"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["+139", "-161"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+145", "-165"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+135", "-165"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["+135", "-165"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+140", "-159"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+140", "-159"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+135", "-161"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["+135", "-160"] }
+        },
+        {
+          "site_key": "betfair",
+          "site_nice": "Betfair",
+          "last_update": "2022-01-08T18:06:24Z",
+          "data": { "odds": ["+148", "-154"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["+130", "-155"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["+140", "-160"] }
+        }
+      ],
+      "spreads": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-104", "-116"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-110", "-111"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-105", "-117"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-105", "-117"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-105", "-117"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-105", "-117"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "pointsbetus",
+          "site_nice": "PointsBet (US)",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-105", "-115"], "points": ["+3", "-3"] }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": ["+3", "-3"] }
+        }
+      ],
+      "overUnder": [
+        {
+          "site_key": "unibet",
+          "site_nice": "Unibet",
+          "last_update": "2022-01-08T18:09:32Z",
+          "data": { "odds": ["-109", "-111"], "points": "49" }
+        },
+        {
+          "site_key": "betus",
+          "site_nice": "BetUS",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "49" }
+        },
+        {
+          "site_key": "draftkings",
+          "site_nice": "DraftKings",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["+105", "-125"], "points": "49.5" }
+        },
+        {
+          "site_key": "betmgm",
+          "site_nice": "BetMGM",
+          "last_update": "2022-01-08T18:07:51Z",
+          "data": { "odds": ["-110", "-110"], "points": "49" }
+        },
+        {
+          "site_key": "bovada",
+          "site_nice": "Bovada",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "48.5" }
+        },
+        {
+          "site_key": "williamhill_us",
+          "site_nice": "William Hill (US)",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "49" }
+        },
+        {
+          "site_key": "fanduel",
+          "site_nice": "FanDuel",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "48.5" }
+        },
+        {
+          "site_key": "betonlineag",
+          "site_nice": "BetOnline.ag",
+          "last_update": "2022-01-08T18:07:41Z",
+          "data": { "odds": ["-111", "-111"], "points": "48.5" }
+        },
+        {
+          "site_key": "gtbets",
+          "site_nice": "GTbets",
+          "last_update": "2022-01-08T18:09:36Z",
+          "data": { "odds": ["-109", "-109"], "points": "49" }
+        },
+        {
+          "site_key": "twinspires",
+          "site_nice": "TwinSpires",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": "49" }
+        },
+        {
+          "site_key": "barstool",
+          "site_nice": "Barstool Sportsbook",
+          "last_update": "2022-01-08T18:07:44Z",
+          "data": { "odds": ["-109", "-112"], "points": "49" }
+        },
+        {
+          "site_key": "sugarhouse",
+          "site_nice": "SugarHouse",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": "49.0" }
+        },
+        {
+          "site_key": "betrivers",
+          "site_nice": "BetRivers",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-109", "-112"], "points": "49.0" }
+        },
+        {
+          "site_key": "foxbet",
+          "site_nice": "FOX Bet",
+          "last_update": "2022-01-08T18:07:42Z",
+          "data": { "odds": ["-110", "-110"], "points": "49.0" }
+        },
+        {
+          "site_key": "mybookieag",
+          "site_nice": "MyBookie.ag",
+          "last_update": "2022-01-08T18:06:30Z",
+          "data": { "odds": ["-110", "-110"], "points": "49.0" }
+        },
+        {
+          "site_key": "intertops",
+          "site_nice": "Intertops",
+          "last_update": "2022-01-08T18:07:43Z",
+          "data": { "odds": ["-110", "-110"], "points": "49" }
+        },
+        {
+          "site_key": "wynnbet",
+          "site_nice": "WynnBET",
+          "last_update": "2022-01-08T18:07:45Z",
+          "data": { "odds": ["-110", "-110"], "points": "49.0" }
+        }
+      ],
+      "away_team": "Los Angeles Chargers"
+    }
+  ],
+  "week": 0,
+  "lastUpdated": "2022-02-15T13:40:48.502Z"
+}

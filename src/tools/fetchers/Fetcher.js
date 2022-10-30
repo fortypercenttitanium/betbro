@@ -6,7 +6,7 @@ export default class JsonFetcher {
 
   async fetch(url) {
     try {
-      const query = await fetch(url);
+      const query = await fetch(url, { mode: 'cors' });
       if (query.ok) {
         const result = await query.json();
 

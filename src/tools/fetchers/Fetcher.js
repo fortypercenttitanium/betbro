@@ -4,8 +4,6 @@ export default class JsonFetcher {
       ? process.env.REACT_APP_DEV_URL
       : process.env.REACT_APP_URL;
 
-  testing = process.env.REACT_APP_TESTING ? true : false;
-
   async fetch(url) {
     try {
       const query = await fetch(url);

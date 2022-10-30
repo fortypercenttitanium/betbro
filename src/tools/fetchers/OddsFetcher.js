@@ -6,9 +6,7 @@ export default class OddsFetcher extends Fetcher {
     try {
       if (process.env.REACT_APP_TESTING === 'true') return testOdds;
 
-      return await this.fetch(
-        this.baseUrl + `/odds?testing=${this.testing.toString()}`,
-      );
+      return await this.fetch(this.baseUrl + '/odds');
     } catch (err) {
       console.error(err);
     }

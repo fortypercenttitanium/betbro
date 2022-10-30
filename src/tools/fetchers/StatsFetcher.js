@@ -6,9 +6,7 @@ export default class StatsFetcher extends Fetcher {
     try {
       if (process.env.REACT_APP_TESTING === 'true') return testStats;
 
-      return await this.fetch(
-        this.baseUrl + `/v1/nfl/teamStats?testing=${this.testing.toString()}`,
-      );
+      return await this.fetch(this.baseUrl + '/stats');
     } catch (err) {
       console.error(err);
     }

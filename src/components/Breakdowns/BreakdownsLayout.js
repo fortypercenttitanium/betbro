@@ -61,6 +61,7 @@ function BreakdownsLayout() {
     async function fetchOdds() {
       try {
         const result = await oddsFetcher.getOdds();
+        if (!result.matchups) throw new Error('Failed to fetch matchup data');
 
         setOddsLastUpdated(result.lastUpdated);
         setMatchups(result.matchups);

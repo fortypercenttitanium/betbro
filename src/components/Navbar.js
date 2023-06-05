@@ -7,7 +7,6 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 36px 0 24px;
   width: 100%;
   height: 96px;
   background: rgb(0, 0, 0);
@@ -26,17 +25,36 @@ const NavContainer = styled.nav`
     background: black;
   }
 
-  .link-container {
+  .right {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 36px;
+    @media (max-width: 600px) {
+      margin-right: 8px;
+      gap: 12px;
+    }
   }
 
   .link {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-align: center;
     transition: 0.3s;
     :hover {
       text-decoration: underline;
       color: white;
     }
+
+    @media (max-width: 600px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .logo-container {
+    min-width: 140px;
+    margin: 0 24px;
   }
 
   .nav-logo {
@@ -56,10 +74,21 @@ export default function Navbar() {
           <img src={logo} alt="BetBro logo" className="nav-logo" />
         </Link>
       </div>
-      <div className="link-container">
-        <Link to="/contact">
-          <p className="link">Contact</p>
-        </Link>
+      <div className="right">
+        <div className="link-container">
+          <a
+            href="https://www.buymeacoffee.com/benderthedev"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p className="link">Buy me a beer</p>
+          </a>
+        </div>
+        <div className="link-container">
+          <Link to="/contact">
+            <p className="link">Contact</p>
+          </Link>
+        </div>
       </div>
     </NavContainer>
   );

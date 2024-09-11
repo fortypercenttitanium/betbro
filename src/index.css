@@ -200,3 +200,14 @@ code {
     opacity: 0.5;
   }
 }
+
+.shut-down {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  max-width: 800px;
+  margin: 24px auto;
+}

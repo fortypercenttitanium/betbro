@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-import Store from '../../tools/localStorage/Store';
-import StatsFetcher from '../../tools/fetchers/StatsFetcher';
-import OddsFetcher from '../../tools/fetchers/OddsFetcher';
-import BreakdownsHeader from './BreakdownsHeader';
-import BreakdownsController from './BreakdownsController';
-import createSelectionList from '../../tools/namingLibrary/selectionList';
-import {
-  defaultStatSelections,
-  defaultSportsbook,
-  defaultLayout,
-} from './defaults/defaults';
+// import Store from '../../tools/localStorage/Store';
+// import StatsFetcher from '../../tools/fetchers/StatsFetcher';
+// import OddsFetcher from '../../tools/fetchers/OddsFetcher';
+// import BreakdownsHeader from './BreakdownsHeader';
+// import BreakdownsController from './BreakdownsController';
+// import createSelectionList from '../../tools/namingLibrary/selectionList';
+// import {
+//   defaultStatSelections,
+//   defaultSportsbook,
+//   defaultLayout,
+// } from './defaults/defaults';
 
-const store = new Store();
-const statsFetcher = new StatsFetcher();
-const oddsFetcher = new OddsFetcher();
+// const store = new Store();
+// const statsFetcher = new StatsFetcher();
+// const oddsFetcher = new OddsFetcher();
 
 const BreakdownsContainer = styled.div`
   display: flex;
@@ -28,104 +28,104 @@ const BreakdownsContainer = styled.div`
 `;
 
 function BreakdownsLayout() {
-  const [inErrorState, setInErrorState] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [stats, setStats] = useState();
-  const [matchups, setMatchups] = useState();
-  const [sportsbook, setSportsbook] = useState();
-  const [selectionList, setSelectionList] = useState([]);
-  const [statSelections, setStatSelections] = useState([]);
-  const [statsLastUpdated, setStatsLastUpdated] = useState('');
-  const [oddsLastUpdated, setOddsLastUpdated] = useState('');
-  const [siteLayout, setSiteLayout] = useState(defaultLayout);
+  // const [inErrorState, setInErrorState] = useState(false);
+  // const [loading, setLoading] = useState(true);
+  // const [stats, setStats] = useState();
+  // const [matchups, setMatchups] = useState();
+  // const [sportsbook, setSportsbook] = useState();
+  // const [selectionList, setSelectionList] = useState([]);
+  // const [statSelections, setStatSelections] = useState([]);
+  // const [statsLastUpdated, setStatsLastUpdated] = useState('');
+  // const [oddsLastUpdated, setOddsLastUpdated] = useState('');
+  // const [siteLayout, setSiteLayout] = useState(defaultLayout);
 
   // Fetch stats from API
-  useEffect(() => {
-    async function fetchStats() {
-      try {
-        const result = await statsFetcher.getStats();
+  // useEffect(() => {
+  //   async function fetchStats() {
+  //     try {
+  //       const result = await statsFetcher.getStats();
 
-        setStatsLastUpdated(result.lastUpdated);
-        setSelectionList(createSelectionList(result.stats));
-        setStats(result);
-      } catch {
-        return setInErrorState(true);
-      }
-    }
+  //       setStatsLastUpdated(result.lastUpdated);
+  //       setSelectionList(createSelectionList(result.stats));
+  //       setStats(result);
+  //     } catch {
+  //       return setInErrorState(true);
+  //     }
+  //   }
 
-    fetchStats();
-  }, []);
+  //   fetchStats();
+  // }, []);
 
   // Fetch odds from API
-  useEffect(() => {
-    async function fetchOdds() {
-      try {
-        const result = await oddsFetcher.getOdds();
-        if (!result.matchups) throw new Error('Failed to fetch matchup data');
+  // useEffect(() => {
+  //   async function fetchOdds() {
+  //     try {
+  //       const result = await oddsFetcher.getOdds();
+  //       if (!result.matchups) throw new Error('Failed to fetch matchup data');
 
-        setOddsLastUpdated(result.lastUpdated);
-        setMatchups(result.matchups);
-      } catch {
-        return setInErrorState(true);
-      }
-    }
+  //       setOddsLastUpdated(result.lastUpdated);
+  //       setMatchups(result.matchups);
+  //     } catch {
+  //       return setInErrorState(true);
+  //     }
+  //   }
 
-    fetchOdds();
-  }, []);
+  //   fetchOdds();
+  // }, []);
 
   // Check for local storage selections of stats. These are saved when the user changes which stats they want to see
-  useEffect(() => {
-    const storedStatSelections = store.getStatSelections();
+  // useEffect(() => {
+  //   const storedStatSelections = store.getStatSelections();
 
-    if (storedStatSelections) {
-      setStatSelections(storedStatSelections);
-    } else {
-      setStatSelections(defaultStatSelections);
-    }
-  }, []);
+  //   if (storedStatSelections) {
+  //     setStatSelections(storedStatSelections);
+  //   } else {
+  //     setStatSelections(defaultStatSelections);
+  //   }
+  // }, []);
 
   // check for local storage selection of sportsbook. This is saved when the user changes their sportsbook selection
-  useEffect(() => {
-    const storedSportsbook = store.getBookSelection();
+  // useEffect(() => {
+  //   const storedSportsbook = store.getBookSelection();
 
-    if (storedSportsbook) {
-      setSportsbook(storedSportsbook);
-    } else {
-      setSportsbook(defaultSportsbook);
-    }
-  }, []);
+  //   if (storedSportsbook) {
+  //     setSportsbook(storedSportsbook);
+  //   } else {
+  //     setSportsbook(defaultSportsbook);
+  //   }
+  // }, []);
 
   // Check local storage for preferred layout mode. This is saved when the user changes which view omde they want to use
-  useEffect(() => {
-    const storedLayout = store.getLayout();
+  // useEffect(() => {
+  //   const storedLayout = store.getLayout();
 
-    if (storedLayout) {
-      setSiteLayout(storedLayout);
-    }
-  }, []);
+  //   if (storedLayout) {
+  //     setSiteLayout(storedLayout);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    if (!inErrorState) {
-      if (stats && matchups && statSelections.length) {
-        setLoading(false);
-      }
-    }
-  }, [inErrorState, stats, matchups, sportsbook, statSelections]);
+  // useEffect(() => {
+  //   if (!inErrorState) {
+  //     if (stats && matchups && statSelections.length) {
+  //       setLoading(false);
+  //     }
+  //   }
+  // }, [inErrorState, stats, matchups, sportsbook, statSelections]);
 
-  function handleChangeSportsbook(book) {
-    store.setBookSelection(book);
-    setSportsbook(book);
-  }
+  // function handleChangeSportsbook(book) {
+  //   store.setBookSelection(book);
+  //   setSportsbook(book);
+  // }
 
-  function handleChangeSelections(selections) {
-    store.setStatSelections(selections);
-    setStatSelections(selections);
-  }
+  // function handleChangeSelections(selections) {
+  //   store.setStatSelections(selections);
+  //   setStatSelections(selections);
+  // }
 
-  function handleChangeLayout(layout) {
-    store.setLayout(layout);
-    setSiteLayout(layout);
-  }
+  // function handleChangeLayout(layout) {
+  //   store.setLayout(layout);
+  //   setSiteLayout(layout);
+  // }
 
   return (
     <BreakdownsContainer>
@@ -137,7 +137,18 @@ function BreakdownsLayout() {
         />
         <title>{`Bro's Breakdowns`}</title>
       </Helmet>
-      <BreakdownsHeader
+      <div className="shut-down">
+        <h1>Shutting down</h1>
+        <h3>The BetBro project is officially shut down.</h3>
+        <p>
+          This was a fun personal project I developed with a good friend, but
+          I'm no longer able to keep the site running due to server/domain costs
+          and real-life commitments. Thanks to those of you who have used the
+          tool over the past few years.
+        </p>
+        <p>-Alex</p>
+      </div>
+      {/* <BreakdownsHeader
         onChangeSportsbook={handleChangeSportsbook}
         onChangeLayout={handleChangeLayout}
         siteLayout={siteLayout}
@@ -156,7 +167,7 @@ function BreakdownsLayout() {
         selectionList={selectionList}
         statSelections={statSelections}
         setStatSelections={handleChangeSelections}
-      />
+      /> */}
     </BreakdownsContainer>
   );
 }
